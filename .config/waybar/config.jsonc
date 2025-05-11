@@ -1,0 +1,46 @@
+{
+    "position": "top",
+    "spacing": 10,
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["cava", "tray", "mpris", "pulseaudio", "custom/exit"],
+    "margin-top": 6,
+    "margin-left": 6,
+    "margin-right": 6,
+    "margin-bottom": 0,
+
+    "clock": {
+      "format": "{:%a %b %d %H:%M}",
+      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+
+    "pulseaudio": {
+        "format": "   {volume}%",
+        "format-muted": "",
+        "on-click": "pavucontrol"
+    },
+
+    "tray": {
+      "icon-size": 21,
+      "spacing": 10
+    },
+
+    "mpris": {
+        "format": "{player_icon} {title}",
+        "max-length": 20,
+        "player-icons": {
+          "default": "󰎆 ",
+          "cmus": "",
+          "mpv": "🎵",
+          "vlc": "🎬",
+          "spotify": " "
+        }
+    },
+
+    "custom/exit": {
+        "format": "",
+        "on-click": "wlogout",
+        "on-click-right": "hyprlock",
+        "tooltip-format": "Left: Power menu\nRight: Lock screen"
+      }
+}
