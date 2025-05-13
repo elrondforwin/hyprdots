@@ -4,9 +4,9 @@
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock"],
     "modules-right": ["cava", "tray", "mpris", "pulseaudio", "custom/exit"],
-    "margin-top": 8,
-    "margin-left": 8,
-    "margin-right": 8,
+    "margin-top": 6,
+    "margin-left": 6,
+    "margin-right": 6,
     "margin-bottom": 0,
 
     "clock": {

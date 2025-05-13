@@ -1,7 +1,7 @@
 @import "mocha.css"; 
 
 * {
-    font-family: "Adwaita Sand Medium";
+    font-family: "MesloLGS Nerd Font Mono Bold";
     font-size: 16px;
     min-height: 0;
     font-weight: bold;
@@ -43,8 +43,8 @@ button {
 
 #workspaces button.active {
     background-color: rgba(0, 0, 0, 0.3);
-    color: @blue;
-    border-bottom: 2px solid @blue;
+    color: @mauve;
+    border-bottom: 2px solid @mauve;
     margin-bottom: 2px;
 }
 
