@@ -1,8 +1,8 @@
 * {
   font:   "Adwaita Sans Medium 11";
 
-  bg0     : #1e1e2e; /* base */
-  bg1     : #181825; /* mantle */
+  bg0     : #16161E; /* base */
+  bg1     : #1A1B26; /* mantle */
   bg2     : #11111b; /* crust */
   bg3     : #313244; /* surface0 */
   fg0     : #cdd6f4; /* text */
@@ -11,7 +11,7 @@
   red     : #f38ba8; /* red */
   green   : #a6e3a1; /* green */
   yellow  : #f9e2af; /* yellow */
-  blue    : #89b4fa; /* blue */
+  blue    : #4AAEEB; /* blue */
   magenta : #cba6f7; /* mauve */
   cyan    :rgb(101, 200, 190); /* teal */
 

@@ -2,7 +2,7 @@
 
 configuration {
     modi:                       "drun,filebrowser,window,run";
-    font:                       "Fira Sans 11";
+    font:                       "Adwaita Sans Medium 11";
     show-icons:                 true;
     icon-theme:                 "Papirus-Dark";
 	drun-display-format:        "{name}";

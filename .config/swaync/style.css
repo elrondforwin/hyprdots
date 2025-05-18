@@ -11,20 +11,20 @@ trough highlight {
 
 scale trough {
   margin: 0rem 1rem;
-  background-color: #313244;
+  background-color: #1A1B26;
   min-height: 8px;
   min-width: 70px;
 }
 
 slider {
-  background-color: #89b4fa;
+  background-color: #4FB8F8;
 }
 
 .floating-notifications.background .notification-row .notification-background {
-  border: 2px solid #89b4fa;
+  border: 2px solid #4FB8F8;
   border-radius: 12.6px;
   margin: 18px;
-  background-color: #1e1e2e;
+  background-color: #16161E;
   color: #cdd6f4;
   padding: 0;
 }
@@ -61,14 +61,14 @@ slider {
 .floating-notifications.background .notification-row .notification-background .notification > *:last-child > * .notification-action {
   border-radius: 7px;
   color: #cdd6f4;
-  background-color: #313244;
+  background-color: #1A1B26;
 
   margin: 7px;
 }
 
 .floating-notifications.background .notification-row .notification-background .notification > *:last-child > * .notification-action:hover {
 
-  background-color: #313244;
+  background-color: #1A1B26;
   color: #cdd6f4;
 }
 
@@ -97,10 +97,10 @@ slider {
 }
 
 .control-center {
-  border: 2px solid #89b4fa;
+  border: 2px solid #4FB8F8;
   border-radius: 12.6px;
   margin: 18px;
-  background-color: #1e1e2e;
+  background-color: #16161E;
   color: #cdd6f4;
   padding: 14px;
 }
@@ -113,7 +113,7 @@ slider {
 .control-center .widget-title button {
   border-radius: 7px;
   color: #cdd6f4;
-  background-color: #313244;
+  background-color: #1A1B26;
 
   padding: 8px;
 }
@@ -133,7 +133,7 @@ slider {
 .control-center .notification-row .notification-background {
   border-radius: 7px;
   color: #cdd6f4;
-  background-color: #313244;
+  background-color: #1A1B26;
 
   margin-top: 14px;
 }
@@ -177,7 +177,7 @@ slider {
 
 .control-center .notification-row .notification-background .notification > *:last-child > * .notification-action:hover {
 
-  background-color: #313244;
+  background-color: #1A1B26;
   color: #cdd6f4;
 }
 
@@ -227,23 +227,23 @@ slider {
 
 .notification.low progress,
 .notification.normal progress {
-  background-color: #89b4fa;
+  background-color: #4FB8F8;
 }
 
 .control-center-dnd {
   margin-top: 5px;
   border-radius: 8px;
-  background: #313244;
+  background: #1A1B26;
   border: 1px solid #45475a;
   box-shadow: none;
 }
 
 .control-center-dnd:checked {
-  background: #313244;
+  background: #16161E;
 }
 
 .control-center-dnd slider {
-  background: #45475a;
+  background: #16161E;
   border-radius: 8px;
 }
 
@@ -255,19 +255,19 @@ slider {
 .widget-dnd > switch {
   font-size: initial;
   border-radius: 8px;
-  background: #313244;
-  border: 1px solid #45475a;
+  background: #1A1B26;
+  border: 0px solid #45475a;
   box-shadow: none;
 }
 
 .widget-dnd > switch:checked {
-  background: #313244;
+  background: #1A1B26;
 }
 
 .widget-dnd > switch slider {
   background: #45475a;
   border-radius: 8px;
-  border: 1px solid #6c7086;
+  border: 0px solid #1A1B26;
 }
 
 .widget-mpris .widget-mpris-player {

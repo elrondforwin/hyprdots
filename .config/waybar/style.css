@@ -1,3 +1,4 @@
+
 @import "mocha.css"; 
 
 * {
@@ -9,7 +10,7 @@
 
 window#waybar {
     background: transparent;
-    background-color: @crust;
+    background-color: #010F23;
     color: @overlay0;
     transition-property: background-color;
     transition-duration: 0.1s;
@@ -78,6 +79,8 @@ button {
 
 #idle_inhibitor.activated {
     color: @red;
+    margin-top: 4px;
+    margin-bottom: 4px
 }
 
 #battery {
@@ -96,9 +99,8 @@ button {
 }
 
 #mpris {
-    color: @teal;
+    color: @blue;
     margin-left: 1px;
-    margin-right: 1px;
     margin-bottom: 2px
 }
 
@@ -108,5 +110,5 @@ button {
     margin-right: 4px;
     padding-right: 9px;
     padding-left: 0px;
-    color: @red;
+    color: @blue;
 }
