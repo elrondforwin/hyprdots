@@ -10,13 +10,13 @@
 
 window#waybar {
     background: transparent;
-    background-color: #010F23;
+    background-color: #000000;
     color: @overlay0;
     transition-property: background-color;
     transition-duration: 0.1s;
     padding: 0;
     margin: 0;
-    border-radius: 12px
+    border-radius: 0px
 }
 
 #window {
@@ -44,8 +44,8 @@ button {
 
 #workspaces button.active {
     background-color: rgba(0, 0, 0, 0.3);
-    color: @blue;
-    border-bottom: 2px solid @blue;
+    color: @text;
+    border-bottom: 2px solid @text;
     margin-bottom: 2px;
 }
 
@@ -64,7 +64,7 @@ button {
 }
 
 #pulseaudio {
-    color: @blue;
+    color: @text;
 }
 
 #network {
@@ -99,7 +99,7 @@ button {
 }
 
 #mpris {
-    color: @blue;
+    color: @text;
     margin-left: 1px;
     margin-bottom: 2px
 }
@@ -110,5 +110,5 @@ button {
     margin-right: 4px;
     padding-right: 9px;
     padding-left: 0px;
-    color: @blue;
+    color: @text;
 }
