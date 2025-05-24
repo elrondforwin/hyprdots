@@ -1,9 +1,9 @@
 {
     "position": "top",
-    "spacing": 2,
-    "modules-left": ["hyprland/workspaces"],
+    "spacing": 4,
+    "modules-left": ["hyprland/workspaces", "hyprland/window"],
     "modules-center": ["clock"],
-    "modules-right": ["cava", "tray", "mpris", "pulseaudio", "custom/exit"],
+    "modules-right": ["tray", "mpris", "pulseaudio", "custom/waypaper", "power-profiles-daemon", "custom/exit"],
     "margin-top": 4,
     "margin-left": 8,
     "margin-right": 8,
@@ -34,7 +34,7 @@
           "cmus": "",
           "mpv": "🎵",
           "vlc": "🎬",
-          "spotify": " "
+          "spotify": "  "
         }
     },
 
@@ -43,5 +43,29 @@
         "on-click": "wlogout",
         "on-click-right": "hyprlock",
         "tooltip-format": "Left: Power menu\nRight: Lock screen"
-      }
-}
+      },
+
+    "hyprland/window": {
+        "icon": true,
+        "max-length": 40
+    },
+
+    "power-profiles-daemon": {
+          "format": "{icon}",
+          "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+          "tooltip": true,
+          "format-icons": {
+              "default": "󰤄",
+              "performance": "󰤄",
+              "balanced": "󰤄",
+              "power-saver": "󰤄"
+              }
+    },
+
+    "custom/waypaper": {
+        "format": "󰸉",
+        "interval": 60,
+        "on-click": "~/.config/waybar/scripts/waypaper.sh",
+        "tooltip": true
+    }
+} 

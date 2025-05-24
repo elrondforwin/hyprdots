@@ -134,3 +134,45 @@ button {
     color: @red;
     background-color: @crust;
 }
+
+#window {
+    border-radius: 12px;
+    margin: 0;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: @crust;
+}
+
+window#waybar.empty #window {
+    background-color: transparent;
+}
+
+#power-profiles-daemon {
+    background-color: @crust;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 12px;
+    margin-bottom: 1px;
+}
+
+#power-profiles-daemon.performance {
+    color: @red
+}
+
+#power-profiles-daemon.balanced {
+    color: @blue
+}
+
+#power-profiles-daemon.power-saver {
+    color: @green
+}
+
+#custom-waypaper {
+    background-color: @crust;
+    padding-left: 8px;
+    padding-right: 13px;
+    border-radius: 12px;
+    color: @peach;
+}

@@ -91,8 +91,7 @@ element alternate active {
 }
 
 element selected {
-  text-color       : @bg1;
-  background-color : @accent;
+  background-color : @bg2;
 }
 
 element selected urgent {
