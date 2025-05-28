@@ -1,54 +1,53 @@
 {
     "position": "top",
-    "spacing": 0,
-    "modules-left": ["hyprland/workspaces"],
+    "spacing": 4,
+    "modules-left": ["hyprland/workspaces", "hyprland/window"],
     "modules-center": ["clock"],
-    "modules-right": ["tray", "pulseaudio", "power-profiles-daemon", "custom/exit"],
-    "margin-top": 0,
-    "margin-left": 0,
-    "margin-right": 0,
+    "modules-right": ["tray", "mpris", "pulseaudio", "custom/waypaper", "power-profiles-daemon", "custom/exit"],
+    "margin-top": 4,
+    "margin-left": 8,
+    "margin-right": 8,
     "margin-bottom": 0,
 
     "clock": {
       "format": "{:%a %b %d %H:%M}",
-      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+      "on-click": "gnome-calendar"
     },
 
     "pulseaudio": {
-        "format": "{volume}%",
+        "format": "   {volume}%",
         "format-muted": "",
         "on-click": "pavucontrol"
     },
 
     "tray": {
       "icon-size": 21,
-      "spacing": 10,
-      "format": "[{title}]"
+      "spacing": 10
     },
 
     "mpris": {
-        "format": "{title}",
+        "format": "{player_icon} {title}",
         "max-length": 20,
         "player-icons": {
-          "default": "󰎆",
+          "default": "󰎆 ",
           "cmus": "",
           "mpv": "🎵",
           "vlc": "🎬",
-          "spotify": ""
+          "spotify": "  "
         }
     },
 
     "custom/exit": {
-        "format": "logout",
+        "format": "",
         "on-click": "wlogout",
         "on-click-right": "hyprlock",
         "tooltip-format": "Left: Power menu\nRight: Lock screen"
       },
 
     "hyprland/window": {
-        "icon": false,
-        "max-length": 50,
-        "format": "{}"
+        "icon": true,
+        "max-length": 40
     },
 
     "power-profiles-daemon": {
@@ -56,22 +55,17 @@
           "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
           "tooltip": true,
           "format-icons": {
-              "default": "dft",
-              "performance": "performance",
-              "balanced": "balanced",
-              "power-saver": "powersave"
+              "default": "󰤄",
+              "performance": "󰤄",
+              "balanced": "󰤄",
+              "power-saver": "󰤄"
               }
     },
 
     "custom/waypaper": {
-        "format": "[ wlp ]",
+        "format": "󰸉",
         "interval": 60,
         "on-click": "~/.config/waybar/scripts/waypaper.sh",
         "tooltip": true
-    },
-
-      "hyprland/workspaces": {
-        "format": "{name}",
-        "format-focused": "[{name}]"
-      }
+    }
 } 

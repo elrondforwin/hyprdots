@@ -2,7 +2,7 @@
 @import "mocha.css"; 
 
 * {
-    font-family: "JetBrains Mono NF";
+    font-family: "Adwaita Sand Medium";
     font-size: 16px;
     min-height: 0;
     font-weight: bold;
@@ -10,7 +10,7 @@
 
 window#waybar {
     background: transparent;
-    background-color: @crust;
+    background-color: transparent;
     color: @overlay0;
     transition-property: background-color;
     transition-duration: 0.1s;
@@ -29,7 +29,7 @@ window#waybar {
     padding: 3px;
     padding-left: 8px;
     padding-right: 8px;
-    border-radius: 0px; /*12px*/
+    border-radius: 12px;
     background-color: @crust;
 }
 
@@ -45,27 +45,28 @@ button {
     padding: 3px;
     padding-right: 6px;
     padding-left: 6px;
-    border-radius: 0px
+    border-radius: 12px
 }
+
 
 #workspaces button {
     padding: 0 2px;
     margin-left: 3px;
     margin-right: 3px;
-    color: @overlay1;
+    color: @mauve;
     border-bottom: 2px solid transparent;
 }
 
 #workspaces button.focused {
-    color: @overlay2;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: @mauve;
 }
 
 #workspaces button.active {
-    color: @overlay2;
-    border-bottom: 2px solid @overlay2;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: @mauve;
+    border-bottom: 2px solid @mauve;
 }
-
-
 
 #workspaces button.urgent {
     background-color: #eb4d4b;
@@ -74,7 +75,7 @@ button {
 #clock {
     color: @text;
     background-color: @crust;
-    border-radius: 0px; /*12px*/
+    border-radius: 12px;
     padding: 3px;
     padding-right: 8px;
     padding-left: 8px;
@@ -88,12 +89,12 @@ button {
 }
 
 #pulseaudio {
-    color: @sky;
+    color: @blue;
     background-color: @crust;
     padding: 3px;
     padding-left: 8px;
     padding-right: 8px;
-    border-radius: 0px; /*12px*/
+    border-radius: 12px;
 }
 
 #network {
@@ -122,20 +123,20 @@ button {
     padding: 3px;
     padding-left: 8px;
     padding-right: 8px;
-    border-radius: 0px;
+    border-radius: 12px
 }
 
 #custom-exit {
     min-width: 10px;
     padding-right: 13px;
     padding-left: 8px;
-    border-radius: 0px; /*12px*/
+    border-radius: 12px;
     color: @red;
     background-color: @crust;
 }
 
 #window {
-    border-radius: 0px; /*12px*/
+    border-radius: 12px;
     margin: 0;
     padding-top: 1px;
     padding-bottom: 1px;
@@ -152,7 +153,7 @@ window#waybar.empty #window {
     background-color: @crust;
     padding-left: 10px;
     padding-right: 10px;
-    border-radius: 0px; /*12px*/
+    border-radius: 12px;
     margin-bottom: 1px;
 }
 
@@ -172,6 +173,6 @@ window#waybar.empty #window {
     background-color: @crust;
     padding-left: 8px;
     padding-right: 13px;
-    border-radius: 0px; /*12px*/
+    border-radius: 12px;
     color: @peach;
 }
