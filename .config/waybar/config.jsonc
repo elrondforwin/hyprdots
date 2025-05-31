@@ -39,7 +39,7 @@
     },
 
     "custom/exit": {
-        "format": "logout",
+        "format": "pwmenu",
         "on-click": "wlogout",
         "on-click-right": "hyprlock",
         "tooltip-format": "Left: Power menu\nRight: Lock screen"
