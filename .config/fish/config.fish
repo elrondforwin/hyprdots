@@ -1,15 +1,14 @@
-source /usr/share/cachyos-fish-config/cachyos-config.fish
 
 export EDITOR="vscodium"
 
-
 function y
-	set tmp (mktemp -t "yazi-cwd.XXXXXX")
-	yazi $argv --cwd-file="$tmp"
-	if set cwd (command cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
-		builtin cd -- "$cwd"
-	end
-	rm -f -- "$tmp"
+    set tmp (mktemp -t "yazi-cwd.XXXXXX")
+    yazi $argv --cwd-file="$tmp"
+
+    if set cwd (command cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
+        builtin cd -- "$cwd"
+    end
+    rm -f -- "$tmp"
 end
 
 function cevirmov
@@ -36,5 +35,6 @@ function cevirmp4
     ffmpeg -i "$input" -vcodec libx265 -crf 28 "$output"
 end
 
-
 alias reloadwaybar="pkill waybar && waybar & disown"
+alias vim="nvim"
+

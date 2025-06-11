@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # Rofi teması
-#ROFI_CMD="rofi -dmenu -p Power -theme ~/.config/rofi/power.rasi"
 ROFI_CMD="rofi -dmenu -p Power"
 
 # Menü seçenekleri

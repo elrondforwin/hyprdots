@@ -124,3 +124,7 @@ button {
 #power-profiles-daemon.power-saver {
     color: @green
 }
+
+#language {
+    color: @yellow
+}

@@ -1,6 +1,7 @@
+
 @theme "~/.config/rofi/theme.rasi"
 
 configuration {
-	show-icons:                     false;
-	modes:						    "drun,window,emoji,run";
+	modi: "drun,run,window,emoji";
+	show-icons: true;
 }
