@@ -26,10 +26,11 @@ case "$chosen" in
     "$suspend")
         ~/.config/rofi/scripts/power.sh suspend
         ;;
-    "$logout")
-        ~/.config/rofi/scripts/power.sh exit
-        ;;
     "$lock")
         hyprlock
         ;;
+    "$logout")
+        ~/.config/rofi/scripts/power.sh exit
+        ;;
+
 esac
