@@ -3,5 +3,4 @@
 
 configuration {
 	modi: "drun,run,window,emoji";
-	show-icons: true;
 }

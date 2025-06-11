@@ -1,24 +1,35 @@
 #!/bin/bash
 
 # Rofi teması
-ROFI_CMD="rofi -dmenu -p Power"
+ROFI_CMD="rofi -dmenu -p Power -theme ~/.config/rofi/powermenu/powermenu.rasi"
+
+shutdown=''
+reboot=''
+lock=''
+suspend=''
+logout=''
+yes=''
+no=''
 
 # Menü seçenekleri
-options="Power Off\nReboot\nSuspend\nLog Out"
+options="$shutdown\n$reboot\n$suspend\n$lock\n$logout"
 
 chosen="$(echo -e "$options" | $ROFI_CMD)"
 
 case "$chosen" in
-    "Power Off")
+    "$shutdown")
         ~/.config/rofi/scripts/power.sh shutdown
         ;;
-    "Reboot")
+    "$reboot")
         ~/.config/rofi/scripts/power.sh reboot
         ;;
-    "Suspend")
+    "$suspend")
         ~/.config/rofi/scripts/power.sh suspend
         ;;
-    "Log Out")
+    "$logout")
         ~/.config/rofi/scripts/power.sh exit
+        ;;
+    "$lock")
+        hyprlock
         ;;
 esac
