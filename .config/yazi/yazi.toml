@@ -30,7 +30,7 @@ ueberzug_offset = [ 0, 0, 0, 0 ]
 
 [opener]
 edit = [
-  { run = 'nvim "$1"', desc = "$EDITOR", block = true, for = "unix" },
+  { run = 'vscodium "$1"', desc = "$EDITOR", block = true, for = "unix" },
 	{ run = 'code %*',    orphan = true, desc = "code",           for = "windows" },
 	{ run = 'code -w %*', block = true,  desc = "code (block)",   for = "windows" },
 ]
