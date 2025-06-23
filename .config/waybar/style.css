@@ -34,7 +34,7 @@
 
 window#waybar {
     background: transparent;
-    background-color: rgba(17, 17, 27, 0.95);
+    background-color: rgba(17, 17, 27, 0.8);
     color: @overlay0;
     transition-property: background-color;
     transition-duration: 0.1s;

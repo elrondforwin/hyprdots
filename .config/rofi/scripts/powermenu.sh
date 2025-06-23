@@ -3,11 +3,11 @@
 # Rofi teması
 ROFI_CMD="rofi -dmenu -p Power -theme ~/.config/rofi/powermenu/powermenu.rasi"
 
-shutdown=''
-reboot=''
-lock=''
-suspend=''
-logout=''
+shutdown='󰐥'
+reboot='󰑓'
+lock=''
+suspend=''
+logout=''
 yes=''
 no=''
 

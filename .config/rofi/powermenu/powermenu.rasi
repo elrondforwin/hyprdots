@@ -1,5 +1,5 @@
 * {
-    font: "JetBrains Mono Nerd Font 10";
+    font: "JetBrainsMono Nerd Font 16";
     background:     #11111b;
     background-alt: #181825;
     foreground:     #cdd6f4;
