@@ -17,7 +17,7 @@
     "pulseaudio": {
         "format": "   {volume}%",
         "format-muted": "",
-        "on-click": "pavucontrol"
+        "on-click": "kitty --title pulsemixer -e pulsemixer"
     },
 
     "tray": {
