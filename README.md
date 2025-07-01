@@ -71,7 +71,7 @@ waypaper
 ```
 ### Screenshot annotation
 ```
-slurp
+swappy
 ```
 ## Terminal
 ### Terminal Emulator
@@ -117,17 +117,41 @@ papirus-icon-theme
 [Noir XCursor](https://github.com/TDCMC/xcursor-noir?tab=readme-ov-file)
 
 ### my other personal preferences
-
+#### Browser
 ```
 zen-browser
-spotify-launcher
-mission-center
-gnome-disk-utility
-vscodium
-vesktop
-obsidian
-libre-menu-editor
+```
+#### File Manager and Plugins
+```
 thunar
 tumbler
 thunar-archive-plugin
+```
+#### Music Player
+```
+spotify-launcher
+```
+#### Task Manager
+```
+mission-center
+```
+#### Disk Utility
+```
+gnome-disk-utility
+```
+#### Text Editor
+```
+vscodium
+```
+#### Discord Client
+```
+vesktop
+```
+#### Note Taking App
+```
+obsidian
+```
+#### App Entry Editor
+```
+libre-menu-editor
 ```
