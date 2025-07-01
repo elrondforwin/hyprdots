@@ -15,7 +15,7 @@
     },
 
     "pulseaudio": {
-        "format": "   {volume}%",
+        "format": " {volume}%",
         "format-muted": "",
         "on-click": "kitty --title pulsemixer -e pulsemixer"
     },
@@ -26,14 +26,14 @@
     },
 
     "mpris": {
-        "format": "{player_icon}  {title}",
+        "format": "{player_icon} {title}",
         "max-length": 25,
         "player-icons": {
-          "default": "󰎆 ",
+          "default": "󰎆",
           "cmus": "",
           "mpv": "🎵",
           "vlc": "🎬",
-          "spotify": " "
+          "spotify": ""
         }
     },
 
@@ -57,7 +57,7 @@
       },
 
     "hyprland/language": {
-        "format": "\uf11c   {}",
+        "format": "\uf11c {}",
         "format-en": "us",
         "format-tr": "trq",
         "on-click": "hyprctl switchxkblayout vxe-v87-vxe-v87 next"

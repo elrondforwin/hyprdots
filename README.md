@@ -1,7 +1,133 @@
-# my current hyprland dotfiles
+# My Current Hyprland Dotfiles
 
-this repo is not ready for public use, these are my personal dotfiles. it may change in the future.
+#### No fancy effects, no dynamic wallpaper and color things. 
 
-so if you are gonna use it YOU HAVE TO edit it.
+#### A simple config that just works (on my machine of course)
 
-also note that hyprland.conf env variables are made for nvidia gpus that support newer drivers.
+![](screenshots/1.png)
+![](screenshots/2.png)
+
+---
+
+### DISCLAIMER
+This repo is not ready for public use, these are my personal dotfiles. No guarantee it will work on your machine — works on mine.
+
+---
+
+### Some notes for people gonna use it
+
+I use paru btw so if you'll use yay then remove the ``alias yay="paru"`` line in ``/.config/fish/config.fish``
+
+If you are not using nvidia gpu you should delete the nvidia fix env's in hyprland.conf
+
+---
+
+# Used packages
+Can be found on pacman and aur
+
+## Hyprland, customization and my general workflow
+
+### Hypr Ecosystem
+```
+hyprland
+hyprlock
+hyprpicker
+hyprshot
+```
+### Topbar
+```
+waybar
+```
+### Volume Control
+```
+pulsemixer
+```
+### Notification Daemon
+```
+swaync
+```
+### XWayland screenshare fix
+```
+xwaylandvideobridge
+```
+### App Launcher
+```
+rofi-wayland
+```
+### Emoji Picker
+```
+rofi-emoji
+```
+### Clipboard
+```
+cliphist
+wl-clip-persist
+```
+note that this config needs to rofi-wayland installed if you gonna use clipboard history, feel free to change
+### Wallpaper
+```
+swww
+waypaper
+```
+### Screenshot annotation
+```
+slurp
+```
+## Terminal
+### Terminal Emulator
+```
+kitty
+```
+### Terminal File Manager
+```
+yazi
+```
+### User Shell
+```
+fish
+```
+#### Other terminal related packages, for fish config functionality
+```
+fastfetch
+eza
+ffmpeg
+expac
+fisher
+```
+
+#### Fisher packages
+**for prompt configration**
+```
+ilancosman/tide@v6
+```
+use ``fisher install ilancosman/tide@v6`` to install it. ``tide configure`` to configure the prompt.
+
+## Desktop Customization
+
+```
+qt6ct
+catppuccin-gtk-theme-mocha
+papirus-folders-catppuccin-git
+catppuccin-qt5ct-git
+papirus-folders-catppuccin-git
+papirus-icon-theme
+```
+
+#### does not have a package
+[Noir XCursor](https://github.com/TDCMC/xcursor-noir?tab=readme-ov-file)
+
+### my other personal preferences
+
+```
+zen-browser
+spotify-launcher
+mission-center
+gnome-disk-utility
+vscodium
+vesktop
+obsidian
+libre-menu-editor
+thunar
+tumbler
+thunar-archive-plugin
+```
