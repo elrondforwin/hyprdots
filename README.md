@@ -111,10 +111,8 @@ papirus-folders-catppuccin-git
 catppuccin-qt5ct-git
 papirus-folders-catppuccin-git
 papirus-icon-theme
+apple_cursor
 ```
-
-#### does not have a package
-[Noir XCursor](https://github.com/TDCMC/xcursor-noir?tab=readme-ov-file)
 
 ### my other personal preferences
 #### Browser
