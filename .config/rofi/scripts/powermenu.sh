@@ -12,7 +12,7 @@ yes=''
 no=''
 
 # Menü seçenekleri
-options="$shutdown\n$reboot\n$suspend\n$lock\n$logout"
+options="$shutdown\n$reboot\n$suspend\n$logout"
 
 chosen="$(echo -e "$options" | $ROFI_CMD)"
 
@@ -25,9 +25,6 @@ case "$chosen" in
         ;;
     "$suspend")
         ~/.config/rofi/scripts/power.sh suspend
-        ;;
-    "$lock")
-        hyprlock
         ;;
     "$logout")
         ~/.config/rofi/scripts/power.sh exit
