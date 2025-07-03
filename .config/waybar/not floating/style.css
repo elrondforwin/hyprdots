@@ -34,7 +34,7 @@
 
 window#waybar {
     background: transparent;
-    background-color: transparent;
+    background-color: @crust;
     color: @overlay0;
     transition-property: background-color;
     transition-duration: 0.1s;
@@ -49,7 +49,8 @@ button {
 }
 
 #workspaces {
-    background-color: @crust;
+    background-color: @base;
+    margin: 4 0 4 4;
     padding-left: 8px;
     padding-right: 8px;
     border-radius: 12px;
@@ -77,7 +78,8 @@ button {
 
 #clock {
     color: @text;
-    background: @crust;
+    margin: 4 0 4 0;
+    background: @base;
     padding: 5px;
     padding-left: 12px;
     padding-right: 12px;
@@ -90,11 +92,12 @@ button {
 
 #pulseaudio {
     color: @blue;
-    background-color: @crust;
+    background-color: @base;
     padding: 5px;
     padding-left: 7px;
     padding-right: 7px;
     border-radius: 12px;
+    margin: 4 0 4 0;
 }
 
 
@@ -112,22 +115,24 @@ button {
  */
 
 #mpris {
-    background-color: @crust;
+    background-color: @base;
     color: @teal;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-right: 7px;
     padding-left: 7px;
     border-radius: 12px;
+    margin: 4 0 4 0;
 }
 
 #custom-exit {
-    background-color: @crust;
+    background-color: @base;
     min-width: 10px;
     color: @red;
     padding-top: 2px;
     padding-right: 11px;
     padding-left: 8px;
+    margin: 4 4 4 0;
     border-radius: 12px;
 }
 
@@ -135,7 +140,8 @@ button {
     padding-right: 13px;
     padding-left: 7px;
     border-radius: 12px;
-    background-color: @crust;
+    background-color: @base;
+    margin: 4 0 4 0;
 }
 
 #power-profiles-daemon.performance {
@@ -152,15 +158,17 @@ button {
 
 #language {
     color: @yellow;
-    background-color: @crust;
+    background-color: @base;
     padding-left: 10px;
     padding-right: 8px;
     border-radius: 12px;
+    margin: 4 0 4 0;
 }
 
 #tray {
-    background-color: @crust;
+    background-color: @base;
     padding-left: 8px;
     padding-right: 8px;
     border-radius: 12px;
+    margin: 4 0 4 0;
 }
