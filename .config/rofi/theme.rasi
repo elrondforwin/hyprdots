@@ -1,19 +1,14 @@
+@import "colors.rasi"
+
 * {
   font:   "Adwaita Sans Medium 11";
 
-  bg0     : #1a1b26;
-  bg1     : #11111b;
-  bg2     : #24283b;
-  bg3     : #414868;
-  fg0     : #c0caf5;
-  fg1     : #a9b1d6;
-  fg2     : #737aa2;
-  red     : #f7768e;
-  green   : #9ece6a;
-  yellow  : #e0af68;
-  blue    : #89b4fa;
-  magenta : #9a7ecc;
-  cyan    : #4abaaf;
+  bg1     : @surface;
+  bg2     : @surface-bright;
+  fg0     : @on-surface;
+  fg1     : @on-surface-variant;
+  red     : @error;
+  blue    : @primary;
 
   accent: @blue;
   urgent: @red;
@@ -110,6 +105,5 @@ element-text {
 
 scrollbar {
   handle-width : 0px;
-  handle-color : @fg2;
   padding      : 0px;
 }

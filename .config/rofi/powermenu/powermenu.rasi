@@ -1,11 +1,13 @@
+@import "~/.config/rofi/colors.rasi"
+
 * {
     font: "JetBrainsMono Nerd Font 16";
-    background:     #11111b;
-    background-alt: #181825;
-    foreground:     #cdd6f4;
-    selected:       #89b4fa;
+    background:     @surface-container-lowest;
+    background-alt: @surface;
+    foreground:   @secondary;
+    selected:      @primary;
     active:         #ABE9B3FF;
-    urgent:         #F28FADFF;
+    urgent:        @error;
 }
 
 

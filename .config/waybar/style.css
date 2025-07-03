@@ -1,29 +1,4 @@
-@define-color rosewater #f5e0dc;
-@define-color flamingo #f2cdcd;
-@define-color pink #f5c2e7;
-@define-color mauve #cba6f7;
-@define-color red #f38ba8;
-@define-color maroon #eba0ac;
-@define-color peach #fab387;
-@define-color yellow #f9e2af;
-@define-color green #a6e3a1;
-@define-color teal #94e2d5;
-@define-color sky #89dceb;
-@define-color sapphire #74c7ec;
-@define-color blue #89b4fa;
-@define-color lavender #b4befe;
-@define-color text #cdd6f4;
-@define-color subtext1 #bac2de;
-@define-color subtext0 #a6adc8;
-@define-color overlay2 #9399b2;
-@define-color overlay1 #7f849c;
-@define-color overlay0 #6c7086;
-@define-color surface2 #585b70;
-@define-color surface1 #45475a;
-@define-color surface0 #313244;
-@define-color base #1e1e2e;
-@define-color mantle #181825;
-@define-color crust #11111b;
+@import 'colors.css';
 
 * {
     font-family: "JetBrainsMono Nerd Font";
@@ -35,7 +10,7 @@
 window#waybar {
     background: transparent;
     background-color: transparent;
-    color: @overlay0;
+    color: transparent;
     transition-property: background-color;
     transition-duration: 0.1s;
     margin: 0;
@@ -49,35 +24,36 @@ button {
 }
 
 #workspaces {
-    background-color: @crust;
+    background-color: @background;
     padding-left: 8px;
     padding-right: 8px;
     border-radius: 12px;
-    border: 0px solid @blue
+    border: 0px solid @primary
 }
 #workspaces button {
+    color: @primary;
     padding: 0 4px;
     margin: 0 2px
 }
 
 #workspaces button.focused {
-    color: @rosewater;
+    color: @primary;
 }
 
 #workspaces button.active {
-    color: @blue;
-    border-bottom: 2px solid @blue;
+    color: @tertiary;
+    border-bottom: 2px solid @tertiary;
     margin-bottom: 2px;
 }
 
 #workspaces button.urgent {
-    background-color: #eb4d4b;
+    background-color: @error;
     border-radius: 8px;
 }
 
 #clock {
-    color: @text;
-    background: @crust;
+    color: @primary;
+    background: @background;
     padding: 5px;
     padding-left: 12px;
     padding-right: 12px;
@@ -85,12 +61,12 @@ button {
 }
 
 #clock.date {
-    color: @mauve;
+    color: @on_background;
 }
 
 #pulseaudio {
-    color: @blue;
-    background-color: @crust;
+    color: @primary;
+    background-color: @background;
     padding: 5px;
     padding-left: 7px;
     padding-right: 7px;
@@ -112,8 +88,8 @@ button {
  */
 
 #mpris {
-    background-color: @crust;
-    color: @teal;
+    background-color: @background;
+    color: @primary;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-right: 7px;
@@ -122,9 +98,9 @@ button {
 }
 
 #custom-exit {
-    background-color: @crust;
+    background-color: @background;
     min-width: 10px;
-    color: @red;
+    color: @primary;
     padding-top: 2px;
     padding-right: 11px;
     padding-left: 8px;
@@ -135,31 +111,31 @@ button {
     padding-right: 13px;
     padding-left: 7px;
     border-radius: 12px;
-    background-color: @crust;
+    background-color: @background;
 }
 
 #power-profiles-daemon.performance {
-    color: @red
+    color: @secondary
 }
 
 #power-profiles-daemon.balanced {
-    color: @blue
+    color: @primary
 }
 
 #power-profiles-daemon.power-saver {
-    color: @green
+    color: @tertiary
 }
 
 #language {
-    color: @yellow;
-    background-color: @crust;
+    color: @primary;
+    background-color: @background;
     padding-left: 10px;
     padding-right: 8px;
     border-radius: 12px;
 }
 
 #tray {
-    background-color: @crust;
+    background-color: @background;
     padding-left: 8px;
     padding-right: 8px;
     border-radius: 12px;
