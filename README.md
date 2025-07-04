@@ -1,7 +1,5 @@
 # My Current Hyprland Dotfiles
 
-#### No fancy effects, no dynamic wallpaper and color things. 
-
 #### A simple config that just works (on my machine of course)
 
 ![](screenshots/1.png)
@@ -9,16 +7,16 @@
 
 ---
 
-### DISCLAIMER
-This repo is not ready for public use, these are my personal dotfiles. No guarantee it will work on your machine — works on mine.
+> [!IMPORTANT]  
+> This repo is not ready for public use, these are my personal dotfiles. No guarantee it will work on your maachine — works on mine.
 
 ---
 
-### Some notes for people gonna use it
+> [!NOTE]
+> I use paru btw so if you'll use yay then remove the ``alias yay="paru"`` line in ``/.config/fish/config.fish``
 
-I use paru btw so if you'll use yay then remove the ``alias yay="paru"`` line in ``/.config/fish/config.fish``
-
-If you are not using nvidia gpu you should delete the nvidia fix env's in hyprland.conf
+> [!NOTE]
+> If you are not using nvidia gpu you should delete the nvidia fix env's in ``hyprland.conf``
 
 ---
 
@@ -40,7 +38,7 @@ waybar
 ```
 ### Volume Control
 ```
-pulsemixer
+puslsemixer
 ```
 ### Notification Daemon
 ```
@@ -114,42 +112,46 @@ papirus-icon-theme
 apple_cursor
 ```
 
-### my other personal preferences
+## Color Generation from Wallpaper
+```
+matugen
+wallust 
+```
+
+## my other personal preferences
 #### Browser
 ```
 zen-browser
 ```
-#### File Manager and Plugins
+### File Manager
 ```
-thunar
-tumbler
-thunar-archive-plugin
+nemo
 ```
-#### Music Player
+### Music Player
 ```
 spotify-launcher
 ```
-#### Task Manager
+### Task Manager
 ```
 mission-center
 ```
-#### Disk Utility
+### Disk Utility
 ```
 gnome-disk-utility
 ```
-#### Text Editor
+### Text Editor
 ```
 vscodium
 ```
-#### Discord Client
+### Discord Client
 ```
 vesktop
 ```
-#### Note Taking App
+### Note Taking App
 ```
 obsidian
 ```
-#### App Entry Editor
+### App Entry Editor
 ```
 libre-menu-editor
 ```
