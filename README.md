@@ -54,7 +54,7 @@ papirus-icon-theme
 apple_cursor
 matugen
 wallust
-nemo # feel free to change
+nemo
 mission-center
 ```
 #### Fisher packages
