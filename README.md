@@ -50,7 +50,6 @@ ffmpeg
 expac
 fisher
 qt6ct
-papirus-icon-theme
 apple_cursor
 matugen
 wallust
