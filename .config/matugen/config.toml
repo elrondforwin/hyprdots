@@ -43,3 +43,7 @@ post_hook = 'pywalfox update'
 [templates.vesktop]
 input_path = '~/.config/matugen/templates/midnight-discord.css'
 output_path = '~/.config/vesktop/themes/midnight-discord.css'
+
+[templates.folder]
+input_path = '~/.config/matugen/templates/folder-color.txt'
+output_path = '~/.config/matugen/papirus-folders/folder-color.txt'
