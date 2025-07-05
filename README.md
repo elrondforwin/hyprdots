@@ -54,6 +54,7 @@ apple_cursor
 matugen
 wallust
 nemo
+nemo-fileroller
 mission-center
 ```
 #### Fisher packages
