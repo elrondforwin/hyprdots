@@ -1,7 +1,7 @@
 @import 'colors.css';
 
 * {
-    font-family: "JetBrainsMono Nerd Font";
+    font-family: "Adwaita Sans Medium 11";
     font-size: 16px;
     min-height: 0;
     font-weight: bold;
@@ -14,7 +14,7 @@ window#waybar {
     transition-property: background-color;
     transition-duration: 0.1s;
     margin: 0;
-    border-radius: 12px
+    border-radius: 0px
 }
 
 button {
@@ -23,54 +23,114 @@ button {
     border-radius: 0;
 }
 
+.modules-left {
+    background-color: @surface_container;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 12px;
+    border: 2px solid @primary;
+}
+
 #workspaces {
     background-color: @background;
-    padding-left: 8px;
-    padding-right: 8px;
-    border-radius: 12px;
-    border: 0px solid @primary
+    margin: 5 0 5 0;
+    border-radius: 8px;
 }
+
 #workspaces button {
     color: @primary;
     padding: 0 4px;
     margin: 0 2px
 }
 
+#workspaces button:hover {
+    border-radius: 8px;  
+    background-color: @surface_container_high
+}
+
 #workspaces button.focused {
     color: @primary;
 }
-
 #workspaces button.active {
-    color: @tertiary;
-    border-bottom: 2px solid @tertiary;
-    margin-bottom: 2px;
+    background-color: @primary;
+    color: @background;
+    border-radius: 8px;
+    padding: 0 10 0 10
 }
 
 #workspaces button.urgent {
     background-color: @error;
-    border-radius: 8px;
+    color: @background;
+    border-radius: 5px
 }
 
 #clock {
     color: @primary;
-    background: @background;
-    padding: 5px;
-    padding-left: 12px;
-    padding-right: 12px;
-    border-radius: 12px;
+    background-color: @background;
+    border-radius: 8px;
+    padding: 0 4 0 4
+}
+
+#clock:hover {
+    background-color: @surface_container_high;
 }
 
 #clock.date {
     color: @on_background;
 }
 
-#pulseaudio {
+.modules-center {
+    color: @primary;
+    background: @surface_container;
+    padding: 5px;
+    padding-left: 4px;
+    padding-right: 4px;
+    border-radius: 12px;
+    border: 2px solid @primary;
+}
+
+.modules-right {
+    background: @surface_container;
+    padding: 0 5 0 5;
+    border-radius: 12px;
+    border: 2px solid @primary;
+}
+
+
+#pulseaudio,
+#mpris,
+#custom-exit,
+#language {
     color: @primary;
     background-color: @background;
-    padding: 5px;
-    padding-left: 7px;
-    padding-right: 7px;
-    border-radius: 12px;
+    border-radius: 8px;
+    margin: 5 0 5 0;
+    padding: 0 5 0 5
+}
+
+#tray {
+    color: @primary;
+    border-radius: 8px;
+    margin-right: 3px;
+}
+
+#custom-exit {
+    padding-right: 8px;
+}
+
+#pulseaudio:hover,
+#mpris:hover,
+#custom-exit:hover,
+#language:hover {
+    background-color: @surface_container_high;
+}
+
+#pulseaudio:active,
+#mpris:active,
+#custom-exit:active,
+#language:active {
+    background-color: #fff;
+    color: #fff;
 }
 
 
@@ -86,57 +146,3 @@ button {
     margin-right: 0;
 }
  */
-
-#mpris {
-    background-color: @background;
-    color: @primary;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-right: 7px;
-    padding-left: 7px;
-    border-radius: 12px;
-}
-
-#custom-exit {
-    background-color: @background;
-    min-width: 10px;
-    color: @primary;
-    padding-top: 2px;
-    padding-right: 11px;
-    padding-left: 8px;
-    border-radius: 12px;
-}
-
-#power-profiles-daemon {
-    padding-right: 13px;
-    padding-left: 7px;
-    border-radius: 12px;
-    background-color: @background;
-}
-
-#power-profiles-daemon.performance {
-    color: @secondary
-}
-
-#power-profiles-daemon.balanced {
-    color: @primary
-}
-
-#power-profiles-daemon.power-saver {
-    color: @tertiary
-}
-
-#language {
-    color: @primary;
-    background-color: @background;
-    padding-left: 10px;
-    padding-right: 8px;
-    border-radius: 12px;
-}
-
-#tray {
-    background-color: @background;
-    padding-left: 8px;
-    padding-right: 8px;
-    border-radius: 12px;
-}
