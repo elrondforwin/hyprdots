@@ -47,7 +47,7 @@ ffmpeg
 expac
 fisher
 qt6ct
-apple_cursor
+bibata-cursor-theme-bin
 matugen
 wallust
 nemo
