@@ -23,6 +23,14 @@ button {
     border-radius: 0;
 }
 
+.modules-left {
+    background-color: @surface_container;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 16px;
+    border: 2px solid @primary;
+}
+
 #workspaces {
     margin: 5 0 5 0;
     border-radius: 14px;
@@ -36,13 +44,6 @@ button {
     margin: 0 2px
 }
 
-.modules-left {
-    background-color: @surface_container;
-    padding-left: 5px;
-    padding-right: 5px;
-    border-radius: 16px;
-}
-
 #workspaces button:hover {
     border-radius: 14px;  
     background-color: @surface_container_high
@@ -53,22 +54,21 @@ button {
 }
 #workspaces button.active {
     background-color: @primary;
-    color: @surface_container;
+    color: @surface;
     border-radius: 14px;
     padding: 0 10 0 10
 }
 
 #workspaces button.urgent {
     background-color: @error;
-    color: @surface_container;
+    color: @surface;
     border-radius: 5px
 }
 
 #clock {
-    background-color: @surface_container;
     color: @primary;
     border-radius: 14px;
-    padding: 0 12 0 12
+    padding: 0 4 0 4
 }
 
 #clock:hover {
@@ -78,9 +78,6 @@ button {
 #clock.date {
     color: @on_background;
 }
-
-/*
-
 
 .modules-center {
     color: @primary;
@@ -98,28 +95,26 @@ button {
     border-radius: 16px;
     border: 2px solid @primary;
 }
-*/
 
 
 #pulseaudio,
 #mpris,
 #custom-exit,
 #language {
-    background-color: @surface_container;
     color: @primary;
     border-radius: 14px;
-    padding: 5 10 5 10
+    margin: 5 0 5 0;
+    padding: 0 5 0 5
 }
 
 #tray {
-    background-color: @surface_container;
     color: @primary;
     border-radius: 14px;
-    padding: 5 8 5 8
+    margin-right: 3px;
 }
 
 #custom-exit {
-    padding: 5 13 5 10
+    padding-right: 8px;
 }
 
 #pulseaudio:hover,

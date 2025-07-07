@@ -4,9 +4,7 @@
   font:   "Adwaita Sans Medium 11";
 
   bg1     : @surface;
-  bg2     : @surface-bright;
-  fg0     : @on-surface;
-  fg1     : @on-surface-variant;
+  fg0     : @inverse-surface;
   red     : @error;
   blue    : @primary;
 
@@ -57,7 +55,7 @@ icon-search {
 
 textbox {
   padding          : 4px 8px;
-  background-color : @bg2;
+  background-color : @bg1;
 }
 
 listview {

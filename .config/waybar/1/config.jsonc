@@ -3,7 +3,7 @@
     "spacing": 4,
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["tray", "hyprland/language", "mpris", "pulseaudio", "custom/exit"],
+    "modules-right": ["group/tray", "hyprland/language", "mpris", "pulseaudio", "custom/exit"],
     "margin-top": 4,
     "margin-left": 4,
     "margin-right": 4,
