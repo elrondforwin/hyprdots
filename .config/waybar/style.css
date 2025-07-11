@@ -61,7 +61,7 @@ button {
 #workspaces button.urgent {
     background-color: @error;
     color: @surface_container;
-    border-radius: 5px
+    border-radius: 14px
 }
 
 #clock {

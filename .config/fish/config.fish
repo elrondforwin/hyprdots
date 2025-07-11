@@ -136,7 +136,6 @@ alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
 #-----------------END-CACHYOS-FISH-CONFIG----------------#
 
 export EDITOR="vscodium"
-
 function y
     set tmp (mktemp -t "yazi-cwd.XXXXXX")
     yazi $argv --cwd-file="$tmp"
@@ -172,5 +171,7 @@ function cevirmp4
 end
 
 alias reloadwaybar="pkill waybar && waybar & disown"
-alias vim="nvim"
 alias yay="paru"
+alias vim="nvim"
+alias vi="vim"
+alias v="vim"

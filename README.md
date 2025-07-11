@@ -49,7 +49,7 @@ fisher
 qt6ct
 bibata-cursor-theme-bin
 matugen
-wallust
+python-pywal16
 nemo
 nemo-fileroller
 mission-center
@@ -76,7 +76,7 @@ gnome-disk-utility
 ```
 ### Text Editor
 ```
-vscodium
+code
 ```
 ### Discord Client
 ```
