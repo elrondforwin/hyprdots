@@ -53,6 +53,7 @@ python-pywal16
 nemo
 nemo-fileroller
 mission-center
+spicetify-cli
 ```
 #### Fisher packages
 **for prompt configration**
@@ -92,3 +93,24 @@ obsidian
 ```
 libre-menu-editor
 ```
+
+### Guide to apply spicetify matugen theme
+
+1. install and configure spicetify correctly.
+
+2. Download my dotfiles and put spicetify files to the correct location.
+
+3. Run these commands
+
+```
+spicetify config current_theme Ziro
+spicetify config color_scheme blue-dark
+spicetify config custom_apps marketplace
+```
+
+4. You have to press CTRL + Shift + R to reload Spotify.
+
+> [!NOTE]
+> You can't (and shouldn't) change your theme through marketplace with this config but you can use extensions and other stuff.
+
+> If you want to change your theme through marketplace (matugen won't work) run ``spicetify config current_theme marketplace``
