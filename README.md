@@ -55,7 +55,7 @@ nemo-fileroller
 mission-center
 spicetify-cli
 ```
-#### Fisher packages
+### Fisher packages
 **for prompt configration**
 ```
 ilancosman/tide@v6
@@ -94,9 +94,11 @@ obsidian
 libre-menu-editor
 ```
 
+----
+
 ### Guide to apply spicetify matugen theme
 
-1. install and configure spicetify correctly.
+1. Install and apply spicetify correctly.
 
 2. Download my dotfiles and put spicetify files to the correct location.
 
@@ -108,7 +110,7 @@ spicetify config color_scheme blue-dark
 spicetify config custom_apps marketplace
 ```
 
-4. You have to press CTRL + Shift + R to reload Spotify.
+4. Done! You have to press CTRL + Shift + R to reload Spotify when you change your wallpaper.
 
 > [!NOTE]
 > You can't (and shouldn't) change your theme through marketplace with this config but you can use extensions and other stuff.
