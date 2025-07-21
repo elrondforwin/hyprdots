@@ -47,7 +47,7 @@ ffmpeg
 expac
 fisher
 qt6ct
-bibata-cursor-theme-bin
+xcursor-breeze
 matugen
 python-pywal16
 nemo
@@ -110,7 +110,7 @@ spicetify config color_scheme blue-dark
 spicetify config custom_apps marketplace
 ```
 
-4. Done! You have to press CTRL + Shift + R to reload Spotify when you change your wallpaper.
+4. Done! You have to type ``spicetify apply`` to reload Spotify when you change your wallpaper. (I don't want to automate this via scripts since it can behave bad. Manually reloading it generally works better)
 
 > [!NOTE]
 > You can't (and shouldn't) change your theme through marketplace with this config but you can use extensions and other stuff.
