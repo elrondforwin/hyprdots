@@ -30,7 +30,7 @@ hyprshot
 kitty
 waybar
 pulsemixer
-swaync
+dunst
 xwaylandvideobridge
 rofi-wayland
 rofi-emoji
@@ -46,7 +46,8 @@ eza
 ffmpeg
 expac
 fisher
-qt6ct
+qt6ct-kde
+darkly-bin
 xcursor-breeze
 matugen
 python-pywal16

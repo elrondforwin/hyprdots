@@ -27,9 +27,9 @@ output_path = '~/.config/gtk-3.0/colors.css'
 input_path = '~/.config/matugen/templates/gtk-colors.css'
 output_path = '~/.config/gtk-4.0/colors.css'
 
-[templates.qt6ct]
-input_path = '~/.config/matugen/templates/qtct-colors.conf'
-output_path = '~/.config/qt6ct/colors/generated.conf'
+[templates.qt6-kde]
+input_path = '~/.config/matugen/templates/matugen.colors'
+output_path = '~/.local/share/color-schemes/matugen.colors'
 
 [templates.yazi]
 input_path = '~/.config/matugen/templates/yazi-colors.toml'
@@ -47,3 +47,12 @@ output_path = '~/.config/vesktop/themes/midnight-discord.css'
 [templates.folder]
 input_path = '~/.config/matugen/templates/folder-color.txt'
 output_path = '~/.config/matugen/papirus-folders/folder-color.txt'
+
+[templates.spicetify]
+input_path = '~/.config/matugen/templates/color.ini'
+output_path = '~/.config/spicetify/Themes/Ziro/color.ini'
+
+[templates.dunst]
+input_path = '~/.config/matugen/templates/dunstrc'
+output_path = '~/.config/dunst/dunstrc'
+post_hook = 'pkill dunst'
