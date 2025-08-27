@@ -7,6 +7,10 @@
 > [!IMPORTANT]  
 > No guarantee it will work on your machine — works on mine, but should work on yours too.
 
+> !IMPORTANT
+> This branch is used for my personal dotfiles.
+> Not ready for use! But you can always steal my settings :p
+
 ---
 
 > [!NOTE]
@@ -53,7 +57,6 @@ matugen
 python-pywal16
 nemo
 nemo-fileroller
-mission-center
 spicetify-cli
 ```
 ### Fisher packages
