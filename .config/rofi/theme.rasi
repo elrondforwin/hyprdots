@@ -1,9 +1,9 @@
 @import "colors.rasi"
 
 * {
-  font:   "Adwaita Sans Medium 11";
+  font:   "JetBrainsMono NFP Bold 12";
 
-  bg1     : @surface;
+  bg1     : @surface-container-lowest;
   fg0     : @inverse-surface;
   red     : @error;
   blue    : @primary;
@@ -32,15 +32,17 @@ window {
   background-color: @bg1;
   border: 2px;
   border-color: @accent;
-  border-radius: 12px;
+  border-radius: 0px;
+  padding: 10px;
 }
 
 inputbar {
+  margin   : 0 0 0 0;
   spacing  : 8px;
-  padding  : 4px 8px;
+  padding  : 4px 4px;
   children : [ icon-search, entry ];
 
-  background-color: @bg1;
+  background-color: @surface;
 }
 
 icon-search, entry, element-icon, element-text {
@@ -60,7 +62,7 @@ textbox {
 
 listview {
   padding      : 4px 0px;
-  lines        : 12;
+  lines        : 8;
   columns      : 1;
   scrollbar    : true;
   fixed-height : false;
@@ -85,8 +87,7 @@ element alternate active {
 }
 
 element selected {
-  text-color       : @bg1;
-  background-color : @blue;
+  text-color       : @accent;
 }
 
 element selected urgent {
@@ -94,7 +95,7 @@ element selected urgent {
 }
 
 element-icon {
-  size: 0.8em;
+  size: 1.6em;
 }
 
 element-text {

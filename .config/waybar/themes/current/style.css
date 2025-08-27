@@ -1,0 +1,152 @@
+@import 'colors.css';
+
+* {
+    font-family: "Adwaita Sans Medium 11";
+    font-size: 16px;
+    min-height: 0;
+    font-weight: bold;
+}
+
+window#waybar {
+    background: transparent;
+    background-color: transparent;
+    color: transparent;
+    transition-property: background-color;
+    transition-duration: 0.1s;
+    margin: 0;
+    border-radius: 0px
+}
+
+button {
+    box-shadow: inset 0 -3px transparent;
+    border: none;
+    border-radius: 0;
+}
+
+#workspaces {
+    margin: 5 0 5 0;
+    border-radius: 14px;
+}
+
+#workspaces button {
+    background: @surface_container_low;
+    border-radius: 14px;  
+    color: @primary;
+    padding: 0 4px;
+    margin: 0 2px
+}
+
+.modules-left {
+    background-color: @surface_container;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 16px;
+}
+
+#workspaces button:hover {
+    border-radius: 14px;  
+    background-color: @surface_container_high
+}
+
+#workspaces button.focused {
+    color: @primary;
+}
+#workspaces button.active {
+    background-color: @primary;
+    color: @surface_container;
+    border-radius: 14px;
+    padding: 0 10 0 10
+}
+
+#workspaces button.urgent {
+    background-color: @error;
+    color: @surface_container;
+    border-radius: 14px
+}
+
+#clock {
+    background-color: @surface_container;
+    color: @primary;
+    border-radius: 14px;
+    padding: 0 12 0 12
+}
+
+#clock:hover {
+    background-color: @surface_container_high;
+}
+
+#clock.date {
+    color: @on_background;
+}
+
+/*
+
+
+.modules-center {
+    color: @primary;
+    background: @surface_container;
+    padding: 5px;
+    padding-left: 4px;
+    padding-right: 4px;
+    border-radius: 16px;
+    border: 2px solid @primary;
+}
+
+.modules-right {
+    background: @surface_container;
+    padding: 0 5 0 5;
+    border-radius: 16px;
+    border: 2px solid @primary;
+}
+*/
+
+
+#pulseaudio,
+#mpris,
+#custom-exit,
+#language {
+    background-color: @surface_container;
+    color: @primary;
+    border-radius: 14px;
+    padding: 5 10 5 10
+}
+
+#tray {
+    background-color: @surface_container;
+    color: @primary;
+    border-radius: 14px;
+    padding: 5 8 5 8
+}
+
+#custom-exit {
+    padding: 5 13 5 10
+}
+
+#pulseaudio:hover,
+#mpris:hover,
+#custom-exit:hover,
+#language:hover {
+    background-color: @surface_container_high;
+}
+
+#pulseaudio:active,
+#mpris:active,
+#custom-exit:active,
+#language:active {
+    background-color: #fff;
+    color: #fff;
+}
+
+
+/* If workspaces is the leftmost module, omit left margin
+.modules-left>widget:first-child>#workspaces {
+    margin-left: 0;
+
+}
+ */
+
+/* If workspaces is the rightmost module, omit right margin
+.modules-right>widget:last-child>#workspaces {
+    margin-right: 0;
+}
+ */

@@ -1,6 +1,5 @@
 #-----------------BEGIN-CACHYOS-FISH-CONFIG----------------#
 ## Set values
-## Run fastfetch as welcome message
 function fish_greeting
 end
 
@@ -135,7 +134,9 @@ alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
 
 #-----------------END-CACHYOS-FISH-CONFIG----------------#
 
-export EDITOR="vscodium"
+zoxide init fish | source
+alias cd="z"
+
 function y
     set tmp (mktemp -t "yazi-cwd.XXXXXX")
     yazi $argv --cwd-file="$tmp"
@@ -175,3 +176,7 @@ alias yay="paru"
 alias vim="nvim"
 alias vi="vim"
 alias v="vim"
+
+alias code="code --enable-features=UseOzonePlatform --ozone-platform=wayland"
+
+export TERMINAL=foot

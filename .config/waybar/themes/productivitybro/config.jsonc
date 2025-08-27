@@ -1,0 +1,53 @@
+{
+    "position": "top",
+    "spacing": 2,
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["tray", "cpu", "memory", "hyprland/language", "pulseaudio", "custom/exit"],
+    "margin-top": 0,
+    "margin-left": 0,
+    "margin-right": 0,
+    "margin-bottom": 0,
+
+    "tray": {
+      "icon-size": 21,
+      "spacing": 10
+    },
+
+    "clock": {
+        "format": " {:%H:%M}",
+        "format-alt": " {:%A, %B %d}",
+        "on-click": "mode",
+        "tooltip": false
+    },
+    
+    "cpu": {
+        "interval": 5,
+        "format": " {usage}%",
+        "max-length": 10
+    },
+    
+    "memory": {
+        "interval": 5,
+        "format": " {used:0.1f}G/{total:0.1f}G"
+    },
+
+    "pulseaudio": {
+        "format": " {volume}%",
+        "format-muted": "",
+        "on-click": "kitty --override font_size=12 --title pulsemixer -e pulsemixer"
+    },
+ 
+    "custom/exit": {
+        "format": "",
+        "on-click": "~/.config/rofi/scripts/powermenu.sh",
+        "on-click-right": "hyprlock"
+    },
+
+    "hyprland/language": {
+        "format": "\uf11c {}",
+        "format-en": "us",
+        "format-tr": "trq",
+        "on-click": "hyprctl switchxkblayout vxe-v87-vxe-v87 next"
+    }
+}
