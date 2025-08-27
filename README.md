@@ -1,12 +1,10 @@
 # My Current Hyprland Dotfiles
-
-#### A simple config that just works
-
 ---
 
 > [!IMPORTANT]  
 > No guarantee it will work on your machine — works on mine, but should work on yours too.
-
+> [!IMPORTANT]
+> This repository is not intended for out-of-the-box use. It is public so that others may use it as a reference.
 ---
 
 > [!NOTE]
@@ -111,7 +109,7 @@ spicetify config color_scheme blue-dark
 spicetify config custom_apps marketplace
 ```
 
-4. Done! You have to type ``spicetify apply`` to reload Spotify when you change your wallpaper. (I don't want to automate this via scripts since it can behave bad. Manually reloading it generally works better)
+4. Done! You have to type ``spicetify apply`` to reload Spotify when you change your wallpaper. (I don't want to automate this via scripts since it can behave badly. Manually reloading it generally works better)
 
 > [!NOTE]
 > You can't (and shouldn't) change your theme through marketplace with this config but you can use extensions and other stuff.
