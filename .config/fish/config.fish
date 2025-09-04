@@ -178,5 +178,3 @@ alias vi="vim"
 alias v="vim"
 
 alias code="code --enable-features=UseOzonePlatform --ozone-platform=wayland"
-
-export TERMINAL=foot

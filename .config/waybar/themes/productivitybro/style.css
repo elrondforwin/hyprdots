@@ -71,6 +71,7 @@ button {
 }
 
 #pulseaudio,
+#mpd,
 #mpris,
 #custom-exit,
 #memory,
@@ -93,6 +94,7 @@ button {
 }
 
 #pulseaudio:hover,
+#mpd:hover,
 #memory:hover,
 #mpris:hover,
 #cpu:hover,
