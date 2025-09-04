@@ -73,7 +73,9 @@ zen-browser
 ```
 ### Music Player
 ```
-spotify-launcher
+rmpc
+mpc
+mpd
 ```
 ### Disk Utility
 ```
