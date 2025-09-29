@@ -28,10 +28,13 @@ pkill dunst
 ln -sf "$ACTIVE_DIR/colors.css" "$CONFIG_DIR/waybar/colors.css"
 pkill waybar && waybar &
 disown
+# neovim theme
+ln -sf "$ACTIVE_DIR/set_theme.lua" "$CONFIG_DIR/nvim/lua/plugins/set_theme.lua"
 
 # apply wallpaper
 swww img "$ACTIVE_DIR/wallpaper.png"
 
+bash /home/$USER/.local/share/icons/papirus-folders.sh -t Papirus-Dark -C cat-mocha-sky
+
 # notify user
 notify-send "$THEME applied."
-

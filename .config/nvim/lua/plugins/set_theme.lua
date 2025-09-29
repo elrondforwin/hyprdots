@@ -1,0 +1,1 @@
+/home/elrond/.themes/Catppuccin-Mauve/set_theme.lua
