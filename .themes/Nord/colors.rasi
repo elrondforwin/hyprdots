@@ -1,0 +1,52 @@
+* {
+    primary: #88C0D0;               /* nord8 — Primary accent */
+    primary-fixed: #ECEFF4;         /* nord6 — Light fixed */
+    primary-fixed-dim: #88C0D0;     /* nord8 — Same as primary */
+    on-primary: #2E3440;            /* nord0 — Dark text on primary */
+    on-primary-fixed: #2E3440;      /* nord0 */
+    on-primary-fixed-variant: #434C5E; /* nord2 */
+    primary-container: #434C5E;     /* nord2 */
+    on-primary-container: #ECEFF4;  /* nord6 */
+
+    secondary: #81A1C1;             /* nord9 — Secondary accent */
+    secondary-fixed: #E5E9F0;       /* nord5 */
+    secondary-fixed-dim: #81A1C1;   /* nord9 */
+    on-secondary: #3B4252;          /* nord1 */
+    on-secondary-fixed: #2E3440;    /* nord0 */
+    on-secondary-fixed-variant: #4C566A; /* nord3 */
+    secondary-container: #4C566A;   /* nord3 */
+    on-secondary-container: #E5E9F0; /* nord5 */
+
+    tertiary: #B48EAD;              /* nord15 — Tertiary/Purple */
+    tertiary-fixed: #ECEFF4;        /* nord6 */
+    tertiary-fixed-dim: #B48EAD;    /* nord15 */
+    on-tertiary: #434C5E;           /* nord2 */
+    on-tertiary-fixed: #2E3440;     /* nord0 */
+    on-tertiary-fixed-variant: #5E81AC; /* nord10 */
+    tertiary-container: #5E81AC;    /* nord10 */
+    on-tertiary-container: #ECEFF4; /* nord6 */
+
+    error: #BF616A;                 /* nord11 */
+    on-error: #2E3440;              /* nord0 */
+    error-container: #BF616A;       /* nord11 */
+    on-error-container: #ECEFF4;    /* nord6 */
+
+    surface: #2E3440;               /* nord0 */
+    on-surface: #D8DEE9;            /* nord4 */
+    on-surface-variant: #E5E9F0;    /* nord5 */
+    outline: #4C566A;               /* nord3 */
+    outline-variant: #434C5E;       /* nord2 */
+    shadow: #000000;
+    scrim: #000000;
+    inverse-surface: #D8DEE9;       /* nord4 */
+    inverse-on-surface: #434C5E;    /* nord2 */
+    inverse-primary: #88C0D0;       /* nord8 */
+
+    surface-dim: #2E3440;           /* nord0 */
+    surface-bright: #3B4252;        /* nord1 */
+    surface-container-lowest: #2E3440; /* nord0 */
+    surface-container-low: #3B4252; /* nord1 */
+    surface-container: #434C5E;     /* nord2 */
+    surface-container-high: #4C566A; /* nord3 */
+    surface-container-highest: #5E81AC; /* nord10 */
+}

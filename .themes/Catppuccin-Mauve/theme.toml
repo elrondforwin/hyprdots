@@ -1,0 +1,165 @@
+# : Manager [[[
+
+[mgr]
+cwd = { fg = "#cdd6f4" }  # text
+
+# Tab
+tab_active = { fg = "#11111b", bg = "#cba6f7", bold = true }       # crust / mauve
+tab_inactive = { fg = "#b4befe", bg = "#11111b" }                 # lavender / crust
+tab_width = 1
+
+# Find
+find_keyword = { fg = "#f38ba8", bold = true, italic = true, underline = true }  # red
+find_position = { fg = "#f38ba8", bold = true, italic = true }                  # red
+
+# Marker
+marker_copied = { fg = "#f5c2e7", bg = "#f5c2e7" }      # pink
+marker_cut = { fg = "#a6e3a1", bg = "#a6e3a1" }         # green
+marker_marked = { fg = "#f38ba8", bg = "#f38ba8" }      # red
+marker_selected = { fg = "#fab387", bg = "#fab387" }    # peach
+
+# Count
+count_copied = { fg = "#11111b", bg = "#a6e3a1" }       # crust / green
+count_cut = { fg = "#11111b", bg = "#a6e3a1" }          # crust / green
+count_selected = { fg = "#11111b", bg = "#fab387" }     # crust / peach
+
+# Border
+border_symbol = "│"
+border_style  = { fg = "#cba6f7" }                      # mauve
+
+# : ]]]
+
+
+# : Status [[[
+
+[status]
+separator_open = "🭁"
+separator_close = "🭠"
+separator_style = { bg = "#11111b", fg = "#f9e2af" }   # crust / yellow
+
+[mode]
+# Mode
+normal_main = { bg = "#cba6f7", fg = "#11111b", bold = true }   # mauve / crust
+normal_alt  = { bg = "#6c7086", fg = "#cdd6f4" }               # subtext1 / text
+
+# Select mode
+select_main = { bg = "#89b4fa", fg = "#181825", bold = true }   # blue / mantle
+select_alt  = { bg = "#6c7086", fg = "#cdd6f4" }               # subtext1 / text
+
+# Unset mode
+unset_main = { bg = "#f5c2e7", fg = "#1e1e2e", bold = true }    # pink / surface0
+unset_alt  = { bg = "#6c7086", fg = "#cdd6f4" }                # subtext1 / text
+
+# Progress
+progress_label = { bold = true }
+progress_normal = { fg = "#cba6f7", bg = "#181825" }            # mauve / mantle
+progress_error = { fg = "#f38ba8", bg = "#181825" }             # red / mantle
+
+# Permissions
+permissions_t = { fg = "#94e2d5" }      # teal
+permissions_w = { fg = "#f5c2e7" }      # pink
+permissions_x = { fg = "#f38ba8" }      # red
+permissions_r = { fg = "#94e2d5" }      # teal
+permissions_s = { fg = "#cba6f7" }      # mauve
+
+# : ]]]
+
+
+# : Select [[[
+
+[select]
+border = { fg = "#cba6f7" }             # mauve
+active = { fg = "#fab387", bold = true } # peach
+inactive = {}
+
+# : ]]]
+
+
+# : Input [[[
+
+[input]
+border = { fg = "#cba6f7" }             # mauve
+value = { fg = "#cdd6f4" }              # text
+
+# : ]]]
+
+
+# : Completion [[[
+
+[completion]
+border = { fg = "#cba6f7", bg = "#11111b" }  # mauve / crust
+
+# : ]]]
+
+
+# : Tasks [[[
+
+[tasks]
+border = { fg = "#cba6f7" }             # mauve
+title = {}
+hovered = { fg = "#a6e3a1", underline = true }  # green
+
+# : ]]]
+
+
+# : Which [[[
+
+[which]
+cols = 3
+mask = { bg = "#181825" }               # mantle
+cand = { fg = "#cba6f7" }               # mauve
+rest = { fg = "#11111b" }               # crust
+desc = { fg = "#cdd6f4" }               # text
+separator = " ▶ "
+separator_style = { fg = "#cdd6f4" }    # text
+
+# : ]]]
+
+
+# : Help [[[
+
+[help]
+on = { fg = "#cdd6f4" }                 # text
+run = { fg = "#cdd6f4" }                # text
+footer = { fg = "#181825", bg = "#89b4fa" }  # mantle / blue
+
+# : ]]]
+
+
+# : Notify [[[
+
+[notify]
+title_info = { fg = "#fab387" }         # peach
+title_warn = { fg = "#cba6f7" }         # mauve
+title_error = { fg = "#f38ba8" }        # red
+
+# : ]]]
+
+
+# : File-specific styles [[[
+
+[filetype]
+
+rules = [
+    # Images
+    { mime = "image/*", fg = "#cba6f7" },           # mauve
+
+    # Media
+    { mime = "{audio,video}/*", fg = "#f9e2af" },   # yellow
+
+    # Archives
+    { mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "#f5c2e7" },  # pink
+
+    # Documents
+    { mime = "application/{pdf,doc,rtf}", fg = "#a6e3a1" },  # green
+
+    # Special files
+    { name = "*", is = "orphan", bg = "#f38ba8" },  # red
+    { name = "*", is = "exec", fg = "#b4befe" },    # lavender
+
+    # Fallback
+    { name = "*", fg = "#cdd6f4" },                 # text
+    { name = "*/", fg = "#cba6f7" },                # mauve
+]
+
+# : ]]]
