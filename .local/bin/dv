@@ -1,0 +1,24 @@
+#!/bin/bash
+
+case "$1" in
+"")
+  echo "Please specify an URL"
+  ;;
+*)
+  yt-dlp \
+    --format "bestvideo[height<=1080][ext=mp4]+bestaudio[ext=m4a]/best[height<=1080][ext=mp4]" \
+    --output "temp.mp4" \
+    "${1}"
+  ;;
+esac
+
+echo "Do you want to convert your video to davinci resolve format?: (y/N)"
+read answer
+if [[ "$answer" == "yes" || "$answer" == "y" ]]; then
+  ffmpeg -i temp.mp4 -vcodec dnxhd -acodec pcm_s16le -s 1920x1080 -r 30000/1001 -b:v 36M -pix_fmt yuv422p -f mov "resolve_$(date +%Y%m%d_%H%M%S).mov"
+  rm temp.mp4
+elif [[ "$answer" == "no" || "$answer" == "n" ]]; then
+  mv temp.mp4 resolve_$(date +%Y%m%d_%H%M%S).mp4
+else
+  mv temp.mp4 resolve_$(date +%Y%m%d_%H%M%S).mp4
+fi

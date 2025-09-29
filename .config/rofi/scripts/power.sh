@@ -1,9 +1,9 @@
 #!/bin/bash
-#    ___                    
+#    ___
 #   / _ \___ _    _____ ____
 #  / ___/ _ \ |/|/ / -_) __/
-# /_/   \___/__,__/\__/_/   
-#                           
+# /_/   \___/__,__/\__/_/
+#
 
 terminate_clients() {
   TIMEOUT=5
@@ -75,3 +75,4 @@ if [[ "$1" == "hibernate" ]]; then
   sleep 1
   systemctl hibernate
 fi
+

@@ -33,13 +33,13 @@ window {
   border: 2px;
   border-color: @accent;
   border-radius: 0px;
-  padding: 10px;
+  padding: 5px;
 }
 
 inputbar {
   margin   : 0 0 0 0;
-  spacing  : 8px;
-  padding  : 4px 4px;
+  spacing  : 4px;
+  padding  : 2px 2px;
   children : [ icon-search, entry ];
 
   background-color: @surface;
@@ -56,7 +56,7 @@ icon-search {
 }
 
 textbox {
-  padding          : 4px 8px;
+  padding          : 0px 0px;
   background-color : @bg1;
 }
 
@@ -71,7 +71,7 @@ listview {
 
 element {
   padding : 4px 8px;
-  spacing : 8px;
+  spacing : 4px;
 }
 
 element normal urgent {
@@ -87,7 +87,8 @@ element alternate active {
 }
 
 element selected {
-  text-color       : @accent;
+  text-color       : @bg1;
+  background-color : @accent;
 }
 
 element selected urgent {
@@ -95,7 +96,7 @@ element selected urgent {
 }
 
 element-icon {
-  size: 1.6em;
+  size: 1.2em;
 }
 
 element-text {
