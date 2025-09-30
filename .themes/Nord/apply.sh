@@ -30,6 +30,9 @@ pkill waybar && waybar &
 disown
 # neovim theme
 ln -sf "$ACTIVE_DIR/set_theme.lua" "$CONFIG_DIR/nvim/lua/plugins/set_theme.lua"
+# zen browser theme
+ln -sf "$ACTIVE_DIR/zen-browser/userChrome.css" "/home/elrond/.zen/x9b0kr7f.Default (release)/chrome/"
+ln -sf "$ACTIVE_DIR/zen-browser/userContent.css" "/home/elrond/.zen/x9b0kr7f.Default (release)/chrome/"
 
 # apply wallpaper
 swww img "$ACTIVE_DIR/wallpaper.png"
