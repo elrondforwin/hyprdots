@@ -131,8 +131,8 @@ ForegroundPositive=#a6e3a1
 ForegroundVisited=#74c7ec
 
 [General]
-ColorScheme=Matugen
-Name=Matugen
+ColorScheme=Theme
+Name=Theme
 
 [Appearance]
 color_scheme=Matugen
