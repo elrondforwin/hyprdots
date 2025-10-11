@@ -1,0 +1,52 @@
+* {
+    primary: #7aa2f7;               /* Blue — Primary accent */
+    primary-fixed: #e0af68;         /* Yellow fixed */
+    primary-fixed-dim: #7aa2f7;     /* Same as primary */
+    on-primary: #1a1b26;            /* Darkest background — Dark text on primary */
+    on-primary-fixed: #1a1b26;      /* Darkest background */
+    on-primary-fixed-variant: #1a1b26; /* Darkest background */
+    primary-container: #1a1b26;     /* Darkest background */
+    on-primary-container: #e0af68;  /* Light contrast */
+
+    secondary: #7dcfff;             /* Sky — Secondary accent */
+    secondary-fixed: #a9b1d6;       /* Text */
+    secondary-fixed-dim: #7dcfff;   /* Sky */
+    on-secondary: #1a1b26;          /* Darkest background */
+    on-secondary-fixed: #1a1b26;    /* Darkest background */
+    on-secondary-fixed-variant: #1a1b26; /* Darkest background */
+    secondary-container: #1a1b26;   /* Darkest background */
+    on-secondary-container: #a9b1d6; /* Text */
+
+    tertiary: #bb9af7;              /* Purple — Tertiary */
+    tertiary-fixed: #e0af68;        /* Light contrast */
+    tertiary-fixed-dim: #bb9af7;    /* Purple */
+    on-tertiary: #1a1b26;           /* Darkest background */
+    on-tertiary-fixed: #1a1b26;     /* Darkest background */
+    on-tertiary-fixed-variant: #1a1b26; /* Darkest background */
+    tertiary-container: #1a1b26;    /* Darkest background */
+    on-tertiary-container: #e0af68; /* Light contrast */
+
+    error: #f7768e;                 /* Red */
+    on-error: #1a1b26;              /* Darkest background */
+    error-container: #f7768e;       /* Red */
+    on-error-container: #e0af68;    /* Light contrast */
+
+    surface: #1a1b26;               /* Darkest background */
+    on-surface: #a9b1d6;            /* Text */
+    on-surface-variant: #a9b1d6;    /* Text */
+    outline: #565f89;               /* Purple */
+    outline-variant: #1a1b26;       /* Darkest background */
+    shadow: #000000;
+    scrim: #000000;
+    inverse-surface: #a9b1d6;       /* Text */
+    inverse-on-surface: #1a1b26;    /* Darkest background */
+    inverse-primary: #7aa2f7;       /* Blue */
+
+    surface-dim: #1a1b26;           /* Darkest background */
+    surface-bright: #1a1b26;        /* Darkest background */
+    surface-container-lowest: #12131B; /* Darkest background */
+    surface-container-low: #1a1b26; /* Darkest background */
+    surface-container: #1a1b26;     /* Darkest background */
+    surface-container-high: #1a1b26; /* Darkest background */
+    surface-container-highest: #1a1b26; /* Darkest background */
+}

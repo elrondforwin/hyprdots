@@ -1,7 +1,7 @@
 @import 'colors.css';
 
 * {
-    font-family: "JetBrainsMono NFP";
+    font-family: "JetBrainsMono NF";
     font-size: 16px;
     min-height: 0;
     font-weight: bold;
@@ -80,7 +80,7 @@ button {
 #language {
     background-color: @surface_container_lowest;
     color: @primary;
-    padding: 5 10 5 10
+    padding: 5 7 5 7
 }
 
 #tray {

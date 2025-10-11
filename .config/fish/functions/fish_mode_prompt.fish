@@ -1,2 +1,1 @@
-function fish_mode_prompt
-end
+# Disable default vi prompt

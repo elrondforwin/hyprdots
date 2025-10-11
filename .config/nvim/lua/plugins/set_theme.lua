@@ -1,1 +1,1 @@
-/home/elrond/.themes/Catppuccin-Mauve/set_theme.lua
+/home/elrond/.themes/Tokyo-Night/set_theme.lua

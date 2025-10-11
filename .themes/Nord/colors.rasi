@@ -44,7 +44,7 @@
 
     surface-dim: #2E3440;           /* nord0 */
     surface-bright: #3B4252;        /* nord1 */
-    surface-container-lowest: #2E3440; /* nord0 */
+    surface-container-lowest: #3B4252; /* nord0 */
     surface-container-low: #3B4252; /* nord1 */
     surface-container: #434C5E;     /* nord2 */
     surface-container-high: #4C566A; /* nord3 */

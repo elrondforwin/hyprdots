@@ -13,6 +13,11 @@ ln -sf "$ACTIVE_DIR/gtk-4.0" "$CONFIG_DIR"
 # foot terminal colors
 ln -sf "$ACTIVE_DIR/foot/16-colors.ini" "$CONFIG_DIR/foot/16-colors.ini"
 ln -sf "$ACTIVE_DIR/foot/foot-colors.ini" "$CONFIG_DIR/foot/foot-colors.ini"
+# kitty colors
+ln -sf "$ACTIVE_DIR/kitty/16-colors.conf" "$CONFIG_DIR/kitty/16-colors.conf"
+ln -sf "$ACTIVE_DIR/kitty/bg-colors.conf" "$CONFIG_DIR/kitty/bg-colors.conf"
+# reload kitty
+pkill -SIGUSR1 kitty
 # discord colors
 ln -sf "$ACTIVE_DIR/discord.css" "$CONFIG_DIR/vesktop/themes/active.css"
 # hypr colors
@@ -37,6 +42,7 @@ ln -sf "$ACTIVE_DIR/zen-browser/userContent.css" "/home/elrond/.zen/x9b0kr7f.Def
 # apply wallpaper
 swww img "$ACTIVE_DIR/wallpaper.png"
 
+# change folder style
 bash /home/$USER/.local/share/icons/papirus-folders.sh -t Papirus-Dark -C cat-mocha-sky
 
 # notify user

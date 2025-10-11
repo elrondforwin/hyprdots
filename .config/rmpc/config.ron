@@ -4,7 +4,7 @@
 (
     address: "127.0.0.1:6600",
     password: None,
-    theme: None,
+    theme: "default",
     cache_dir: None,
     on_song_change: None,
     volume_step: 5,
@@ -25,6 +25,30 @@
         disabled_protocols: ["http://", "https://"],
         vertical_align: Center,
         horizontal_align: Center,
+    ),
+    cava: (
+        framerate: 60,
+        input: (
+            method: Fifo,
+            source: "/tmp/mpd.fifo",
+            sample_rate: 44100,
+            channels: 2,
+            sample_bits: 16,
+        ),
+        bar_symbols: ['▁','▂','▃','▄','▅','▆','▇','█'],
+        bar_width: 4,
+        bar_spacing: 1,
+        orientation: Bottom,
+        smoothing: (
+            noise_reduction: 77,
+        ),
+        // Catppuccin Mocha renkler
+        color: (
+            foreground: "#f38ba8",
+            background: "#1e1e2e",
+            gradient: true,
+            gradient_colors: ["#89b4fa", "#cba6f7", "#f38ba8"], // blue -> mauve -> pink
+        ),
     ),
     keybinds: (
         global: {
@@ -124,7 +148,27 @@
             name: "Queue",
             pane: Split(
                 direction: Horizontal,
-                panes: [(size: "40%", pane: Pane(AlbumArt)), (size: "60%", pane: Pane(Queue))],
+                panes: [
+                    (
+                    size: "40%", 
+                    borders: "RIGHT",
+                    pane: Pane(AlbumArt)
+                    ),
+                    
+                    
+                    (size: "60%", pane: Split(
+                        direction: Vertical,
+                        panes: [
+                            (
+                            size: "60%",
+                            borders: "BOTTOM",
+                            pane: Pane(Queue)
+                             
+                             ),
+                            (size: "40%", pane: Pane(Cava)),
+                        ],
+                    )),
+                ],
             ),
         ),
         (
@@ -132,21 +176,26 @@
             pane: Pane(Directories),
         ),
         (
-            name: "Playlists",
-            pane: Pane(Playlists),
-        ),
-        (
             name: "Artists",
             pane: Pane(Artists),
+        ),
+        (
+            name: "Album Artists",
+            pane: Pane(AlbumArtists),
         ),
         (
             name: "Albums",
             pane: Pane(Albums),
         ),
         (
+            name: "Playlists",
+            pane: Pane(Playlists),
+        ),
+        (
             name: "Search",
             pane: Pane(Search),
         ),
+
     ],
 )
 

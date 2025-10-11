@@ -1,6 +1,6 @@
 {
     "position": "top",
-    "spacing": 2,
+    "spacing": 0,
     "modules-left": ["hyprland/workspaces", "mpd"],
     "modules-center": ["clock"],
     "modules-right": ["tray", "cpu", "memory", "hyprland/language", "pulseaudio", "custom/exit"],
@@ -15,46 +15,47 @@
     },
 
     "clock": {
-        "format": " {:%H:%M}",
-        "format-alt": " {:%A, %B %d}",
+        "format": "[ {:%H:%M} ]",
+        "format-alt": "[ {:%A, %B %d} ]",
         "on-click": "mode",
         "tooltip": false
     },
     
     "cpu": {
         "interval": 5,
-        "format": " {usage}%",
-        "max-length": 10
+        "format": "[ c: {usage}% ]",
+        "max-length": 15
     },
     
     "memory": {
         "interval": 5,
-        "format": " {used:0.1f}G/{total:0.1f}G"
+        "format": "[ m: {used:0.1f}G/{total:0.1f}G ]"
     },
 
     "pulseaudio": {
-        "format": " {volume}%",
-        "format-muted": "",
-        "on-click": "kitty --override font_size=12 --title pulsemixer -e pulsemixer"
+        "format": "[ v: {volume}% ]",
+        "format-muted": "vol muted",
+        "on-click": "kitty -T pulsemixer pulsemixer"
     },
  
     "custom/exit": {
-        "format": "",
+        "format": "[ pw ]",
         "on-click": "~/.config/rofi/scripts/powermenu.sh",
         "on-click-right": "hyprlock"
     },
 
     "hyprland/language": {
-        "format": "\uf11c {}",
+        "format": "[ kb: {} ]",
         "format-en": "us",
         "format-tr": "trq",
         "on-click": "hyprctl switchxkblayout vxe-v87-vxe-v87 next"
     },
 
     "mpd": {
-        "format": " {title}",
+        "format": "[ {title} ]",
         "format-disconnected": "",
         "format-stopped": "",
+        "max-length": 50,
         "interval": 10,
         "consume-icons": {
             "on": " " // Icon shows only when "consume" is on

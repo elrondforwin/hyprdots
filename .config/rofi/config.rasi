@@ -1,5 +1,6 @@
 
-@theme "~/.config/rofi/theme.rasi"
+// @theme "~/.config/rofi/theme.rasi"
+@theme "~/.config/rofi/maintheme.rasi"
 
 configuration {
 	modi: "drun,run,window,emoji";
