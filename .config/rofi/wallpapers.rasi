@@ -1,0 +1,67 @@
+@import "colors.rasi"
+
+* {
+  bg1     : @surface-container-lowest;
+  fg0     : @inverse-surface;
+  red     : @error;
+  blue    : @primary;
+
+  accent: @blue;
+  urgent: @red;
+
+  background-color : transparent;
+  text-color       : @fg0;
+
+  margin  : 0;
+  padding : 0;
+  spacing : 0;
+}
+
+element-icon, element-text, scrollbar {
+  cursor: pointer;
+}
+
+window {
+  fullscreen: false;
+  background-color: @bg1;
+  border: 2px;
+  border-color: @accent;
+  border-radius: 10px;
+  padding: 4px 4px;
+  children: [ listview ];
+}
+
+inputbar {
+  enabled: false;
+}
+
+listview {
+  flow: horizontal;
+  lines        : 1;
+  columns      : 4;
+  spacing      : 4;
+  fixed-columns: true;
+  scrollbar    : false;
+  fixed-height : false;
+  
+  children: [ element ];
+}
+
+element {
+	orientation: vertical;
+  padding: 0em;
+
+  children: [ element-icon ];
+}
+
+element selected {
+  text-color       : @bg1;
+  background-color : @accent;
+  border-radius: 8;
+}
+
+element-icon {
+	size: 10em;
+	horizontal-align: 0.5;
+	vertical-align: 0.5;
+}

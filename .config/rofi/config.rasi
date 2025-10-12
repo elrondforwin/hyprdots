@@ -3,5 +3,5 @@
 @theme "~/.config/rofi/maintheme.rasi"
 
 configuration {
-	modi: "drun,run,window,emoji";
+	modi: "drun";
 }
