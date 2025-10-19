@@ -1,9 +1,9 @@
 {
     "position": "top",
     "spacing": 8,
-    "modules-left": ["hyprland/workspaces", "mpd"],
+    "modules-left": ["hyprland/workspaces", "hyprland/window"],
     "modules-center": ["clock"],
-    "modules-right": ["tray", "cpu", "memory", "hyprland/language", "pulseaudio", "custom/exit"],
+    "modules-right": ["tray", "mpd", "cpu", "memory", "hyprland/language", "pulseaudio", "custom/exit"],
     "margin-top": 0,
     "margin-left": 0,
     "margin-right": 0,
@@ -49,6 +49,18 @@
         "format-en": "us",
         "format-tr": "trq",
         "on-click": "hyprctl switchxkblayout vxe-v87-vxe-v87 next"
+    },
+
+    "hyprland/window": {
+      "format": "{}",
+      "max-length": 45,
+      "rewrite": {
+        "kitty": "Terminal",
+        "zsh": "Terminal",
+        "~": "Terminal"
+      },
+      "swap-icon-label": false,
+      "icon": true
     },
 
     "mpd": {

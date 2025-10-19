@@ -97,7 +97,7 @@
     --sidebar-shade-color: @sidebar_shade_color;
 
     --secondary-sidebar-bg-color: @secondary_sidebar_bg_color;
-    --secondary-sidebar-fg_color: @secondary_sidebar_fg_color;
+    --secondary-sidebar-fg-color: @secondary_sidebar_fg_color;
     --secondary-sidebar-backdrop-color: @secondary_sidebar_backdrop_color;
     --secondary-sidebar-border-color: @secondary_sidebar_border_color;
     --secondary-sidebar-shade-color: @secondary_sidebar_shade_color;

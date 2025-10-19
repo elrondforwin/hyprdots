@@ -1,1 +1,1 @@
-/home/elrond/.themes/Tokyo-Night/set_theme.lua
+/home/elrond/.themes/Lain/set_theme.lua

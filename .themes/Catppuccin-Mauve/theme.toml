@@ -24,7 +24,7 @@ count_cut = { fg = "#11111b", bg = "#a6e3a1" }          # crust / green
 count_selected = { fg = "#11111b", bg = "#fab387" }     # crust / peach
 
 # Border
-border_symbol = "│"
+border_symbol = " "
 border_style  = { fg = "#cba6f7" }                      # mauve
 
 # : ]]]

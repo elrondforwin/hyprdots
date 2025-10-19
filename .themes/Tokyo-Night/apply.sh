@@ -40,7 +40,7 @@ ln -sf "$ACTIVE_DIR/zen-browser/userChrome.css" "/home/elrond/.zen/x9b0kr7f.Defa
 ln -sf "$ACTIVE_DIR/zen-browser/userContent.css" "/home/elrond/.zen/x9b0kr7f.Default (release)/chrome/"
 
 # apply wallpaper
-swww img "$ACTIVE_DIR/wallpaper.png"
+# swww img "$ACTIVE_DIR/wallpaper.png"
 
 # change folder style
 bash /home/$USER/.local/share/icons/papirus-folders.sh -t Papirus-Dark -C cat-mocha-sapphire

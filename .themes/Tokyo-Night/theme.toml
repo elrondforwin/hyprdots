@@ -24,7 +24,7 @@ count_cut = { fg = "#1a1b26", bg = "#9ece6a" }          # darkest background / g
 count_selected = { fg = "#1a1b26", bg = "#ff9e64" }     # darkest background / orange
 
 # Border
-border_symbol = "│"
+border_symbol = " "
 border_style  = { fg = "#7aa2f7" }                      # blue
 
 # : ]]]

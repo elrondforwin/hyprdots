@@ -1,0 +1,165 @@
+
+/**
+ * @name system24 (tokyo night)
+ * @description a tui-style discord theme. based on tokyo night theme (https://github.com/tokyo-night/tokyo-night-vscode-theme).
+ * @author refact0r
+ * @version 2.0.0
+ * @invite nz87hXyvcy
+ * @website https://github.com/refact0r/system24
+ * @source https://github.com/refact0r/system24/blob/master/theme/system24-tokyo-night.theme.css
+ * @authorId 508863359777505290
+ * @authorLink https://www.refact0r.dev
+*/
+
+/* import theme modules */
+@import url('https://refact0r.github.io/system24/build/system24.css');
+
+body {
+    /* font, change to '' for default discord font */
+    --font: 'JetBrainsMono NF'; /* change to '' for default discord font */
+    --code-font: 'JetBrainsMono NF'; /* change to '' for default discord font */
+    font-weight: 300; /* text font weight. 300 is light, 400 is normal. DOES NOT AFFECT BOLD TEXT */
+    letter-spacing: -0.05ch; /* decreases letter spacing for better readability. recommended on monospace fonts.*/
+
+    /* sizes */
+    --gap: 0px; /* spacing between panels */
+    --divider-thickness: 2px; /* thickness of unread messages divider and highlighted message borders */
+    --border-thickness: 0px; /* thickness of borders around main panels. DOES NOT AFFECT OTHER BORDERS */
+    --border-hover-transition: 0.0s ease; /* transition for borders when hovered */
+
+    /* animation/transition options */
+    --animations: off; /* off: disable animations/transitions, on: enable animations/transitions */
+    --list-item-transition: 0.0s ease; /* transition for list items */
+    --dms-icon-svg-transition: 0.0s ease; /* transition for the dms icon */
+
+    /* top bar options */
+    --top-bar-height: var(--gap); /* height of the top bar (discord default is 36px, old discord style is 24px, var(--gap) recommended if button position is set to titlebar) */
+    --top-bar-button-position: titlebar; /* off: default position, hide: hide buttons completely, serverlist: move inbox button to server list, titlebar: move inbox button to channel titlebar (will hide title) */
+    --top-bar-title-position: hide; /* off: default centered position, hide: hide title completely, left: left align title (like old discord) */
+    --subtle-top-bar-title: on; /* off: default, on: hide the icon and use subtle text color (like old discord) */
+
+    /* window controls */
+    --custom-window-controls: on; /* off: default window controls, on: custom window controls */
+    --window-control-size: 0px; /* size of custom window controls */
+
+    /* dms button options */
+    --custom-dms-icon: off; /* off: use default discord icon, hide: remove icon entirely, custom: use custom icon */
+    --dms-icon-svg-url: url(''); /* icon svg url. MUST BE A SVG. */
+    --dms-icon-svg-size: 90%; /* size of the svg (css mask-size property) */
+    --dms-icon-color-before: var(--icon-secondary); /* normal icon color */
+    --dms-icon-color-after: var(--white); /* icon color when button is hovered/selected */
+    --custom-dms-background: off; /* off to disable, image to use a background image (must set url variable below), color to use a custom color/gradient */
+    --dms-background-image-url: url(''); /* url of the background image */
+    --dms-background-image-size: cover; /* size of the background image (css background-size property) */
+    --dms-background-color: linear-gradient(70deg, var(--blue-2), var(--purple-2), var(--red-2)); /* fixed color/gradient (css background property) */
+
+    /* background image options */
+    --background-image: off; /* off: no background image, on: enable background image (must set url variable below) */
+    --background-image-url: url(''); /* url of the background image */
+
+    /* transparency/blur options */
+    /* NOTE: TO USE TRANSPARENCY/BLUR, YOU MUST HAVE TRANSPARENT BG COLORS. FOR EXAMPLE: --bg-4: hsla(220, 15%, 10%, 0.7); */
+    --transparency-tweaks: off; /* off: no changes, on: remove some elements for better transparency */
+    --remove-bg-layer: off; /* off: no changes, on: remove the base --bg-3 layer for use with window transparency (WILL OVERRIDE BACKGROUND IMAGE) */
+    --panel-blur: off; /* off: no changes, on: blur the background of panels */
+    --blur-amount: 12px; /* amount of blur */
+    --bg-floating: var(--bg-3); /* set this to a more opaque color if floating panels look too transparent. only applies if panel blur is on  */
+
+    /* other options */
+    --small-user-panel: on; /* off: default user panel, on: smaller user panel like in old discord */
+
+    /* unrounding options */
+    --unrounding: on; /* off: default, on: remove rounded corners from panels */
+
+    /* styling options */
+    --custom-spotify-bar: on; /* off: default, on: custom text-like spotify progress bar */
+    --ascii-titles: on; /* off: default, on: use ascii font for titles at the start of a channel */
+    --ascii-loader: system24; /* off: default, system24: use system24 ascii loader, cats: use cats loader */
+
+    /* panel labels */
+    --panel-labels: off; /* off: default, on: add labels to panels */
+    --label-color: var(--text-muted); /* color of labels */
+    --label-font-weight: 500; /* font weight of labels */
+}
+
+/* color options */
+:root {
+    --colors: on; /* off: discord default colors, on: midnight custom colors */
+
+    /* text colors */
+    --text-0: var(--bg-3); /* text on colored elements (e.g. buttons) */
+    --text-1: #c2b092; /* primary UI text (channels, names) */
+    --text-2: #c3af92; /* headings, bold text — slightly brighter for emphasis */
+    --text-3: #c2b092; /* normal message text */
+    --text-4: #ba6e7d; /* interactive elements (channel names, icons) */
+    --text-5: #59313a; /* muted text (timestamps, disabled) */
+
+    /* background and dark colors */
+    --bg-1: #170e10; /* pressed/clicked button background */
+    --bg-2: #392025; /* default button background */
+    --bg-3: #050404; /* sidebar/chat dividers, subtle surfaces */
+    --bg-4: #000000; /* main chat & background — pure void */
+    --hover: hsla(0, 0%, 100%, 0.08);   /* soft hover glow (channels, buttons) */
+    --active: hsla(0, 0%, 100%, 0.16);  /* selected/active state */
+    --active-2: hsla(0, 0%, 100%, 0.22); /* stronger active (e.g. call buttons) */
+    --message-hover: hsla(0, 0%, 0%, 0.08); /* message row hover */
+
+    /* accent colors — now aligned with Lain’s "digital warmth" */
+    --accent-1: #ba6e7d; /* links, mentions, highlights */
+    --accent-2: #c3af92; /* subtle accents (e.g. unread indicators) */
+    --accent-3: #392025; /* accent buttons (join call, etc.) */
+    --accent-4: #59313a; /* accent button hover */
+    --accent-5: #170e10; /* accent button active/pressed */
+    --accent-new: #ba6e7d; /* mute/deafen — keep it soft, not aggressive */
+
+    /* mention & reply backgrounds — dreamy, translucent */
+    --mention: linear-gradient(to right, color-mix(in srgb, #ba6e7d 15%, transparent) 0%, transparent 60%);
+    --mention-hover: linear-gradient(to right, color-mix(in srgb, #ba6e7d 20%, transparent) 0%, transparent 60%);
+    --reply: linear-gradient(to right, color-mix(in srgb, #c2b092 10%, transparent) 0%, transparent 60%);
+    --reply-hover: linear-gradient(to right, color-mix(in srgb, #c2b092 15%, transparent) 0%, transparent 60%);
+
+    /* status indicator colors — softened to match Lain’s analog feel */
+    --online: #c3af92;      /* warm "alive" — like a flickering terminal */
+    --dnd: #ba6e7d;         /* gentle red — not alarming, just "busy" */
+    --idle: #c2b092;        /* soft amber — like standby mode */
+    --streaming: #59313a;   /* deep maroon — mysterious, not flashy */
+    --offline: #59313a;     /* faded presence — like a disconnected node */
+
+    /* border colors */
+    --border-light: hsla(0, 0%, 100%, 0.06);
+    --border: hsla(0, 0%, 100%, 0.1);
+    --border-hover: hsla(0, 0%, 100%, 0.14);
+    --button-border: transparent;
+
+    /* base colors — kept but simplified for consistency */
+    --red-1: #ba6e7d;
+    --red-2: #59313a;
+    --red-3: #392025;
+    --red-4: #170e10;
+    --red-5: #050404;
+
+    /* Other "base" colors are redundant in Lain theme — unify them */
+    --green-1: #c2b092;
+    --green-2: #c3af92;
+    --green-3: #ba6e7d;
+    --green-4: #59313a;
+    --green-5: #050404;
+
+    --blue-1: #c2b092;
+    --blue-2: #c3af92;
+    --blue-3: #ba6e7d;
+    --blue-4: #59313a;
+    --blue-5: #050404;
+
+    --yellow-1: #c2b092;
+    --yellow-2: #c3af92;
+    --yellow-3: #ba6e7d;
+    --yellow-4: #59313a;
+    --yellow-5: #050404;
+
+    --purple-1: #c2b092;
+    --purple-2: #c3af92;
+    --purple-3: #ba6e7d;
+    --purple-4: #59313a;
+    --purple-5: #050404;
+}

@@ -17,7 +17,6 @@ window#waybar {
     border-radius: 0px
 }
 
-
 button {
     box-shadow: inset 0 -3px transparent;
     border: none;
@@ -100,6 +99,13 @@ button {
 #cpu:hover,
 #custom-exit:hover,
 #clock:hover,
+#window:hover,
 #language:hover {
     background-color: @surface_container_low;
+}
+
+#window, window#waybar.solo {
+    background-color: @surface_container_lowest;
+    color: @primary;
+    padding: 0 10 0 10;
 }
