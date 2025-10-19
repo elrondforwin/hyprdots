@@ -106,7 +106,7 @@ body {
 
     /* accent colors — now aligned with Lain’s "digital warmth" */
     --accent-1: #ba6e7d; /* links, mentions, highlights */
-    --accent-2: #c3af92; /* subtle accents (e.g. unread indicators) */
+    --accent-2: #392025; /* subtle accents (e.g. unread indicators) */
     --accent-3: #392025; /* accent buttons (join call, etc.) */
     --accent-4: #59313a; /* accent button hover */
     --accent-5: #170e10; /* accent button active/pressed */
