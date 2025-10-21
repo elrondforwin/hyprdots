@@ -16,6 +16,7 @@ ln -sf "$ACTIVE_DIR/foot/foot-colors.ini" "$CONFIG_DIR/foot/foot-colors.ini"
 # kitty colors
 ln -sf "$ACTIVE_DIR/kitty/16-colors.conf" "$CONFIG_DIR/kitty/16-colors.conf"
 ln -sf "$ACTIVE_DIR/kitty/bg-colors.conf" "$CONFIG_DIR/kitty/bg-colors.conf"
+ln -sf "$ACTIVE_DIR/kitty/tabs-colors.conf" "$CONFIG_DIR/kitty/tabs-colors.conf"
 # reload kitty
 pkill -SIGUSR1 kitty
 # discord colors
