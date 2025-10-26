@@ -1,5 +1,4 @@
 
-// @theme "~/.config/rofi/theme.rasi"
 @theme "~/.config/rofi/maintheme.rasi"
 
 configuration {

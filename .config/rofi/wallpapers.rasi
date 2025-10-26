@@ -26,7 +26,7 @@ window {
   background-color: @bg1;
   border: 2px;
   border-color: @accent;
-  border-radius: 10px;
+  border-radius: 0px;
   padding: 4px 4px;
   children: [ listview ];
 }
@@ -57,7 +57,7 @@ element {
 element selected {
   text-color       : @bg1;
   background-color : @accent;
-  border-radius: 8;
+  border-radius: 0;
 }
 
 element-icon {

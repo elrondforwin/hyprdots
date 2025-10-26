@@ -3,7 +3,7 @@
     "spacing": 8,
     "modules-left": ["hyprland/workspaces", "hyprland/window"],
     "modules-center": ["clock"],
-    "modules-right": ["tray", "mpd", "cpu", "memory", "hyprland/language", "pulseaudio", "custom/exit"],
+    "modules-right": ["tray", "mpd", "hyprland/language", "pulseaudio", "custom/exit"],
     "margin-top": 0,
     "margin-left": 0,
     "margin-right": 0,
@@ -67,7 +67,7 @@
         "format": " {title}",
         "format-disconnected": "",
         "format-stopped": "",
-        "max-length": 50,
+        "max-length": 30,
         "interval": 10,
         "consume-icons": {
             "on": " " // Icon shows only when "consume" is on

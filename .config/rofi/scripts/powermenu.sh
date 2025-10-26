@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ROFI_CMD="rofi -dmenu -p Power -theme ~/.config/rofi/powermenu/powermenu.rasi"
+ROFI_CMD="rofi -dmenu -p Power -theme powermenu.rasi"
 
 shutdown='󰐥'
 reboot='󰑓'

@@ -75,4 +75,3 @@ if [[ "$1" == "hibernate" ]]; then
   sleep 1
   systemctl hibernate
 fi
-
