@@ -137,6 +137,10 @@ alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
 zoxide init fish | source
 alias cd="z"
 
+if test -z "$DISPLAY" -a "$XDG_VTNR" = 1
+    exec Hyprland
+end
+
 # prompt
 function fish_prompt --description 'Write out the prompt'
     set -l last_status $status

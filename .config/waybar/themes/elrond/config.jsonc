@@ -53,7 +53,7 @@
 
     "hyprland/window": {
       "format": "{}",
-      "max-length": 45,
+      "max-length": 30,
       "rewrite": {
         "kitty": "Terminal",
         "zsh": "Terminal",

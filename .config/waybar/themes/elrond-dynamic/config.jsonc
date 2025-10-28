@@ -1,0 +1,98 @@
+{
+  "position": "top",
+  "spacing": 4,
+  "modules-left": ["hyprland/workspaces", "hyprland/window"],
+  "modules-center": ["clock"],
+  "modules-right": [
+    "group/tray",
+    "mpd",
+    "pulseaudio",
+    "custom/exit"
+  ],
+  "margin-top": 0,
+  "margin-left": 0,
+  "margin-right": 0,
+  "margin-bottom": 0,
+
+  "tray": {
+    "icon-size": 21,
+    "spacing": 10
+  },
+
+  "group/tray": {
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 500,
+      "children-class": "not-power",
+      "transition-left-to-right": false
+    },
+    "modules": ["custom/trayicon", "tray", "cpu", "memory", "hyprland/language" ]
+  }, 
+
+  "custom/trayicon": {
+    "format": "󰶺",
+  },
+
+  "clock": {
+    "format": " {:%H:%M}",
+    "format-alt": " {:%A, %B %d}",
+    "on-click": "mode",
+    "tooltip": false
+  },
+
+  "cpu": {
+    "interval": 5,
+    "format": " {usage}%",
+    "max-length": 15
+  },
+
+  "memory": {
+    "interval": 5,
+    "format": " {used:0.1f}G/{total:0.1f}G"
+  },
+
+  "pulseaudio": {
+    "format": " {volume}%",
+    "format-muted": "vol muted",
+    "on-click": "kitty -T pulsemixer pulsemixer"
+  },
+
+  "custom/exit": {
+    "format": "⏻",
+    "on-click": "~/.config/rofi/scripts/powermenu.sh",
+    "on-click-right": "hyprlock"
+  },
+
+  "hyprland/language": {
+    "format": " {}",
+    "format-en": "us",
+    "format-tr": "trq",
+    "on-click": "hyprctl switchxkblayout vxe-v87-vxe-v87 next"
+  },
+
+  "hyprland/window": {
+    "format": "{}",
+    "max-length": 30,
+    "rewrite": {
+      "kitty": "Terminal",
+      "zsh": "Terminal",
+      "~": "Terminal"
+    },
+    "swap-icon-label": false,
+    "icon": true
+  },
+
+  "mpd": {
+    "format": " {title}",
+    "format-disconnected": "",
+    "format-stopped": "",
+    "max-length": 30,
+    "interval": 10,
+    "consume-icons": {
+      "on": " " // Icon shows only when "consume" is on
+    },
+    "tooltip-format": "MPD (connected)",
+    "tooltip-format-disconnected": "MPD (disconnected)",
+    "on-click": "mpc toggle"
+  }
+}
