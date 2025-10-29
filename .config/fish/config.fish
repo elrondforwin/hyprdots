@@ -1,4 +1,3 @@
-#-----------------BEGIN-CACHYOS-FISH-CONFIG----------------#
 ## Set values
 function fish_greeting
 end
@@ -71,17 +70,17 @@ function backup --argument filename
     cp $filename $filename.bak
 end
 
-# Copy DIR1 DIR2
-function copy
-    set count (count $argv | tr -d \n)
-    if test "$count" = 2; and test -d "$argv[1]"
-        set from (echo $argv[1] | trim-right /)
-        set to (echo $argv[2])
-        command cp -r $from $to
-    else
-        command cp $argv
-    end
-end
+# # Copy DIR1 DIR2
+# function copy
+#     set count (count $argv | tr -d \n)
+#     if test "$count" = 2; and test -d "$argv[1]"
+#         set from (echo $argv[1] | trim-right /)
+#         set to (echo $argv[2])
+#         command cp -r $from $to
+#     else
+#         command cp $argv
+#     end
+# end
 
 ## Useful aliases
 # Replace ls with eza
@@ -92,7 +91,6 @@ alias lt='eza -aT --color=always --group-directories-first --icons' # tree listi
 alias l.="eza -a | grep -e '^\.'" # show only dotfiles
 
 # Common use
-alias grubup="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias fixpacman="sudo rm /var/lib/pacman/db.lck"
 alias tarnow='tar -acf '
 alias untar='tar -zxvf '
@@ -115,16 +113,7 @@ alias gitpkg='pacman -Q | grep -i "\-git" | wc -l' # List amount of -git package
 alias update='sudo pacman -Syu'
 
 # Get fastest mirrors
-alias mirror="sudo cachyos-rate-mirrors"
-
-# Help people new to Arch
-alias apt='man pacman'
-alias apt-get='man pacman'
-alias please='sudo'
-alias tb='nc termbin.com 9999'
-
-# Cleanup orphaned packages
-alias cleanup='sudo pacman -Rns (pacman -Qtdq)'
+alias mirror="sudo reflector --verbose -l 50 -n 10 -p http --sort rate --save /etc/pacman.d/mirrorlist"
 
 # Get the error messages from journalctl
 alias jctl="journalctl -p 3 -xb"
@@ -214,5 +203,6 @@ alias vim="nvim"
 alias vi="vim"
 alias v="vim"
 alias img="kitten icat"
+alias copy="wl-copy"
 
 alias code="code --enable-features=UseOzonePlatform --ozone-platform=wayland"
