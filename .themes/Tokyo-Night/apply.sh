@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-THEME="Tokyo-Night"
+CUR_THEME_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
+THEME="$(echo "${CUR_THEME_DIR##*/}")"
 THEMES_DIR="/home/$USER/.themes"
 ACTIVE_DIR="$THEMES_DIR/$THEME"
 CONFIG_DIR="/home/$USER/.config"
@@ -36,15 +37,15 @@ pkill waybar && waybar &
 disown
 # neovim theme
 ln -sf "$ACTIVE_DIR/set_theme.lua" "$CONFIG_DIR/nvim/lua/plugins/set_theme.lua"
-# zen browser theme
-ln -sf "$ACTIVE_DIR/zen-browser/userChrome.css" "/home/elrond/.zen/x9b0kr7f.Default (release)/chrome/"
-ln -sf "$ACTIVE_DIR/zen-browser/userContent.css" "/home/elrond/.zen/x9b0kr7f.Default (release)/chrome/"
+# # zen browser theme
+# ln -sf "$ACTIVE_DIR/zen-browser/userChrome.css" "/home/elrond/.zen/x9b0kr7f.Default (release)/chrome/"
+# ln -sf "$ACTIVE_DIR/zen-browser/userContent.css" "/home/elrond/.zen/x9b0kr7f.Default (release)/chrome/"
 
 # apply wallpaper
 # swww img "$ACTIVE_DIR/wallpaper.png"
 
 # change folder style
-bash /home/$USER/.local/share/icons/papirus-folders.sh -t Papirus-Dark -C cat-mocha-sapphire
+bash /home/$USER/.local/share/icons/papirus-folders.sh -t Papirus-Dark -C cat-mocha-mauve
 
 # notify user
 notify-send "$THEME applied."

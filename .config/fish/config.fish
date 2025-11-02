@@ -1,5 +1,10 @@
-## Set values
 function fish_greeting
+end
+
+# init zoxide if found
+if type -q zoxide
+    zoxide init fish | source
+    alias cd="z"
 end
 
 # Format man pages
@@ -30,7 +35,6 @@ if test -d ~/Applications/depot_tools
     end
 end
 
-## Functions
 # Functions needed for !! and !$ https://github.com/oh-my-fish/plugin-bang-bang
 function __history_previous_command
     switch (commandline -t)
@@ -52,46 +56,33 @@ function __history_previous_command_arguments
     end
 end
 
-if [ "$fish_key_bindings" = fish_vi_key_bindings ]
-
-    bind -Minsert ! __history_previous_command
-    bind -Minsert '$' __history_previous_command_arguments
-else
-    bind ! __history_previous_command
-    bind '$' __history_previous_command_arguments
-end
-
 # Fish command history
 function history
     builtin history --show-time='%F %T '
 end
 
-function backup --argument filename
+function bak --argument filename
     cp $filename $filename.bak
 end
 
-# # Copy DIR1 DIR2
-# function copy
-#     set count (count $argv | tr -d \n)
-#     if test "$count" = 2; and test -d "$argv[1]"
-#         set from (echo $argv[1] | trim-right /)
-#         set to (echo $argv[2])
-#         command cp -r $from $to
-#     else
-#         command cp $argv
-#     end
-# end
+# Replace ls with eza if available
+if type -q eza
+    alias ls='eza -al --color=always --group-directories-first --icons' # preferred listing
+    alias la='eza -a --color=always --group-directories-first --icons' # all files and dirs
+    alias ll='eza -l --color=always --group-directories-first --icons' # long format
+    alias lt='eza -aT --color=always --group-directories-first --icons' # tree listing
+    alias l.="eza -a | grep -e '^\.'" # show only dotfiles
+end
 
-## Useful aliases
-# Replace ls with eza
-alias ls='eza -al --color=always --group-directories-first --icons' # preferred listing
-alias la='eza -a --color=always --group-directories-first --icons' # all files and dirs
-alias ll='eza -l --color=always --group-directories-first --icons' # long format
-alias lt='eza -aT --color=always --group-directories-first --icons' # tree listing
-alias l.="eza -a | grep -e '^\.'" # show only dotfiles
+if type -q ncdu
+    alias disk='ncdu'
+end
 
-# Common use
-alias fixpacman="sudo rm /var/lib/pacman/db.lck"
+if type -q fzf
+    fzf --fish | source
+end
+
+# aliases
 alias tarnow='tar -acf '
 alias untar='tar -zxvf '
 alias wget='wget -c '
@@ -111,23 +102,45 @@ alias hw='hwinfo --short' # Hardware Info
 alias big="expac -H M '%m\t%n' | sort -h | nl" # Sort installed packages according to size in MB
 alias gitpkg='pacman -Q | grep -i "\-git" | wc -l' # List amount of -git packages
 alias update='sudo pacman -Syu'
-
-# Get fastest mirrors
-alias mirror="sudo reflector --verbose -l 50 -n 10 -p http --sort rate --save /etc/pacman.d/mirrorlist"
-
-# Get the error messages from journalctl
+alias img="kitten icat"
+alias copy="wl-copy"
 alias jctl="journalctl -p 3 -xb"
+if type -q nvim
+    alias vim="nvim"
+    alias vi="vim"
+    alias v="vim"
+end
+
+if type -q code
+    alias code="code --enable-features=UseOzonePlatform --ozone-platform=wayland"
+    alias code-oss="code --enable-features=UseOzonePlatform --ozone-platform=wayland"
+end
+
+if type -q code-oss
+    alias code="code-oss --enable-features=UseOzonePlatform --ozone-platform=wayland"
+    alias code-oss="code-oss --enable-features=UseOzonePlatform --ozone-platform=wayland"
+end
+if type -q waybar
+    alias reloadwaybar="pkill waybar && waybar & disown"
+end
+
+# Get fastest mirrors with reflector
+if type -q reflector
+    alias mirror="sudo reflector --verbose -l 50 -n 10 -p http --sort rate --save /etc/pacman.d/mirrorlist"
+else
+    alias mirror="echo 'Please install reflector first.'"
+end
 
 # Recent installed packages
-alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
+if type -q expac
+    alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
+end
 
-#-----------------END-CACHYOS-FISH-CONFIG----------------#
-
-zoxide init fish | source
-alias cd="z"
-
-if test -z "$DISPLAY" -a "$XDG_VTNR" = 1
-    exec Hyprland
+if type -q Hyprland
+    if not test -f /tmp/hyprland.lock
+        touch /tmp/hyprland.lock
+        exec Hyprland
+    end
 end
 
 # prompt
@@ -164,14 +177,16 @@ function fish_prompt --description 'Write out the prompt'
 end
 
 # yazi init
-function y
-    set tmp (mktemp -t "yazi-cwd.XXXXXX")
-    yazi $argv --cwd-file="$tmp"
+if type -q yazi
+    function y
+        set tmp (mktemp -t "yazi-cwd.XXXXXX")
+        yazi $argv --cwd-file="$tmp"
 
-    if set cwd (command cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
-        builtin cd -- "$cwd"
+        if set cwd (command cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
+            builtin cd -- "$cwd"
+        end
+        rm -f -- "$tmp"
     end
-    rm -f -- "$tmp"
 end
 
 function cevirmov
@@ -197,12 +212,3 @@ function cevirmp4
 
     ffmpeg -i "$input" -vcodec libx265 -crf 28 "$output"
 end
-
-alias reloadwaybar="pkill waybar && waybar & disown"
-alias vim="nvim"
-alias vi="vim"
-alias v="vim"
-alias img="kitten icat"
-alias copy="wl-copy"
-
-alias code="code --enable-features=UseOzonePlatform --ozone-platform=wayland"

@@ -1,1 +1,0 @@
-/home/elrond/.themes/Tokyo-Night/set_theme.lua
