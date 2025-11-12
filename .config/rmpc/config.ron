@@ -150,7 +150,6 @@
                 panes: [
                     (
                     size: "40%", 
-                    borders: "RIGHT",
                     pane: Pane(AlbumArt)
                     ),
                     
@@ -159,12 +158,10 @@
                         direction: Vertical,
                         panes: [
                             (
-                            size: "60%",
-                            borders: "BOTTOM",
+                            size: "100%",
                             pane: Pane(Queue)
                              
                              ),
-                            (size: "40%", pane: Pane(Cava)),
                         ],
                     )),
                 ],
