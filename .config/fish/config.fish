@@ -171,7 +171,8 @@ function cevirmp4
 end
 
 alias reloadwaybar="pkill waybar && waybar & disown"
-alias yay="paru"
-alias vim="nvim"
-alias vi="vim"
-alias v="vim"
+if type -q nvim
+    alias vim="nvim"
+    alias vi="vim"
+    alias v="vim"
+end
