@@ -1,0 +1,1 @@
+/home/elrond/.themes/Oledpuccin/set_theme.lua

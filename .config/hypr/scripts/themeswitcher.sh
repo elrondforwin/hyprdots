@@ -14,6 +14,10 @@ query() {
   find "$1" -mindepth 1 -maxdepth 1 -type d -printf "%f\n"
 }
 
+query_ls() {
+  ls "$1"
+}
+
 apply_theme() {
 
   if [[ -f "$THEME_DIR/$SELECTED/apply.sh" ]]; then
@@ -23,12 +27,12 @@ apply_theme() {
 }
 
 list_themes() {
-  if [[ -z "$(query $THEME_DIR)" ]]; then
+  if [[ -z "$(query_ls $THEME_DIR)" ]]; then
     notify-send "Your theme folder is empty. Please create some themes in $THEME_DIR directory."
     exit 1
   fi
 
-  SELECTED=$(query "$THEME_DIR" | rofi -dmenu)
+  SELECTED=$(query_ls "$THEME_DIR" | rofi -dmenu)
 
   apply_theme
 }
@@ -39,4 +43,3 @@ main() {
 }
 
 main
-

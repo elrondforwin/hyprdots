@@ -147,8 +147,8 @@ end
 function fish_prompt --description 'Write out the prompt'
     set -l last_status $status
     set -l normal (set_color normal)
-    set -l status_color (set_color brgreen)
-    set -l cwd_color (set_color $fish_color_cwd)
+    set -l status_color (set_color brpurple)
+    set -l cwd_color (set_color blue)
     set -l vcs_color (set_color brpurple)
     set -l prompt_status ""
 
@@ -157,7 +157,7 @@ function fish_prompt --description 'Write out the prompt'
     or set -lx fish_prompt_pwd_dir_length 0
 
     # Color the prompt differently when we're root
-    set -l suffix '->'
+    set -l suffix '❯'
     if functions -q fish_is_root_user; and fish_is_root_user
         if set -q fish_color_cwd_root
             set cwd_color (set_color $fish_color_cwd_root)

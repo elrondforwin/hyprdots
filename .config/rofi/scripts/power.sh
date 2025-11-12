@@ -6,7 +6,7 @@
 #
 
 terminate_clients() {
-  TIMEOUT=5
+  TIMEOUT=3
   # Get a list of all client PIDs in the current Hyprland session
   client_pids=$(hyprctl clients -j | jq -r '.[] | .pid')
 
