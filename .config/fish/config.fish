@@ -194,6 +194,10 @@ if type -q nemo
     alias nemohere="nemo . 2&> /dev/null & disown"
 end
 
+if type -q rmpc
+    alias r="rmpc"
+end
+
 function cevirmov
     if test (count $argv) -ne 2
         echo "Kullanım: cevirmov input.mp4 output.mov"
