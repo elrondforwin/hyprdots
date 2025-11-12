@@ -9,9 +9,6 @@
 ---
 
 > [!NOTE]
-> I use paru (AUR helper) so if you'll use yay then remove the ``alias yay="paru"`` line in ``/.config/fish/config.fish``
-
-> [!NOTE]
 > If you are not using nvidia gpu you should delete the nvidia fix env's in ``/.config/hypr/hyprland.conf``
 
 ---
