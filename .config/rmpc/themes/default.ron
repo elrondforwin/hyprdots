@@ -16,13 +16,13 @@
     preview_metadata_group_style: (fg: "yellow", modifiers: "Bold"),
     tab_bar: (
         enabled: true,
-        active_style: (fg: "black", bg: "blue", modifiers: "Bold"),
+        active_style: (fg: "black", bg: "cyan", modifiers: "Bold"),
         inactive_style: (),
     ),
-    highlighted_item_style: (fg: "blue", modifiers: "Bold"),
-    current_item_style: (fg: "black", bg: "blue", modifiers: "Bold"),
-    borders_style: (fg: "blue"),
-    highlight_border_style: (fg: "blue"),
+    highlighted_item_style: (fg: "cyan", modifiers: "Bold"),
+    current_item_style: (fg: "black", bg: "cyan", modifiers: "Bold"),
+    borders_style: (fg: "black"),
+    highlight_border_style: (fg: "cyan"),
     symbols: (
         song: "",
         dir: "",
@@ -34,7 +34,7 @@
         playlist_style: None,
     ),
     level_styles: (
-        info: (fg: "blue", bg: "black"),
+        info: (fg: "cyan", bg: "black"),
         warn: (fg: "yellow", bg: "black"),
         error: (fg: "red", bg: "black"),
         debug: (fg: "light_green", bg: "black"),
@@ -43,14 +43,14 @@
     progress_bar: (
         symbols: ["", "█", "█", "▒", ""],
         track_style: (fg: "#1e2030"),
-        elapsed_style: (fg: "blue"),
-        thumb_style: (fg: "blue", bg: "#1e2030"),
+        elapsed_style: (fg: "cyan"),
+        thumb_style: (fg: "cyan", bg: "#1e2030"),
     ),
     scrollbar: (
-        symbols: ["│", "█", "▲", "▼"],
+        symbols: ["", "", "", ""],
         track_style: (),
         ends_style: (),
-        thumb_style: (fg: "blue"),
+        thumb_style: (fg: "cyan"),
     ),
     song_table_format: [
         (
@@ -97,8 +97,7 @@
             ),
             (
                 pane: Pane(ProgressBar),
-                size: "2",
-                borders: "NONE",
+                size: "1",
             ),
         ],
     ),
@@ -116,8 +115,8 @@
                     )
                 ],
                 right: [
-                    (kind: Property(Widget(ScanStatus)), style: (fg: "blue")),
-                    (kind: Property(Widget(Volume)), style: (fg: "blue"))
+                    (kind: Property(Widget(ScanStatus)), style: (fg: "cyan")),
+                    (kind: Property(Widget(Volume)), style: (fg: "cyan"))
                 ]
             ),
             (
@@ -174,7 +173,7 @@
         orientation: Bottom,
         bar_color: Gradient({
             0: "#74c7ec",   // sapphire - düşük frekanslar
-           25: "#89b4fa",   // blue - orta-düşük frekanslar
+           25: "#89b4fa",   // cyan - orta-düşük frekanslar
            50: "#89dceb",   // sky - orta frekanslar
            75: "#b4befe",   // lavender - orta-yüksek frekanslar
           100: "#cba6f7",   // mauve - peak seviyeler

@@ -55,14 +55,13 @@
             ":":       CommandMode,
             ",":       VolumeDown,
             "s":       Stop,
-            ".":       VolumeUp,
-            "<Tab>":   NextTab,
+            ".":       VolumeUp, "<Tab>":   NextTab,
             "<S-Tab>": PreviousTab,
-            "1":       SwitchToTab("Queue"),
-            "2":       SwitchToTab("Directories"),
-            "3":       SwitchToTab("Artists"),
-            "4":       SwitchToTab("Albums"),
-            "5":       SwitchToTab("Search"),
+            "1":       SwitchToTab(" Queue"),
+            "2":       SwitchToTab(" Directories"),
+            "3":       SwitchToTab("󰠃 Artists"),
+            "4":       SwitchToTab("󰀥 Albums"),
+            "5":       SwitchToTab(" Search"),
             "q":       Quit,
             ">":       NextTrack,
             "p":       TogglePause,
@@ -129,13 +128,12 @@
         case_sensitive: false,
         mode: Contains,
         tags: [
-            (value: "any",         label: "Any Tag"),
-            (value: "artist",      label: "Artist"),
-            (value: "album",       label: "Album"),
-            (value: "albumartist", label: "Album Artist"),
-            (value: "title",       label: "Title"),
-            (value: "filename",    label: "Filename"),
-            (value: "genre",       label: "Genre"),
+            (value: "any",         label: " Any Tag"),
+            (value: "artist",      label: "󰠃 Artist"),
+            (value: "album",       label: "󰀥 Album"),
+            (value: "title",       label: " Title"),
+            (value: "filename",    label: " Filename"),
+            (value: "genre",       label: " Genre"),
         ],
     ),
     artists: (
@@ -144,7 +142,7 @@
     ),
     tabs: [
         (
-            name: "Queue",
+            name: " Queue",
             pane: Split(
                 direction: Horizontal,
                 panes: [
@@ -168,19 +166,19 @@
             ),
         ),
         (
-            name: "Directories",
+            name: " Directories",
             pane: Pane(Directories),
         ),
         (
-            name: "Artists",
+            name: "󰠃 Artists",
             pane: Pane(Artists),
         ),
         (
-            name: "Albums",
+            name: "󰀥 Albums",
             pane: Pane(Albums),
         ),
         (
-            name: "Search",
+            name: " Search",
             pane: Pane(Search),
         ),
 
