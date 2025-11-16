@@ -180,7 +180,7 @@ if command -v expac > /dev/null; then
 fi
 
 if command -v nemo > /dev/null; then
-    alias nemohere="nemo . > /dev/null /dev/null & disown"
+    alias nemohere="nemo . &> /dev/null & disown"
 fi
 
 if command -v Hyprland > /dev/null; then
