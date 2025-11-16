@@ -1,7 +1,7 @@
 {
   "position": "top",
   "spacing": 4,
-  "modules-left": ["hyprland/workspaces", "hyprland/window"],
+  "modules-left": ["hyprland/workspaces"],
   "modules-center": ["clock"],
   "modules-right": [
     "group/tray",
