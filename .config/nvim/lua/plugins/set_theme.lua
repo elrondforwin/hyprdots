@@ -1,1 +1,1 @@
-/home/elrond/.themes/Catppuccin-Teal/set_theme.lua
+/home/elrond/.themes/Oledpuccin/set_theme.lua

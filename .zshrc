@@ -16,6 +16,9 @@ PATH=$PATH:/$HOME/.local/bin
 # Source/Load zinit
 source "${ZINIT_HOME}/zinit.zsh"
 
+# emacs mode
+set -o emacs
+
 OMP_THEMES_PATH="/$HOME/.config/oh-my-posh"
 OMP_THEME="$OMP_THEMES_PATH/zen.toml"
 
