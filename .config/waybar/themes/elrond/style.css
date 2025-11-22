@@ -71,27 +71,45 @@ button {
 #pulseaudio,
 #mpd,
 #mpris,
-#custom-exit,
-#memory,
-#cpu,
-#custom-cava,
-#language {
+#custom-exit {
     background-color: @surface_container_lowest;
     color: @primary;
     padding: 5 7 5 7
 }
 
+#mpd {
+    margin-left: 0;
+    padding-left: 1;
+}
+
+#tray,
+#language,
+#cpu,
+#memory {
+    background-color: @surface_container_lowest;
+    color: @primary;
+    padding: 0 7 0 7;
+    margin: 0 2 0 2;
+}
+
+#custom-trayicon {
+    font-size: 20px;
+    margin: 0 0 0 4;
+}
+
 #tray {
     background-color: @surface_container_lowest;
     color: @primary;
-    padding: 5 8 5 8;
+    margin: 0 7 0 7;
 }
 
 #custom-exit {
-    padding: 5 10 5 10
+    padding: 5 10 5 4;
 }
 
-#pulseaudio:hover,
+/* hover animations */
+
+/* #pulseaudio:hover,
 #mpd:hover,
 #memory:hover,
 #mpris:hover,
@@ -101,7 +119,7 @@ button {
 #window:hover,
 #language:hover {
     background-color: @surface_container_low;
-}
+} */
 
 #window, window#waybar.solo {
     background-color: @surface_container_lowest;

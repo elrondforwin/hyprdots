@@ -19,14 +19,11 @@ esac
 # reload function
 reload() {
   if pgrep -x "waybar" >/dev/null; then
-    killall -q waybar
-    while pgrep -x waybar >/dev/null; do sleep 1; done
-    waybar &
-    >/dev/null
+    killall -SIGUSR2 waybar
     echo "Waybar succesfully reloaded."
   else
-    waybar &
-    >/dev/null
+    waybar &>/dev/null &
+    disown
     echo "Waybar is not running. Starting waybar."
   fi
 }
@@ -76,12 +73,8 @@ if [ "$1" = "theme" ]; then
   if [ "$2" ]; then
     # list all available themes
     if [ "$2" = "list" ]; then
-      echo ""
-      echo "Available themes:"
-      echo ""
       ls -w 1 $themedir
-      echo ""
-      exit 1
+      exit 0
     fi
     # remove current theme
     if [ "$2" = "remove" ]; then
@@ -90,7 +83,7 @@ if [ "$1" = "theme" ]; then
       done
       reload
       echo "Succesfully deactivated the $2 theme. Falling back to default one."
-      exit 1
+      exit 0
     fi
     # if the given theme is valid, change to this theme.
     if [ -d "/home/$USER/.config/waybar/themes/$2" ]; then

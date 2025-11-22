@@ -1,7 +1,7 @@
 {
   "position": "top",
-  "spacing": 4,
-  "modules-left": ["hyprland/workspaces"],
+  "spacing": 0,
+  "modules-left": ["hyprland/workspaces", "hyprland/window"],
   "modules-center": ["clock"],
   "modules-right": [
     "group/tray",
@@ -16,11 +16,12 @@
 
   "tray": {
     "icon-size": 21,
-    "spacing": 10
+    "spacing": 0,
   },
 
   "group/tray": {
     "orientation": "horizontal",
+    "spacing": 4,
     "drawer": {
       "transition-duration": 500,
       "children-class": "not-power",

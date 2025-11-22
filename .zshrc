@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # Set the directory we want to store zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
@@ -16,28 +23,30 @@ PATH=$PATH:/$HOME/.local/bin
 # Source/Load zinit
 source "${ZINIT_HOME}/zinit.zsh"
 
+zinit ice depth=1; zinit light romkatv/powerlevel10k
+
 # emacs mode
 set -o emacs
 
-OMP_THEMES_PATH="/$HOME/.config/oh-my-posh"
-OMP_THEME="$OMP_THEMES_PATH/zen.toml"
+# OMP_THEMES_PATH="/$HOME/.config/oh-my-posh"
+# OMP_THEME="$OMP_THEMES_PATH/zen.toml"
 
 # load oh my posh if found
-if [[ ! -z $(command -v oh-my-posh) ]]; then
-    eval "$(oh-my-posh init zsh -c $OMP_THEME)"
-    if [[ ! -f $OMP_THEME ]]; then
-      mkdir -p $OMP_THEMES_PATH
-      curl -fsSL "https://raw.githubusercontent.com/dreamsofautonomy/zen-omp/refs/heads/main/zen.toml" -o $OMP_THEME
-    fi
-  else
-    echo "oh-my-posh not found in PATH!"
-    if [[ ! -f /$HOME/.local/bin/oh-my-posh ]]; then
-      echo "Installing oh-my-posh to ''~/.local/bin'"
-      curl -s https://ohmyposh.dev/install.sh | bash -s
-    else
-      echo "oh-my-posh is present, but not in PATH."
-    fi
-fi
+# if [[ ! -z $(command -v oh-my-posh) ]]; then
+#     eval "$(oh-my-posh init zsh -c $OMP_THEME)"
+#     if [[ ! -f $OMP_THEME ]]; then
+#       mkdir -p $OMP_THEMES_PATH
+#       curl -fsSL "https://raw.githubusercontent.com/dreamsofautonomy/zen-omp/refs/heads/main/zen.toml" -o $OMP_THEME
+#     fi
+#   else
+#     echo "oh-my-posh not found in PATH!"
+#     if [[ ! -f /$HOME/.local/bin/oh-my-posh ]]; then
+#       echo "Installing oh-my-posh to ''~/.local/bin'"
+#       curl -s https://ohmyposh.dev/install.sh | bash -s
+#     else
+#       echo "oh-my-posh is present, but not in PATH."
+#     fi
+# fi
 
 # Add in zsh plugins
 zinit light zsh-users/zsh-syntax-highlighting
@@ -192,5 +201,3 @@ if command -v Hyprland > /dev/null; then
     Hyprland
   fi
 fi
-
-

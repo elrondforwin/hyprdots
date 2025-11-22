@@ -1,0 +1,144 @@
+@define-color rosewater #f5e0dc;
+@define-color flamingo #f2cdcd;
+@define-color pink #f5c2e7;
+@define-color mauve #cba6f7;
+@define-color red #f38ba8;
+@define-color maroon #eba0ac;
+@define-color peach #fab387;
+@define-color yellow #f9e2af;
+@define-color green #a6e3a1;
+@define-color teal #94e2d5;
+@define-color sky #89dceb;
+@define-color sapphire #74c7ec;
+@define-color blue #89b4fa;
+@define-color lavender #b4befe;
+@import 'colors.css';
+
+* {
+    font-family: "JetBrainsMono NFP";
+    font-size: 16px;
+    min-height: 0;
+    font-weight: bold;
+}
+
+window#waybar {
+    background-color: @surface_container_lowest;
+    color: transparent;
+    transition-property: background-color;
+    transition-duration: 0.1s;
+    border-radius: 0px
+}
+
+button {
+    box-shadow: inset 0 -3px transparent;
+    border: none;
+    border-radius: 0;
+}
+
+#workspaces {
+    margin: 0 0 0 0;
+    border-radius: 14px;
+}
+
+#workspaces button {
+    color: @primary;
+    padding: 0 4px;
+    margin: 0 2px;
+    border-bottom: 2px solid @surface_container_lowest;
+}
+
+#workspaces button.focused {
+    color: @primary;
+}
+#workspaces button.active {
+    color: @primary;
+    border-radius: 0;
+    border-bottom: 2px solid @primary;
+}
+
+#workspaces button.urgent {
+    background-color: @red;
+    color: @surface_container_lowest
+}
+
+#clock {
+    color: @pink;
+    border-bottom: 2px solid @pink;
+    padding: 2 5 2 5;
+}
+
+#clock.date {
+    color: @pink;
+}
+
+#pulseaudio {
+    color: @blue;
+    margin: 0 5 0 5;
+    border-bottom: 2px solid @blue;
+    padding: 2 5 2 5;
+}
+
+#mpd {
+    color: @green;
+    margin: 0 5 0 5;
+    border-bottom: 2px solid @green;
+    padding: 2 5 2 5;
+}
+
+#custom-exit {
+    color: @red;
+    margin: 0 5 0 5;
+    border-bottom: 2px solid @red;
+    padding: 2 5 2 5;
+}
+
+#language {
+  color: @yellow;
+  margin: 0 5 0 5;
+  border-bottom: 2px solid @yellow;
+  padding: 2 5 2 5;
+}
+
+#cpu {
+  color: @lavender;
+  margin: 0 5 0 5;
+  border-bottom: 2px solid @lavender;
+  padding: 2 5 2 5;
+}
+
+#memory {
+  color: @sapphire;
+  margin: 0 5 0 5;
+  border-bottom: 2px solid @sapphire;
+  padding: 2 5 2 5;
+}
+
+#custom-trayicon {
+  font-size: 20px;
+  color: @red;
+  margin: 0 5 0 5;
+}
+
+#tray {
+  margin: 0 5 0 5;
+}
+
+/* hover animations */
+
+/* #pulseaudio:hover,
+#mpd:hover,
+#memory:hover,
+#mpris:hover,
+#cpu:hover,
+#custom-exit:hover,
+#clock:hover,
+#window:hover,
+#language:hover {
+    background-color: @surface_container_low;
+} */
+
+#window, window#waybar.solo {
+    background-color: @surface_container_lowest;
+    color: @flamingo;
+    margin: 0 5px;
+}

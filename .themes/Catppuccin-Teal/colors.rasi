@@ -1,52 +1,6 @@
 * {
-    primary: #94E2D5;               /* Mauve — Primary accent */
-    primary-fixed: #b4befe;         /* Light fixed */
-    primary-fixed-dim: #94E2D5;     /* Same as primary */
-    on-primary: #11111b;            /* Crust — Dark text on primary */
-    on-primary-fixed: #11111b;      /* Crust */
-    on-primary-fixed-variant: #1e1e2e; /* Subtle */
-    primary-container: #1e1e2e;     /* Subtle */
-    on-primary-container: #b4befe;  /* Light contrast */
-
-    secondary: #89b4fa;             /* Blue — Secondary accent */
-    secondary-fixed: #cdd6f4;       /* Text */
-    secondary-fixed-dim: #89b4fa;   /* Blue */
-    on-secondary: #181825;          /* Mantle */
-    on-secondary-fixed: #11111b;    /* Crust */
-    on-secondary-fixed-variant: #313244; /* Surface */
-    secondary-container: #313244;   /* Surface */
-    on-secondary-container: #cdd6f4; /* Text */
-
-    tertiary: #f5c2e7;              /* Pink — Tertiary */
-    tertiary-fixed: #b4befe;        /* Light contrast */
-    tertiary-fixed-dim: #f5c2e7;    /* Pink */
-    on-tertiary: #1e1e2e;           /* Subtle */
-    on-tertiary-fixed: #11111b;     /* Crust */
-    on-tertiary-fixed-variant: #585b70; /* Overlay */
-    tertiary-container: #585b70;    /* Overlay */
-    on-tertiary-container: #b4befe; /* Light contrast */
-
-    error: #f38ba8;                 /* Red */
-    on-error: #11111b;              /* Crust */
-    error-container: #f38ba8;       /* Red */
-    on-error-container: #b4befe;    /* Light contrast */
-
-    surface: #11111b;               /* Crust */
-    on-surface: #cdd6f4;            /* Text */
-    on-surface-variant: #cdd6f4;    /* Text */
-    outline: #6c7086;               /* Subtext 1 */
-    outline-variant: #1e1e2e;       /* Subtle */
-    shadow: #000000;
-    scrim: #000000;
-    inverse-surface: #cdd6f4;       /* Text */
-    inverse-on-surface: #1e1e2e;    /* Subtle */
-    inverse-primary: #94E2D5;       /* Mauve */
-
-    surface-dim: #11111b;           /* Crust */
-    surface-bright: #181825;        /* Mantle */
-    surface-container-lowest: #11111b; /* Crust */
-    surface-container-low: #181825; /* Mantle */
-    surface-container: #1e1e2e;     /* Subtle */
-    surface-container-high: #313244; /* Surface */
-    surface-container-highest: #585b70; /* Overlay */
+    primary: #94E2D5;
+    error: #f38ba8;
+    inverse-surface: #cdd6f4;
+    surface-container-lowest: #11111b;
 }

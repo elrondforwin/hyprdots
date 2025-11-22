@@ -2,7 +2,7 @@
 monitor = 0
 follow = none
 width = 300 height = 300
-origin = top-center
+origin = top-right
 offset = 10x20
 scale = 0
 notification_limit = 0
@@ -19,7 +19,7 @@ horizontal_padding = 8
 text_icon_padding = 0
 frame_width = 2
 sort = yes
-font = Adwaita Sans 12
+font = JetBrainsMono NF 12
 line_height = 0
 markup = full
 format = "<b>%s</b>\n%b"
@@ -57,18 +57,18 @@ per_monitor_dpi = false
 
 [urgency_low]
 timeout = 3
-background = "#0B0B11"           # Catppuccin Mocha — crust
+background = "#000000"           # Catppuccin Mocha — crust
 foreground = "#cdd6f4"           # Catppuccin Mocha — text
 highlight = "#14141C"            # Catppuccin Mocha — surface1
 
 [urgency_normal]
 timeout = 6
-background = "#0B0B11"           # Catppuccin Mocha — crust
+background = "#000000"           # Catppuccin Mocha — crust
 foreground = "#cdd6f4"           # Catppuccin Mocha — text
 highlight = "#14141C"            # Catppuccin Mocha — surface1
 
 [urgency_critical]
 timeout = 0
-background = "#11111b"           # Catppuccin Mocha — crust
+background = "#000000"           # Catppuccin Mocha — crust
 foreground = "#cdd6f4"           # Catppuccin Mocha — text
 highlight = "#45475a"            # Catppuccin Mocha — surface1
