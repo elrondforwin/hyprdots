@@ -1,5 +1,5 @@
 [ColorEffects:Disabled]
-Color=#0B0B11
+Color=#000000
 ColorAmount=0
 ColorEffect=0
 ContrastAmount=0.65
@@ -19,8 +19,8 @@ IntensityAmount=0
 IntensityEffect=0
 
 [Colors:Button]
-BackgroundAlternate=#181825
-BackgroundNormal=#1e1e2e
+BackgroundAlternate=#252525
+BackgroundNormal=#000000
 DecorationFocus=#94e2d5
 DecorationHover=#94e2d5
 ForegroundActive=#94e2d5
@@ -34,7 +34,7 @@ ForegroundVisited=#74c7ec
 
 [Colors:Complementary]
 BackgroundAlternate=#181825
-BackgroundNormal=#0B0B11
+BackgroundNormal=#000000
 DecorationFocus=#94e2d5
 DecorationHover=#94e2d5
 ForegroundActive=#94e2d5
@@ -47,8 +47,8 @@ ForegroundPositive=#a6e3a1
 ForegroundVisited=#74c7ec
 
 [Colors:Header]
-BackgroundAlternate=#0B0B11
-BackgroundNormal=#0B0B11
+BackgroundAlternate=#000000
+BackgroundNormal=#000000
 DecorationFocus=#94e2d5
 DecorationHover=#94e2d5
 ForegroundActive=#94e2d5
@@ -61,8 +61,8 @@ ForegroundPositive=#a6e3a1
 ForegroundVisited=#74c7ec
 
 [Colors:Header][Inactive]
-BackgroundAlternate=#0B0B11
-BackgroundNormal=#0B0B11
+BackgroundAlternate=#000000
+BackgroundNormal=#000000
 DecorationFocus=#94e2d5
 DecorationHover=#94e2d5
 ForegroundActive=#94e2d5
@@ -79,18 +79,18 @@ BackgroundAlternate=#181825
 BackgroundNormal=#94e2d5
 DecorationFocus=#94e2d5
 DecorationHover=#94e2d5
-ForegroundActive=#0B0B11
+ForegroundActive=#000000
 ForegroundInactive=#cdd6f4
 ForegroundLink=#b4befe
 ForegroundNegative=#f38ba8
 ForegroundNeutral=#fab387
-ForegroundNormal=#0B0B11
+ForegroundNormal=#000000
 ForegroundPositive=#a6e3a1
 ForegroundVisited=#b4befe
 
 [Colors:Tooltip]
-BackgroundAlternate=#0B0B11
-BackgroundNormal=#0B0B11
+BackgroundAlternate=#000000
+BackgroundNormal=#000000
 DecorationFocus=#94e2d5
 DecorationHover=#94e2d5
 ForegroundActive=#94e2d5
@@ -103,8 +103,8 @@ ForegroundPositive=#a6e3a1
 ForegroundVisited=#74c7ec
 
 [Colors:View]
-BackgroundAlternate=#0B0B11
-BackgroundNormal=#0B0B11
+BackgroundAlternate=#000000
+BackgroundNormal=#000000
 DecorationFocus=#b4befe
 DecorationHover=#89b4fa
 ForegroundActive=#94e2d5
@@ -118,7 +118,7 @@ ForegroundVisited=#74c7ec
 
 [Colors:Window]
 BackgroundAlternate=#89b4fa
-BackgroundNormal=#0B0B11
+BackgroundNormal=#000000
 DecorationFocus=#94e2d5
 DecorationHover=#94e2d5
 ForegroundActive=#94e2d5
@@ -135,7 +135,7 @@ ColorScheme=Theme
 Name=Theme
 
 [Appearance]
-color_scheme=Matugen
+color_scheme=Theme
 
 [KDE]
 contrast=4
@@ -144,6 +144,6 @@ contrast=4
 activeBackground=#89b4fa
 activeBlend=#b4befe
 activeForeground=#b4befe
-inactiveBackground=#0B0B11
+inactiveBackground=#000000
 inactiveBlend=#cdd6f4
 inactiveForeground=#cdd6f4

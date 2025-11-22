@@ -65,6 +65,7 @@ button {
     color: @pink;
     border-bottom: 2px solid @pink;
     padding: 2 5 2 5;
+    margin: 0 2px;
 }
 
 #clock.date {
@@ -73,42 +74,42 @@ button {
 
 #pulseaudio {
     color: @blue;
-    margin: 0 5 0 5;
+    margin: 0 2px;
     border-bottom: 2px solid @blue;
-    padding: 2 5 2 5;
+    padding: 2 5px;
 }
 
 #mpd {
     color: @green;
-    margin: 0 5 0 5;
+    margin: 0 2px;
     border-bottom: 2px solid @green;
     padding: 2 5 2 5;
 }
 
 #custom-exit {
     color: @red;
-    margin: 0 5 0 5;
+    margin: 0 2px;
     border-bottom: 2px solid @red;
     padding: 2 5 2 5;
 }
 
 #language {
   color: @yellow;
-  margin: 0 5 0 5;
+  margin: 0 2px;
   border-bottom: 2px solid @yellow;
   padding: 2 5 2 5;
 }
 
 #cpu {
   color: @lavender;
-  margin: 0 5 0 5;
+  margin: 0 2px;
   border-bottom: 2px solid @lavender;
   padding: 2 5 2 5;
 }
 
 #memory {
   color: @sapphire;
-  margin: 0 5 0 5;
+  margin: 0 2px;
   border-bottom: 2px solid @sapphire;
   padding: 2 5 2 5;
 }
@@ -116,11 +117,11 @@ button {
 #custom-trayicon {
   font-size: 20px;
   color: @red;
-  margin: 0 5 0 5;
+  margin: 0 2px;
 }
 
 #tray {
-  margin: 0 5 0 5;
+  margin: 0 4px;
 }
 
 /* hover animations */
@@ -140,5 +141,5 @@ button {
 #window, window#waybar.solo {
     background-color: @surface_container_lowest;
     color: @flamingo;
-    margin: 0 5px;
+    margin: 0 4px;
 }

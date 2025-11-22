@@ -2,11 +2,15 @@
   "position": "top",
   "spacing": 0,
   "modules-left": ["hyprland/workspaces", "hyprland/window"],
-  "modules-center": ["clock"],
+  "modules-center": [],
   "modules-right": [
-    "group/tray",
+    "tray",
+    "cpu",
+    "memory",
+    "hyprland/language",
     "mpd",
     "pulseaudio",
+    "clock",
     "custom/exit"
   ],
   "margin-top": 0,
@@ -16,12 +20,11 @@
 
   "tray": {
     "icon-size": 21,
-    "spacing": 0,
+    "spacing": 4,
   },
 
   "group/tray": {
     "orientation": "horizontal",
-    "spacing": 4,
     "drawer": {
       "transition-duration": 500,
       "children-class": "not-power",
@@ -77,7 +80,9 @@
     "rewrite": {
       "kitty": "Terminal",
       "zsh": "Terminal",
-      "~": "Terminal"
+      "foot": "Terminal",
+      "~": "Terminal",
+      "nvim": "Neovim",
     },
     "swap-icon-label": false,
     "icon": true
