@@ -20,9 +20,9 @@
         inactive_style: (),
     ),
     highlighted_item_style: (fg: "blue", modifiers: "Bold"),
-    current_item_style: (fg: "black", bg: "blue", modifiers: "Bold"),
+    current_item_style: (fg: "black", bg: "cyan", modifiers: "Bold"),
     borders_style: (fg: "black"),
-    highlight_border_style: (fg: "blue"),
+    highlight_border_style: (fg: "cyan"),
     symbols: (
         song: "",
         dir: "",
@@ -115,8 +115,8 @@
                     )
                 ],
                 right: [
-                    (kind: Property(Widget(ScanStatus)), style: (fg: "yellow")),
-                    (kind: Property(Widget(Volume)), style: (fg: "yellow"))
+                    (kind: Property(Widget(ScanStatus)), style: (fg: "cyan")),
+                    (kind: Property(Widget(Volume)), style: (fg: "cyan"))
                 ]
             ),
             (
