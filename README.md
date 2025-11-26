@@ -1,6 +1,12 @@
 # My Current Hyprland Dotfiles
 ---
 
+# Showcase
+
+https://www.reddit.com/r/unixporn/comments/1lw86kc/hyprland_matugen_is_awesome/
+
+---
+
 > [!IMPORTANT]  
 > No guarantee it will work on your machine — works on mine, but should work on yours too.
 
