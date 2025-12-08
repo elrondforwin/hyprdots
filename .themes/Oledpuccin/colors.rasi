@@ -1,6 +1,0 @@
-* {
-    primary: #94e2d5;               /* Mauve — Primary accent */
-    error: #f38ba8;                 /* Red */
-    inverse-surface: #cdd6f4;       /* Text */
-    surface-container-lowest: #0B0B11; /* Crust */
-}

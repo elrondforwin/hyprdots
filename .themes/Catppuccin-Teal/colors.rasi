@@ -1,6 +1,0 @@
-* {
-    primary: #94E2D5;
-    error: #f38ba8;
-    inverse-surface: #cdd6f4;
-    surface-container-lowest: #11111b;
-}
