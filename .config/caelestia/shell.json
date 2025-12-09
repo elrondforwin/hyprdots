@@ -34,9 +34,9 @@
     "general": {
         "apps": {
             "terminal": ["foot"],
-            "audio": ["pavucontrol"],
+            "audio": ["foot", "-T", "pulsemixer", "pulsemixer"],
             "playback": ["mpv"],
-            "explorer": ["nemo"]
+            "explorer": ["dolphin"]
         },
         "battery": {
             "warnLevels": [
@@ -188,7 +188,7 @@
         }
     },
     "border": {
-        "rounding": 24,
+        "rounding": 14,
         "thickness": 10
     },
     "dashboard": {
@@ -348,7 +348,7 @@
         "defaultPlayer": "mpd",
         "gpuType": "",
         "playerAliases": [{ "from": "com.github.th_ch.youtube_music", "to": "YT Music" }],
-        "weatherLocation": "",
+        "weatherLocation": "Samsun",
         "useFahrenheit": false,
         "useTwelveHourClock": false,
         "smartScheme": true,
@@ -361,7 +361,7 @@
         "commands": {
             "logout": ["loginctl", "terminate-user", ""],
             "shutdown": ["systemctl", "poweroff"],
-            "hibernate": ["systemctl", "hibernate"],
+            "hibernate": ["systemctl", "sleep"],
             "reboot": ["systemctl", "reboot"]
         }
     },
@@ -383,7 +383,7 @@
             "kbLayoutChanged": true,
             "numLockChanged": true,
             "vpnChanged": true,
-            "nowPlaying": false
+            "nowPlaying": true
         },
         "vpn": {
             "enabled": false,

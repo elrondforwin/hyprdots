@@ -180,16 +180,6 @@ if command -v rmpc > /dev/null; then
     alias r="rmpc"
 fi
 
-if command -v yazi > /dev/null; then
-    function y() {
-      local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-      yazi "$@" --cwd-file="$tmp"
-      IFS= read -r -d '' cwd < "$tmp"
-      [ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
-      rm -f -- "$tmp"
-    }
-fi
-
 if command -v waybarctl > /dev/null; then
     alias reloadwaybar="waybarctl reload"
 fi
@@ -238,3 +228,11 @@ if command -v Hyprland > /dev/null; then
     Hyprland
   fi
 fi
+
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}
