@@ -1,0 +1,23 @@
+[config]
+
+# User-defined templates
+# Add your custom templates below
+# Example:
+# [templates.myapp]
+# input_path = "~/.config/noctalia/templates/myapp.css"
+# output_path = "~/.config/myapp/theme.css"
+# post_hook = "myapp --reload-theme"
+
+# Remove this section and add your own templates
+#[templates.placeholder]
+#input_path = "/home/elrond/.config/quickshell/Assets/MatugenTemplates/noctalia.json"
+#output_path = "/home/elrond/.cache/noctalia/placeholder.json"
+
+[templates.hyprland]
+input_path = '~/.config/noctalia/matugenTemplates/hyprland-borders.conf'
+output_path = '~/.config/hypr/noctalia/noctalia-borders.conf'
+post_hook = 'hyprctl reload'
+
+[templates.yazi]
+input_path = '~/.config/noctalia/matugenTemplates/yazi.toml'
+output_path = '~/.config/yazi/theme.toml'
