@@ -32,7 +32,7 @@ window {
   background-color: @bg1;
   border: 2px;
   border-color: @accent;
-  border-radius: 12px;
+  border-radius: 0px;
   padding: 4px;
 }
 
@@ -89,7 +89,7 @@ element alternate active {
 element selected {
   text-color       : @bg1;
   background-color : @accent;
-  border-radius: 8;
+  border-radius: 0;
 }
 
 element selected urgent {

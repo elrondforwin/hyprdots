@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-WALL_DIR="/home/$USER/Pictures/wallpapers"
+WALL_DIR="/home/$USER/Pictures/Wallpapers"
 
 check_preq() {
   if [[ -z $(command -v swww) ]]; then

@@ -39,7 +39,7 @@ browser = /usr/bin/xdg-open
 always_run_script = true
 title = Dunst
 class = Dunst
-corner_radius = 8
+corner_radius = 0
 ignore_dbusclose = false
 force_xwayland = false
 force_xinerama = false
@@ -47,27 +47,27 @@ mouse_left_click = close_current
 mouse_middle_click = do_action, close_current
 mouse_right_click = close_all
 separator_color = frame
-frame_color = "#94e2d5"          # Catppuccin Mocha — mauve
-highlight = "#94e2d5"            # Catppuccin Mocha — mauve
-separator_color = "#14141C"      # Catppuccin Mocha — surface1
+frame_color = "#94e2d5"
+highlight = "#94e2d5"
+separator_color = "#14141C"
 
 [experimental]
 per_monitor_dpi = false
 
 [urgency_low]
 timeout = 3
-background = "#000000"           # Catppuccin Mocha — crust
-foreground = "#cdd6f4"           # Catppuccin Mocha — text
-highlight = "#14141C"            # Catppuccin Mocha — surface1
+background = "#000000"
+foreground = "#cdd6f4"
+highlight = "#14141C"
 
 [urgency_normal]
 timeout = 6
-background = "#000000"           # Catppuccin Mocha — crust
-foreground = "#cdd6f4"           # Catppuccin Mocha — text
-highlight = "#14141C"            # Catppuccin Mocha — surface1
+background = "#000000"
+foreground = "#cdd6f4"
+highlight = "#14141C"
 
 [urgency_critical]
 timeout = 0
-background = "#000000"           # Catppuccin Mocha — crust
-foreground = "#cdd6f4"           # Catppuccin Mocha — text
-highlight = "#45475a"            # Catppuccin Mocha — surface1
+background = "#000000"
+foreground = "#cdd6f4"
+highlight = "#45475a"

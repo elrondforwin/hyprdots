@@ -1,1 +1,1 @@
-/home/elrond/.themes/True-Oled/set_theme.lua
+/home/elrond/.themes/Oledpuccin/set_theme.lua
