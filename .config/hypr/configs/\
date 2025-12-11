@@ -21,14 +21,12 @@ bind = $mainMod, F1, exec, ~/.config/hypr/scripts/toggleanim.sh
 
 # groups
 bind = $mainMod, G, togglegroup
-bind = $mainMod SHIFT, G, lockactivegroup, toggle
 bind = $mainMod, tab, changegroupactive, f
 bind = $mainMod SHIFT, tab, changegroupactive, b
 bind = $mainMod CTRL, H, moveintogroup, l
 bind = $mainMod CTRL, L, moveintogroup, r
 bind = $mainMod CTRL, K, moveintogroup, u
 bind = $mainMod CTRL, J, moveintogroup, d
-bind = $mainMod, D, moveoutofgroup
 
 # Launch Defaults
 bind = $mainMod, Return, exec, $terminal
