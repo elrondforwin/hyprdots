@@ -17,7 +17,3 @@
 input_path = '~/.config/noctalia/matugenTemplates/hyprland-borders.conf'
 output_path = '~/.config/hypr/noctalia/noctalia-borders.conf'
 post_hook = 'hyprctl reload'
-
-[templates.yazi]
-input_path = '~/.config/noctalia/matugenTemplates/yazi.toml'
-output_path = '~/.config/yazi/theme.toml'

@@ -19,9 +19,3 @@ dynamic_background_opacity  yes
 confirm_os_window_close     0
 cursor_trail                0
 cursor_shape                underline
-
-
-# BEGIN_KITTY_THEME
-# Noctalia
-include current-theme.conf
-# END_KITTY_THEME
