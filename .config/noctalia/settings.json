@@ -39,14 +39,6 @@
         "showCapsule": true,
         "widgets": {
             "center": [
-                {
-                    "customFont": "",
-                    "formatHorizontal": "HH:mm ddd, MMM dd",
-                    "formatVertical": "HH mm - dd MM",
-                    "id": "Clock",
-                    "useCustomFont": false,
-                    "usePrimaryColor": false
-                }
             ],
             "left": [
                 {
@@ -65,22 +57,30 @@
                     "showCpuTemp": true,
                     "showCpuUsage": true,
                     "showDiskUsage": false,
+                    "showGpuTemp": false,
                     "showMemoryAsPercent": false,
                     "showMemoryUsage": true,
                     "showNetworkStats": false,
                     "usePrimaryColor": false
                 },
                 {
-                    "colorizeIcons": false,
-                    "hideMode": "hidden",
-                    "id": "ActiveWindow",
-                    "maxWidth": 250,
-                    "scrollingMode": "hover",
-                    "showIcon": true,
-                    "useFixedWidth": false
+                    "id": "plugin:privacy-indicator"
                 },
                 {
-                    "id": "plugin:catwalk"
+                    "hideMode": "hidden",
+                    "hideWhenIdle": false,
+                    "id": "MediaMini",
+                    "maxWidth": 150,
+                    "scrollingMode": "always",
+                    "showAlbumArt": true,
+                    "showArtistFirst": true,
+                    "showProgressRing": false,
+                    "showVisualizer": true,
+                    "useFixedWidth": false,
+                    "visualizerType": "mirrored"
+                },
+                {
+                    "id": "plugin:network-indicator"
                 }
             ],
             "right": [
@@ -94,31 +94,25 @@
                     ]
                 },
                 {
-                    "hideMode": "hidden",
-                    "hideWhenIdle": false,
-                    "id": "MediaMini",
-                    "maxWidth": 250,
-                    "scrollingMode": "always",
-                    "showAlbumArt": true,
-                    "showArtistFirst": true,
-                    "showProgressRing": true,
-                    "showVisualizer": true,
-                    "useFixedWidth": false,
-                    "visualizerType": "linear"
-                },
-                {
                     "displayMode": "forceOpen",
                     "id": "KeyboardLayout"
                 },
                 {
-                    "id": "DarkMode"
-                },
-                {
-                    "id": "WallpaperSelector"
-                },
-                {
-                    "displayMode": "onhover",
+                    "displayMode": "alwaysShow",
                     "id": "Volume"
+                },
+                {
+                    "customFont": "",
+                    "formatHorizontal": "HH:mm ddd, MMM dd",
+                    "formatVertical": "HH mm - dd MM",
+                    "id": "Clock",
+                    "useCustomFont": false,
+                    "usePrimaryColor": false
+                },
+                {
+                    "hideWhenZero": true,
+                    "id": "NotificationHistory",
+                    "showUnreadBadge": true
                 },
                 {
                     "colorizeDistroLogo": false,
@@ -203,12 +197,12 @@
                     "id": "ScreenRecorder"
                 },
                 {
-                    "id": "WallpaperSelector"
+                    "id": "DarkMode"
                 }
             ],
             "right": [
                 {
-                    "id": "Notifications"
+                    "id": "WallpaperSelector"
                 },
                 {
                     "id": "PowerProfile"
@@ -263,7 +257,7 @@
     },
     "hooks": {
         "darkModeChange": "",
-        "enabled": false,
+        "enabled": true,
         "wallpaperChange": ""
     },
     "location": {
@@ -386,10 +380,13 @@
         "cpuCriticalThreshold": 90,
         "cpuPollingInterval": 3000,
         "cpuWarningThreshold": 80,
-        "criticalColor": "",
+        "criticalColor": "#f7768e",
         "diskCriticalThreshold": 90,
         "diskPollingInterval": 3000,
         "diskWarningThreshold": 80,
+        "gpuCriticalThreshold": 90,
+        "gpuPollingInterval": 3000,
+        "gpuWarningThreshold": 80,
         "memCriticalThreshold": 90,
         "memPollingInterval": 3000,
         "memWarningThreshold": 80,
@@ -398,7 +395,7 @@
         "tempPollingInterval": 3000,
         "tempWarningThreshold": 80,
         "useCustomColors": false,
-        "warningColor": ""
+        "warningColor": "#9ece6a"
     },
     "templates": {
         "alacritty": false,
@@ -438,12 +435,12 @@
         "enableMultiMonitorDirectories": false,
         "enabled": true,
         "fillColor": "#000000",
-        "fillMode": "center",
+        "fillMode": "crop",
         "hideWallpaperFilenames": false,
         "monitorDirectories": [
         ],
         "overviewEnabled": false,
-        "panelPosition": "follow_bar",
+        "panelPosition": "bottom_center",
         "randomEnabled": false,
         "randomIntervalSec": 300,
         "recursiveSearch": false,
@@ -455,7 +452,7 @@
         "wallhavenCategories": "111",
         "wallhavenOrder": "desc",
         "wallhavenPurity": "100",
-        "wallhavenQuery": "",
+        "wallhavenQuery": "japan",
         "wallhavenResolutionHeight": "",
         "wallhavenResolutionMode": "atleast",
         "wallhavenResolutionWidth": "",

@@ -14,6 +14,6 @@
 #output_path = "/home/elrond/.cache/noctalia/placeholder.json"
 
 [templates.hyprland]
-input_path = '~/.config/noctalia/matugenTemplates/hyprland-borders.conf'
-output_path = '~/.config/hypr/noctalia/noctalia-borders.conf'
+input_path = '~/.config/noctalia/matugenTemplates/hyprland-colors.conf'
+output_path = '~/.config/hypr/noctalia/noctalia-colors.conf'
 post_hook = 'hyprctl reload'
