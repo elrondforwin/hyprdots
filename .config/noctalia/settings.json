@@ -110,6 +110,9 @@
                     "usePrimaryColor": false
                 },
                 {
+                    "id": "ScreenRecorder"
+                },
+                {
                     "hideWhenZero": true,
                     "id": "NotificationHistory",
                     "showUnreadBadge": true
@@ -157,7 +160,7 @@
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "matugenSchemeType": "scheme-fruit-salad",
-        "predefinedScheme": "Tokyo Night",
+        "predefinedScheme": "Rose Pine",
         "schedulingMode": "off",
         "useWallpaperColors": false
     },
@@ -194,9 +197,6 @@
                     "id": "Bluetooth"
                 },
                 {
-                    "id": "ScreenRecorder"
-                },
-                {
                     "id": "DarkMode"
                 }
             ],
@@ -209,9 +209,6 @@
                 },
                 {
                     "id": "KeepAwake"
-                },
-                {
-                    "id": "NightLight"
                 }
             ]
         }
@@ -399,7 +396,7 @@
     },
     "templates": {
         "alacritty": false,
-        "cava": false,
+        "cava": true,
         "code": false,
         "discord": false,
         "emacs": false,

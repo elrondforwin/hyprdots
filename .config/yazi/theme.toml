@@ -1,3 +1,6 @@
 [flavor]
 dark = "noctalia"
 light = "noctalia"
+
+[mgr]
+border_symbol = " "
