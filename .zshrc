@@ -17,6 +17,15 @@ fi
 # Flatpak desktop integration fix
 export XDG_DATA_DIRS="/var/lib/flatpak/exports/share:/home/elrond/.local/share/flatpak/exports/share:${XDG_DATA_DIRS:-/usr/local/share:/usr/share}"
 
+# Set $EDITOR
+PREFFERED_EDITOR="zeditor"
+FALLBACK_EDITOR="nvim"
+if command -v "$PREFFERED_EDITOR" > /dev/null; then
+  export EDITOR="$PREFFERED_EDITOR"
+else command -v "$FALLBACK_EDITOR" > /dev/null;
+  export EDITOR="$FALLBACK_EDITOR"
+fi
+
 # add ~/.local/bin to $PATH
 PATH=$PATH:/$HOME/.local/bin
 
@@ -96,6 +105,7 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
+zstyle ':fzf-tab:*' use-fzf-default-opts yes
 
 # Aliases
 alias ls='ls --color'
@@ -141,10 +151,21 @@ bindkey '^[[1;5C' forward-word
 # Shell integrations and some aliases
 if command -v fzf > /dev/null; then
     eval "$(fzf --zsh)"
+    # export FZF_DEFAULT_OPTS="--color=bg+:0"
+    export FZF_DEFAULT_OPTS="
+      --color=fg:#908caa,bg:#191724,hl:#ebbcba
+      --color=fg+:#e0def4,bg+:#26233a,hl+:#ebbcba
+      --color=border:#403d52,header:#31748f,gutter:#191724
+      --color=spinner:#f6c177,info:#9ccfd8
+      --color=pointer:#c4a7e7,marker:#eb6f92,prompt:#908caa"
 fi
 
 if command -v rsync > /dev/null; then
     alias rcp='rsync --archive --modify-window=2 --progress --verbose --itemize-changes --stats --human-readable'
+fi
+
+if command -v zeditor > /dev/null; then
+    alias z='zeditor'
 fi
 
 if command -v zoxide > /dev/null; then
@@ -167,7 +188,6 @@ if command -v nvim > /dev/null; then
     alias vim="nvim"
     alias vi="vim"
     alias v="vim"
-    export EDITOR=nvim
     export VISUAL=nvim
 fi
 
