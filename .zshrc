@@ -37,26 +37,6 @@ zinit ice depth=1; zinit light romkatv/powerlevel10k
 # emacs mode
 set -o emacs
 
-# OMP_THEMES_PATH="/$HOME/.config/oh-my-posh"
-# OMP_THEME="$OMP_THEMES_PATH/zen.toml"
-
-# load oh my posh if found
-# if [[ ! -z $(command -v oh-my-posh) ]]; then
-#     eval "$(oh-my-posh init zsh -c $OMP_THEME)"
-#     if [[ ! -f $OMP_THEME ]]; then
-#       mkdir -p $OMP_THEMES_PATH
-#       curl -fsSL "https://raw.githubusercontent.com/dreamsofautonomy/zen-omp/refs/heads/main/zen.toml" -o $OMP_THEME
-#     fi
-#   else
-#     echo "oh-my-posh not found in PATH!"
-#     if [[ ! -f /$HOME/.local/bin/oh-my-posh ]]; then
-#       echo "Installing oh-my-posh to ''~/.local/bin'"
-#       curl -s https://ohmyposh.dev/install.sh | bash -s
-#     else
-#       echo "oh-my-posh is present, but not in PATH."
-#     fi
-# fi
-
 # Add in zsh plugins
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
@@ -132,7 +112,7 @@ alias egrep='egrep --color=auto'
 alias hw='hwinfo --short' # Hardware Info
 alias big="expac -H M '%m\t%n' | sort -h | nl" # Sort installed packages according to size in MB
 alias gitpkg='pacman -Q | grep -i "\-git" | wc -l' # List amount of -git packages
-alias update='sudo pacman -Syu'
+# alias update='sudo pacman -Syu'
 alias img="kitten icat"
 alias copy="wl-copy"
 alias jctl="journalctl -p 3 -xb"
@@ -147,6 +127,36 @@ bindkey '^H' backward-kill-word
 bindkey '^[[3;5~' kill-word
 bindkey '^[[1;5D' backward-word
 bindkey '^[[1;5C' forward-word
+
+function update() {
+    # detect aur helper
+    local HELPER
+    if command -v yay > /dev/null; then
+        HELPER="yay"
+    else if command -v paru > /dev/null; then
+            HELPER="paru"
+    else HELPER="none"
+        fi
+    fi
+
+    FLATPAK="false"
+    # check flatpak
+    if command -v flatpak > /dev/null; then
+        FLATPAK="true"
+    fi
+
+    if [[ "$HELPER" == "none" ]]; then
+        echo "Please install 'yay' or 'paru'"
+        exit 1
+    fi
+
+    notify-send "Updating system..."
+    "$HELPER" -Syu
+    if [[ "$FLATPAK" == "true" ]]; then
+        notify-send "Updating flatpak..."
+        flatpak update -y
+    fi
+}
 
 # Shell integrations and some aliases
 if command -v fzf > /dev/null; then

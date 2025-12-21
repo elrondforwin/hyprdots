@@ -49,7 +49,7 @@
                     "followFocusedScreen": false,
                     "hideUnoccupied": false,
                     "id": "Workspace",
-                    "labelMode": "name",
+                    "labelMode": "index",
                     "showApplications": false,
                     "showLabelsOnlyWhenOccupied": true
                 },
@@ -80,6 +80,9 @@
                     "showVisualizer": false,
                     "useFixedWidth": false,
                     "visualizerType": "mirrored"
+                },
+                {
+                    "id": "plugin:todo"
                 },
                 {
                     "id": "plugin:network-indicator"
@@ -223,6 +226,7 @@
     "desktopWidgets": {
         "editMode": false,
         "enabled": true,
+        "gridSnap": true,
         "monitorWidgets": [
             {
                 "name": "DP-2",
@@ -230,14 +234,15 @@
                     {
                         "id": "Weather",
                         "showBackground": false,
-                        "x": 842.3984375,
-                        "y": 789.6015625
+                        "x": 840,
+                        "y": 720
                     }
                 ]
             }
         ]
     },
     "dock": {
+        "animationSpeed": 1,
         "backgroundOpacity": 1,
         "colorizeIcons": false,
         "deadOpacity": 0.6,
@@ -255,7 +260,7 @@
     },
     "general": {
         "allowPanelsOnScreenWithoutBar": true,
-        "animationDisabled": true,
+        "animationDisabled": false,
         "animationSpeed": 1,
         "avatarImage": "/home/elrond/.face",
         "boxRadiusRatio": 1,
@@ -279,6 +284,8 @@
     "hooks": {
         "darkModeChange": "",
         "enabled": true,
+        "performanceModeDisabled": "",
+        "performanceModeEnabled": "",
         "screenLock": "",
         "screenUnlock": "",
         "wallpaperChange": ""
@@ -425,7 +432,7 @@
     "templates": {
         "alacritty": false,
         "cava": true,
-        "code": false,
+        "code": true,
         "discord": false,
         "emacs": false,
         "enableUserTemplates": true,
@@ -435,6 +442,7 @@
         "gtk": true,
         "kcolorscheme": true,
         "kitty": true,
+        "mango": false,
         "niri": false,
         "pywalfox": false,
         "qt": false,
@@ -479,6 +487,7 @@
         "wallhavenOrder": "desc",
         "wallhavenPurity": "100",
         "wallhavenQuery": "japan",
+        "wallhavenRatios": "",
         "wallhavenResolutionHeight": "",
         "wallhavenResolutionMode": "atleast",
         "wallhavenResolutionWidth": "",
