@@ -7,6 +7,9 @@
         }
     ],
     "states": {
+        "fancy-audiovisualizer": {
+            "enabled": true
+        },
         "network-indicator": {
             "enabled": true
         },

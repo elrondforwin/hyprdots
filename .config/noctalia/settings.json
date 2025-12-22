@@ -4,6 +4,7 @@
         "customLaunchPrefixEnabled": false,
         "enableClipPreview": true,
         "enableClipboardHistory": true,
+        "iconMode": "tabler",
         "pinnedExecs": [
         ],
         "position": "follow_bar",
@@ -19,13 +20,12 @@
         "mprisBlacklist": [
         ],
         "preferredPlayer": "mpv",
-        "visualizerQuality": "high",
         "visualizerType": "linear",
         "volumeOverdrive": false,
         "volumeStep": 5
     },
     "bar": {
-        "capsuleOpacity": 0.41000000000000003,
+        "capsuleOpacity": 0.5,
         "density": "default",
         "exclusive": true,
         "floating": false,
@@ -34,7 +34,7 @@
         "monitors": [
         ],
         "outerCorners": true,
-        "position": "bottom",
+        "position": "top",
         "showCapsule": true,
         "showOutline": false,
         "transparent": false,
@@ -44,7 +44,7 @@
             "left": [
                 {
                     "characterCount": 2,
-                    "colorizeIcons": false,
+                    "colorizeIcons": true,
                     "enableScrollWheel": true,
                     "followFocusedScreen": false,
                     "hideUnoccupied": false,
@@ -64,9 +64,6 @@
                     "showMemoryUsage": true,
                     "showNetworkStats": false,
                     "usePrimaryColor": false
-                },
-                {
-                    "id": "plugin:privacy-indicator"
                 },
                 {
                     "hideMode": "hidden",
@@ -89,6 +86,9 @@
                 }
             ],
             "right": [
+                {
+                    "id": "plugin:privacy-indicator"
+                },
                 {
                     "blacklist": [
                     ],
@@ -113,21 +113,21 @@
                     "formatVertical": "HH mm - dd MM",
                     "id": "Clock",
                     "useCustomFont": false,
-                    "usePrimaryColor": false
+                    "usePrimaryColor": true
                 },
                 {
                     "id": "ScreenRecorder"
                 },
                 {
-                    "hideWhenZero": true,
+                    "hideWhenZero": false,
                     "id": "NotificationHistory",
                     "showUnreadBadge": true
                 },
                 {
                     "colorizeDistroLogo": false,
-                    "colorizeSystemIcon": "none",
+                    "colorizeSystemIcon": "primary",
                     "customIconPath": "",
-                    "enableColorization": false,
+                    "enableColorization": true,
                     "icon": "noctalia",
                     "id": "ControlCenter",
                     "useDistroLogo": false
@@ -224,18 +224,29 @@
         }
     },
     "desktopWidgets": {
-        "editMode": false,
         "enabled": true,
-        "gridSnap": true,
+        "gridSnap": false,
         "monitorWidgets": [
             {
                 "name": "DP-2",
                 "widgets": [
                     {
-                        "id": "Weather",
+                        "hideMode": "hidden",
+                        "id": "MediaPlayer",
+                        "scale": 1.2416872092070415,
                         "showBackground": false,
-                        "x": 840,
-                        "y": 720
+                        "showButtons": false,
+                        "visualizerType": "",
+                        "visualizerVisibility": "always",
+                        "x": 26.40234375000017,
+                        "y": 953.59765625
+                    },
+                    {
+                        "id": "Weather",
+                        "scale": 1.3134116486728997,
+                        "showBackground": false,
+                        "x": 1569.19921875,
+                        "y": 947.6015624999999
                     }
                 ]
             }
@@ -244,24 +255,24 @@
     "dock": {
         "animationSpeed": 1,
         "backgroundOpacity": 1,
-        "colorizeIcons": false,
+        "colorizeIcons": true,
         "deadOpacity": 0.6,
         "displayMode": "auto_hide",
         "enabled": true,
         "floatingRatio": 1,
-        "inactiveIndicators": false,
+        "inactiveIndicators": true,
         "monitors": [
         ],
         "onlySameOutput": true,
         "pinnedApps": [
         ],
-        "pinnedStatic": false,
+        "pinnedStatic": true,
         "size": 1
     },
     "general": {
         "allowPanelsOnScreenWithoutBar": true,
         "animationDisabled": false,
-        "animationSpeed": 1,
+        "animationSpeed": 1.2,
         "avatarImage": "/home/elrond/.face",
         "boxRadiusRatio": 1,
         "compactLockScreen": false,
@@ -319,7 +330,7 @@
         "criticalUrgencyDuration": 15,
         "enableKeyboardLayoutToast": true,
         "enabled": true,
-        "location": "top_right",
+        "location": "top",
         "lowUrgencyDuration": 3,
         "monitors": [
         ],
@@ -435,11 +446,12 @@
         "code": true,
         "discord": false,
         "emacs": false,
-        "enableUserTemplates": true,
+        "enableUserTemplates": false,
         "foot": true,
         "fuzzel": false,
         "ghostty": false,
         "gtk": true,
+        "hyprland": true,
         "kcolorscheme": true,
         "kitty": true,
         "mango": false,
@@ -455,6 +467,8 @@
         "zed": true
     },
     "ui": {
+        "bluetoothDetailsViewMode": "grid",
+        "bluetoothHideUnnamedDevices": false,
         "fontDefault": "Noto Sans",
         "fontDefaultScale": 1,
         "fontFixed": "JetBrainsMono Nerd Font",
@@ -462,7 +476,8 @@
         "panelBackgroundOpacity": 1,
         "panelsAttachedToBar": true,
         "settingsPanelMode": "attached",
-        "tooltipsEnabled": true
+        "tooltipsEnabled": true,
+        "wifiDetailsViewMode": "grid"
     },
     "wallpaper": {
         "directory": "/home/elrond/Pictures/Wallpapers",

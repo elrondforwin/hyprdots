@@ -18,7 +18,7 @@ fi
 export XDG_DATA_DIRS="/var/lib/flatpak/exports/share:/home/elrond/.local/share/flatpak/exports/share:${XDG_DATA_DIRS:-/usr/local/share:/usr/share}"
 
 # Set $EDITOR
-PREFFERED_EDITOR="zeditor"
+PREFFERED_EDITOR="nvim"
 FALLBACK_EDITOR="nvim"
 if command -v "$PREFFERED_EDITOR" > /dev/null; then
   export EDITOR="$PREFFERED_EDITOR"

@@ -13,7 +13,7 @@
 #input_path = "/home/elrond/.config/quickshell/Assets/MatugenTemplates/noctalia.json"
 #output_path = "/home/elrond/.cache/noctalia/placeholder.json"
 
-[templates.hyprland]
-input_path = '~/.config/noctalia/matugenTemplates/hyprland-colors.conf'
-output_path = '~/.config/hypr/noctalia/noctalia-colors.conf'
-post_hook = 'hyprctl reload'
+# [templates.hyprland]
+# input_path = '~/.config/noctalia/matugenTemplates/hyprland-colors.conf'
+# output_path = '~/.config/hypr/noctalia/noctalia-colors.conf'
+# post_hook = 'hyprctl reload'
