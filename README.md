@@ -1,3 +1,2 @@
-# My Current Hyprland Dotfiles
-
-this branch is experimental and does not intended for production usage.
+this branch is not used anymore
+i use noctalia branch instead.
