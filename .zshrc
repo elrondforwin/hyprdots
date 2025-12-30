@@ -134,7 +134,7 @@ function update() {
     if command -v yay > /dev/null; then
         HELPER="yay"
     else if command -v paru > /dev/null; then
-            HELPER="paru"
+        HELPER="paru"
     else HELPER="none"
         fi
     fi
@@ -255,7 +255,7 @@ extract() {
 if command -v Hyprland > /dev/null; then
   if [[ ! -f /tmp/hyprland.lock ]]; then
     touch /tmp/hyprland.lock
-    Hyprland
+    start-hyprland
   fi
 fi
 
