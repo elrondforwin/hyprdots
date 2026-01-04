@@ -8,16 +8,24 @@
     ],
     "states": {
         "fancy-audiovisualizer": {
-            "enabled": true
+            "enabled": true,
+            "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
         },
         "network-indicator": {
-            "enabled": true
+            "enabled": true,
+            "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
         },
         "privacy-indicator": {
-            "enabled": true
+            "enabled": true,
+            "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
+        },
+        "simple-notes": {
+            "enabled": true,
+            "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
         },
         "todo": {
-            "enabled": true
+            "enabled": true,
+            "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
         }
     },
     "version": 1

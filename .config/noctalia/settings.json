@@ -5,10 +5,13 @@
         "enableClipPreview": true,
         "enableClipboardHistory": true,
         "iconMode": "tabler",
+        "ignoreMouseInput": false,
         "pinnedExecs": [
         ],
         "position": "center",
+        "screenshotAnnotationTool": "",
         "showCategories": false,
+        "showIconBackground": true,
         "sortByMostUsed": true,
         "terminalCommand": "xterm -e",
         "useApp2Unit": true,
@@ -25,19 +28,20 @@
         "volumeStep": 5
     },
     "bar": {
-        "capsuleOpacity": 0.6,
-        "density": "compact",
+        "backgroundOpacity": 0.93,
+        "capsuleOpacity": 0.66,
+        "density": "default",
         "exclusive": true,
         "floating": false,
-        "marginHorizontal": 0.25,
-        "marginVertical": 0.25,
+        "marginHorizontal": 0,
+        "marginVertical": 0,
         "monitors": [
         ],
         "outerCorners": false,
         "position": "bottom",
         "showCapsule": true,
         "showOutline": false,
-        "transparent": false,
+        "useSeparateOpacity": false,
         "widgets": {
             "center": [
             ],
@@ -47,7 +51,9 @@
                     "colorizeIcons": true,
                     "enableScrollWheel": true,
                     "followFocusedScreen": false,
+                    "groupedBorderOpacity": 1,
                     "hideUnoccupied": false,
+                    "iconScale": 0.8,
                     "id": "Workspace",
                     "labelMode": "index",
                     "showApplications": false,
@@ -62,6 +68,7 @@
                     "showCpuUsage": true,
                     "showDiskUsage": false,
                     "showGpuTemp": true,
+                    "showLoadAverage": false,
                     "showMemoryAsPercent": false,
                     "showMemoryUsage": true,
                     "showNetworkStats": false,
@@ -80,33 +87,6 @@
                     "showVisualizer": false,
                     "useFixedWidth": false,
                     "visualizerType": "mirrored"
-                },
-                {
-                    "defaultSettings": {
-                        "arrowType": "caret",
-                        "byteThresholdActive": 1024,
-                        "fontSizeModifier": 1,
-                        "forceMegabytes": false,
-                        "iconSizeModifier": 1,
-                        "minWidth": 0,
-                        "showNumbers": true,
-                        "spacingInbetween": 0,
-                        "useCustomColors": false
-                    },
-                    "id": "plugin:network-indicator"
-                },
-                {
-                    "colorizeIcons": true,
-                    "hideMode": "hidden",
-                    "iconScale": 1,
-                    "id": "Taskbar",
-                    "maxTaskbarWidth": 10,
-                    "onlyActiveWorkspaces": true,
-                    "onlySameOutput": true,
-                    "showPinnedApps": true,
-                    "showTitle": true,
-                    "smartWidth": true,
-                    "titleWidth": 120
                 }
             ],
             "right": [
@@ -129,6 +109,14 @@
                 },
                 {
                     "defaultSettings": {
+                        "notes": [
+                        ],
+                        "showCountInBar": true
+                    },
+                    "id": "plugin:simple-notes"
+                },
+                {
+                    "defaultSettings": {
                         "completedCount": 0,
                         "count": 0,
                         "showBackground": true,
@@ -140,20 +128,24 @@
                 },
                 {
                     "displayMode": "forceOpen",
-                    "id": "KeyboardLayout"
+                    "id": "KeyboardLayout",
+                    "showIcon": true
                 },
                 {
                     "displayMode": "alwaysShow",
                     "id": "Volume"
                 },
                 {
-                    "customFont": "",
-                    "formatHorizontal": "HH:mm ddd, MMM dd",
-                    "formatVertical": "HH mm - dd MM",
+                    "customFont": "JetBrainsMono Nerd Font",
+                    "formatHorizontal": "HH:mm",
+                    "formatVertical": "",
                     "id": "Clock",
                     "tooltipFormat": "HH:mm ddd, MMM dd",
-                    "useCustomFont": false,
+                    "useCustomFont": true,
                     "usePrimaryColor": true
+                },
+                {
+                    "id": "NoctaliaPerformance"
                 },
                 {
                     "id": "ScreenRecorder"
@@ -206,7 +198,7 @@
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "matugenSchemeType": "scheme-rainbow",
-        "predefinedScheme": "Rose Pine",
+        "predefinedScheme": "Tokyo Night",
         "schedulingMode": "off",
         "useWallpaperColors": false
     },
@@ -237,6 +229,7 @@
                 "id": "brightness-card"
             }
         ],
+        "diskPath": "/",
         "position": "close_to_bar_button",
         "shortcuts": {
             "left": [
@@ -264,19 +257,12 @@
         }
     },
     "desktopWidgets": {
-        "enabled": false,
+        "enabled": true,
         "gridSnap": false,
         "monitorWidgets": [
             {
                 "name": "DP-2",
                 "widgets": [
-                    {
-                        "id": "Weather",
-                        "scale": 1.3134116486728997,
-                        "showBackground": false,
-                        "x": 1575.2031250000002,
-                        "y": 53.60546874999983
-                    }
                 ]
             }
         ]
@@ -300,7 +286,7 @@
     },
     "general": {
         "allowPanelsOnScreenWithoutBar": true,
-        "animationDisabled": true,
+        "animationDisabled": false,
         "animationSpeed": 1.2,
         "avatarImage": "/home/elrond/.face",
         "boxRadiusRatio": 1,
@@ -308,15 +294,15 @@
         "dimmerOpacity": 0.2,
         "enableShadows": true,
         "forceBlackScreenCorners": false,
-        "iRadiusRatio": 0,
+        "iRadiusRatio": 1,
         "language": "",
         "lockOnSuspend": true,
-        "radiusRatio": 0,
+        "radiusRatio": 1,
         "scaleRatio": 1,
         "screenRadiusRatio": 1,
-        "shadowDirection": "bottom_right",
-        "shadowOffsetX": 2,
-        "shadowOffsetY": 3,
+        "shadowDirection": "center",
+        "shadowOffsetX": 0,
+        "shadowOffsetY": 0,
         "showHibernateOnLockScreen": false,
         "showScreenCorners": false,
         "showSessionButtonsOnLockScreen": true
@@ -324,8 +310,8 @@
     "hooks": {
         "darkModeChange": "",
         "enabled": true,
-        "performanceModeDisabled": "",
-        "performanceModeEnabled": "",
+        "performanceModeDisabled": "bash -c \"/home/elrond/.config/hypr/scripts/gamemode_disable.sh\"",
+        "performanceModeEnabled": "bash -c \"/home/elrond/.config/hypr/scripts/gamemode_enable.sh\"",
         "screenLock": "",
         "screenUnlock": "",
         "wallpaperChange": ""
@@ -343,6 +329,11 @@
         "weatherShowEffects": true
     },
     "network": {
+        "bluetoothDetailsViewMode": "grid",
+        "bluetoothHideUnnamedDevices": false,
+        "bluetoothRssiPollIntervalMs": 10000,
+        "bluetoothRssiPollingEnabled": false,
+        "wifiDetailsViewMode": "grid",
         "wifiEnabled": false
     },
     "nightLight": {
@@ -399,7 +390,7 @@
         "audioCodec": "opus",
         "audioSource": "default_output",
         "colorRange": "limited",
-        "copyToClipboard": false,
+        "copyToClipboard": true,
         "directory": "/home/elrond/Videos",
         "frameRate": 60,
         "quality": "very_high",
@@ -410,6 +401,7 @@
     "sessionMenu": {
         "countdownDuration": 5000,
         "enableCountdown": true,
+        "largeButtonsLayout": "grid",
         "largeButtonsStyle": true,
         "position": "center",
         "powerOptions": [
@@ -453,20 +445,21 @@
         "showHeader": true,
         "showNumberLabels": true
     },
-    "settingsVersion": 33,
+    "settingsVersion": 37,
     "systemMonitor": {
         "cpuCriticalThreshold": 90,
         "cpuPollingInterval": 3000,
         "cpuWarningThreshold": 80,
         "criticalColor": "#f7768e",
         "diskCriticalThreshold": 90,
-        "diskPath": "/",
         "diskPollingInterval": 3000,
         "diskWarningThreshold": 80,
         "enableDgpuMonitoring": true,
+        "externalMonitor": "resources || missioncenter || jdsystemmonitor || corestats || system-monitoring-center || gnome-system-monitor || plasma-systemmonitor || mate-system-monitor || ukui-system-monitor || deepin-system-monitor || pantheon-system-monitor",
         "gpuCriticalThreshold": 90,
         "gpuPollingInterval": 3000,
         "gpuWarningThreshold": 80,
+        "loadAvgPollingInterval": 3000,
         "memCriticalThreshold": 90,
         "memPollingInterval": 3000,
         "memWarningThreshold": 80,
@@ -502,20 +495,19 @@
         "walker": false,
         "wezterm": false,
         "yazi": true,
-        "zed": true
+        "zed": true,
+        "zenBrowser": true
     },
     "ui": {
-        "bluetoothDetailsViewMode": "grid",
-        "bluetoothHideUnnamedDevices": false,
-        "fontDefault": "Noto Sans",
+        "boxBorderEnabled": false,
+        "fontDefault": "JetBrainsMono Nerd Font",
         "fontDefaultScale": 1,
         "fontFixed": "JetBrainsMono Nerd Font",
         "fontFixedScale": 1,
         "panelBackgroundOpacity": 1,
         "panelsAttachedToBar": true,
         "settingsPanelMode": "attached",
-        "tooltipsEnabled": true,
-        "wifiDetailsViewMode": "grid"
+        "tooltipsEnabled": true
     },
     "wallpaper": {
         "directory": "/home/elrond/Pictures/Wallpapers",
@@ -532,9 +524,11 @@
         "randomIntervalSec": 300,
         "recursiveSearch": false,
         "setWallpaperOnAllMonitors": true,
+        "solidColor": "#1a1a2e",
         "transitionDuration": 1500,
         "transitionEdgeSmoothness": 0.05,
         "transitionType": "random",
+        "useSolidColor": false,
         "useWallhaven": false,
         "wallhavenApiKey": "",
         "wallhavenCategories": "111",

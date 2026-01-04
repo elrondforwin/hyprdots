@@ -46,7 +46,7 @@ zinit light Aloxaf/fzf-tab
 # Add in snippets
 zinit snippet OMZL::git.zsh
 zinit snippet OMZP::git
-zinit snippet OMZP::sudo
+# zinit snippet OMZP::sudo
 zinit snippet OMZP::archlinux
 zinit snippet OMZP::kubectl
 zinit snippet OMZP::kubectx
@@ -61,7 +61,7 @@ zinit cdreplay -q
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Keybindings
-# bindkey -e
+bindkey -e
 # bindkey '^p' history-search-backward
 # bindkey '^n' history-search-forward
 # bindkey '^[w' kill-region
@@ -89,9 +89,9 @@ zstyle ':fzf-tab:*' use-fzf-default-opts yes
 
 # Aliases
 alias ls='ls --color'
-alias rm='rm -r -v'
-alias cp='cp -i -v'
-alias mkdir='mkdir -p -v'
+alias rm='rm -r'
+alias cp='cp -r'
+alias mkdir='mkdir -p'
 alias less='less -R'
 alias c='clear'
 alias tarnow='tar -acf '
@@ -119,6 +119,16 @@ alias jctl="journalctl -p 3 -xb"
 alias pacman="sudo pacman"
 alias svim="sudo vim"
 alias sv="sudo vim"
+alias z='zeditor'
+alias code="code --enable-features=UseOzonePlatform --ozone-platform=wayland"
+alias code-oss="code --enable-features=UseOzonePlatform --ozone-platform=wayland"
+alias r="rmpc"
+alias reloadwaybar="waybarctl reload"
+alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
+alias nemohere="nemo . &> /dev/null & disown"
+alias dolphere="dolphin . &> /dev/null & disown"
+alias rcp='rsync --archive --modify-window=2 --progress --verbose --itemize-changes --stats --human-readable'
+alias f='fastfetch'
 
 # some movement fixes
 bindkey '\e[3~' delete-char
@@ -162,21 +172,15 @@ function update() {
 if command -v fzf > /dev/null; then
     eval "$(fzf --zsh)"
     # export FZF_DEFAULT_OPTS="--color=bg+:0"
-    export FZF_DEFAULT_OPTS="
-      --color=fg:#908caa,bg:#191724,hl:#ebbcba
-      --color=fg+:#e0def4,bg+:#26233a,hl+:#ebbcba
-      --color=border:#403d52,header:#31748f,gutter:#191724
-      --color=spinner:#f6c177,info:#9ccfd8
-      --color=pointer:#c4a7e7,marker:#eb6f92,prompt:#908caa"
+    # export FZF_DEFAULT_OPTS="
+    #   --color=fg:#908caa,bg:#191724,hl:#ebbcba
+    #   --color=fg+:#e0def4,bg+:#26233a,hl+:#ebbcba
+    #   --color=border:#403d52,header:#31748f,gutter:#191724
+    #   --color=spinner:#f6c177,info:#9ccfd8
+    #   --color=pointer:#c4a7e7,marker:#eb6f92,prompt:#908caa"
+    export FZF_DEFAULT_OPTS="--color 16"
 fi
 
-if command -v rsync > /dev/null; then
-    alias rcp='rsync --archive --modify-window=2 --progress --verbose --itemize-changes --stats --human-readable'
-fi
-
-if command -v zeditor > /dev/null; then
-    alias z='zeditor'
-fi
 
 if command -v zoxide > /dev/null; then
     eval "$(zoxide init --cmd cd zsh)"
@@ -190,42 +194,18 @@ if command -v eza > /dev/null; then
     alias l.="eza -a | grep -e '^\.'" # show only dotfiles
 fi
 
-if command -v ncdu > /dev/null; then
-    alias disk='ncdu'
-fi
+alias disk='ncdu'
 
 if command -v nvim > /dev/null; then
-    alias vim="nvim"
-    alias vi="vim"
-    alias v="vim"
+    alias v="nvim"
+    alias n="nvim"
     export VISUAL=nvim
-fi
-
-if command -v code > /dev/null; then
-    alias code="code --enable-features=UseOzonePlatform --ozone-platform=wayland"
-    alias code-oss="code --enable-features=UseOzonePlatform --ozone-platform=wayland"
-fi
-
-if command -v rmpc > /dev/null; then
-    alias r="rmpc"
-fi
-
-if command -v waybarctl > /dev/null; then
-    alias reloadwaybar="waybarctl reload"
 fi
 
 if command -v reflector > /dev/null; then
     alias mirror="sudo reflector --verbose -l 50 -n 10 -p http --sort rate --save /etc/pacman.d/mirrorlist"
 else
     alias mirror="echo 'Please install reflector first.'"
-fi
-
-if command -v expac > /dev/null; then
-    alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
-fi
-
-if command -v nemo > /dev/null; then
-    alias nemohere="nemo . &> /dev/null & disown"
 fi
 
 extract() {
