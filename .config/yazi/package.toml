@@ -1,0 +1,7 @@
+[[plugin.deps]]
+use = "uhs-robert/recycle-bin"
+rev = "69d7d4c"
+hash = "38dac2fc8f4b50bbdaa46e699720a54a"
+
+[flavor]
+deps = []

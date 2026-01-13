@@ -1,12 +1,14 @@
 {
     "appLauncher": {
+        "autoPasteClipboard": false,
+        "clipboardWrapText": true,
         "customLaunchPrefix": "",
         "customLaunchPrefixEnabled": false,
         "enableClipPreview": true,
         "enableClipboardHistory": true,
         "iconMode": "tabler",
         "ignoreMouseInput": false,
-        "pinnedExecs": [
+        "pinnedApps": [
         ],
         "position": "center",
         "screenshotAnnotationTool": "",
@@ -19,7 +21,6 @@
     },
     "audio": {
         "cavaFrameRate": 30,
-        "externalMixer": "pwvucontrol || pavucontrol || foot -T pulsemixer pulsemixer",
         "mprisBlacklist": [
         ],
         "preferredPlayer": "mpv",
@@ -29,16 +30,16 @@
     },
     "bar": {
         "backgroundOpacity": 0.93,
-        "capsuleOpacity": 0.66,
+        "capsuleOpacity": 1,
         "density": "default",
         "exclusive": true,
         "floating": false,
-        "marginHorizontal": 0,
-        "marginVertical": 0,
+        "marginHorizontal": 3,
+        "marginVertical": 7,
         "monitors": [
         ],
-        "outerCorners": false,
-        "position": "bottom",
+        "outerCorners": true,
+        "position": "top",
         "showCapsule": true,
         "showOutline": false,
         "useSeparateOpacity": false,
@@ -76,10 +77,15 @@
                     "usePrimaryColor": false
                 },
                 {
+                    "compactMode": false,
+                    "compactShowAlbumArt": true,
+                    "compactShowVisualizer": false,
                     "hideMode": "hidden",
                     "hideWhenIdle": false,
                     "id": "MediaMini",
                     "maxWidth": 150,
+                    "panelShowAlbumArt": true,
+                    "panelShowVisualizer": true,
                     "scrollingMode": "hover",
                     "showAlbumArt": true,
                     "showArtistFirst": true,
@@ -108,32 +114,14 @@
                     "id": "plugin:privacy-indicator"
                 },
                 {
-                    "defaultSettings": {
-                        "notes": [
-                        ],
-                        "showCountInBar": true
-                    },
-                    "id": "plugin:simple-notes"
-                },
-                {
-                    "defaultSettings": {
-                        "completedCount": 0,
-                        "count": 0,
-                        "showBackground": true,
-                        "showCompleted": true,
-                        "todos": [
-                        ]
-                    },
-                    "id": "plugin:todo"
-                },
-                {
                     "displayMode": "forceOpen",
                     "id": "KeyboardLayout",
                     "showIcon": true
                 },
                 {
                     "displayMode": "alwaysShow",
-                    "id": "Volume"
+                    "id": "Volume",
+                    "middleClickCommand": "pwvucontrol || pavucontrol"
                 },
                 {
                     "customFont": "JetBrainsMono Nerd Font",
@@ -148,7 +136,19 @@
                     "id": "NoctaliaPerformance"
                 },
                 {
-                    "id": "ScreenRecorder"
+                    "defaultSettings": {
+                        "maxEvents": 50,
+                        "openInBrowser": true,
+                        "refreshInterval": 1800,
+                        "showForks": true,
+                        "showIssues": true,
+                        "showPRs": true,
+                        "showPushes": false,
+                        "showStars": true,
+                        "token": "",
+                        "username": ""
+                    },
+                    "id": "plugin:github-feed"
                 },
                 {
                     "hideWhenZero": false,
@@ -184,21 +184,16 @@
             },
             {
                 "enabled": true,
-                "id": "timer-card"
-            },
-            {
-                "enabled": true,
                 "id": "weather-card"
             }
         ]
     },
     "colorSchemes": {
         "darkMode": true,
-        "generateTemplatesForPredefined": true,
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "matugenSchemeType": "scheme-rainbow",
-        "predefinedScheme": "Tokyo Night",
+        "predefinedScheme": "Rose Pine",
         "schedulingMode": "off",
         "useWallpaperColors": false
     },
@@ -286,14 +281,14 @@
     },
     "general": {
         "allowPanelsOnScreenWithoutBar": true,
-        "animationDisabled": false,
+        "animationDisabled": true,
         "animationSpeed": 1.2,
         "avatarImage": "/home/elrond/.face",
         "boxRadiusRatio": 1,
         "compactLockScreen": false,
         "dimmerOpacity": 0.2,
         "enableShadows": true,
-        "forceBlackScreenCorners": false,
+        "forceBlackScreenCorners": true,
         "iRadiusRatio": 1,
         "language": "",
         "lockOnSuspend": true,
@@ -303,8 +298,9 @@
         "shadowDirection": "center",
         "shadowOffsetX": 0,
         "shadowOffsetY": 0,
+        "showChangelogOnStartup": true,
         "showHibernateOnLockScreen": false,
-        "showScreenCorners": false,
+        "showScreenCorners": true,
         "showSessionButtonsOnLockScreen": true
     },
     "hooks": {
@@ -319,6 +315,8 @@
     "location": {
         "analogClockInCalendar": false,
         "firstDayOfWeek": -1,
+        "hideWeatherCityName": false,
+        "hideWeatherTimezone": false,
         "name": "Samsun",
         "showCalendarEvents": true,
         "showCalendarWeather": true,
@@ -386,18 +384,6 @@
         ],
         "overlayLayer": true
     },
-    "screenRecorder": {
-        "audioCodec": "opus",
-        "audioSource": "default_output",
-        "colorRange": "limited",
-        "copyToClipboard": true,
-        "directory": "/home/elrond/Videos",
-        "frameRate": 60,
-        "quality": "very_high",
-        "showCursor": true,
-        "videoCodec": "h264",
-        "videoSource": "portal"
-    },
     "sessionMenu": {
         "countdownDuration": 5000,
         "enableCountdown": true,
@@ -445,7 +431,7 @@
         "showHeader": true,
         "showNumberLabels": true
     },
-    "settingsVersion": 37,
+    "settingsVersion": 39,
     "systemMonitor": {
         "cpuCriticalThreshold": 90,
         "cpuPollingInterval": 3000,
@@ -474,7 +460,7 @@
         "alacritty": false,
         "cava": true,
         "code": true,
-        "discord": false,
+        "discord": true,
         "emacs": false,
         "enableUserTemplates": false,
         "foot": true,
@@ -499,15 +485,19 @@
         "zenBrowser": true
     },
     "ui": {
+        "bluetoothDetailsViewMode": "grid",
+        "bluetoothHideUnnamedDevices": false,
         "boxBorderEnabled": false,
         "fontDefault": "JetBrainsMono Nerd Font",
         "fontDefaultScale": 1,
         "fontFixed": "JetBrainsMono Nerd Font",
         "fontFixedScale": 1,
+        "networkPanelView": "wifi",
         "panelBackgroundOpacity": 1,
         "panelsAttachedToBar": true,
         "settingsPanelMode": "attached",
-        "tooltipsEnabled": true
+        "tooltipsEnabled": true,
+        "wifiDetailsViewMode": "grid"
     },
     "wallpaper": {
         "directory": "/home/elrond/Pictures/Wallpapers",
