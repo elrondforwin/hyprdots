@@ -25,31 +25,44 @@
         ],
         "preferredPlayer": "mpv",
         "visualizerType": "linear",
+        "volumeFeedback": false,
         "volumeOverdrive": false,
         "volumeStep": 5
     },
     "bar": {
-        "backgroundOpacity": 0.93,
+        "backgroundOpacity": 0.85,
         "capsuleOpacity": 1,
         "density": "default",
         "exclusive": true,
         "floating": false,
-        "marginHorizontal": 3,
-        "marginVertical": 7,
+        "hideOnOverview": false,
+        "marginHorizontal": 8,
+        "marginVertical": 8,
         "monitors": [
         ],
-        "outerCorners": true,
+        "outerCorners": false,
         "position": "top",
-        "showCapsule": true,
+        "screenOverrides": [
+        ],
+        "showCapsule": false,
         "showOutline": false,
-        "useSeparateOpacity": false,
+        "useSeparateOpacity": true,
         "widgets": {
             "center": [
+                {
+                    "customFont": "",
+                    "formatHorizontal": "HH:mm ddd, MMM dd",
+                    "formatVertical": "HH mm - dd MM",
+                    "id": "Clock",
+                    "tooltipFormat": "HH:mm ddd, MMM dd",
+                    "useCustomFont": false,
+                    "usePrimaryColor": false
+                }
             ],
             "left": [
                 {
                     "characterCount": 2,
-                    "colorizeIcons": true,
+                    "colorizeIcons": false,
                     "enableScrollWheel": true,
                     "followFocusedScreen": false,
                     "groupedBorderOpacity": 1,
@@ -62,7 +75,7 @@
                     "unfocusedIconsOpacity": 1
                 },
                 {
-                    "compactMode": false,
+                    "compactMode": true,
                     "diskPath": "/",
                     "id": "SystemMonitor",
                     "showCpuTemp": true,
@@ -73,6 +86,7 @@
                     "showMemoryAsPercent": false,
                     "showMemoryUsage": true,
                     "showNetworkStats": false,
+                    "showSwapUsage": false,
                     "useMonospaceFont": false,
                     "usePrimaryColor": false
                 },
@@ -97,6 +111,12 @@
             ],
             "right": [
                 {
+                    "colorName": "primary",
+                    "hideWhenIdle": true,
+                    "id": "AudioVisualizer",
+                    "width": 100
+                },
+                {
                     "blacklist": [
                     ],
                     "colorizeIcons": true,
@@ -119,39 +139,30 @@
                     "showIcon": true
                 },
                 {
-                    "displayMode": "alwaysShow",
+                    "displayMode": "alwaysHide",
                     "id": "Volume",
                     "middleClickCommand": "pwvucontrol || pavucontrol"
                 },
                 {
-                    "customFont": "JetBrainsMono Nerd Font",
-                    "formatHorizontal": "HH:mm",
-                    "formatVertical": "",
-                    "id": "Clock",
-                    "tooltipFormat": "HH:mm ddd, MMM dd",
-                    "useCustomFont": true,
-                    "usePrimaryColor": true
-                },
-                {
-                    "id": "NoctaliaPerformance"
-                },
-                {
                     "defaultSettings": {
-                        "maxEvents": 50,
-                        "openInBrowser": true,
-                        "refreshInterval": 1800,
-                        "showForks": true,
-                        "showIssues": true,
-                        "showPRs": true,
-                        "showPushes": false,
-                        "showStars": true,
-                        "token": "",
-                        "username": ""
+                        "audioCodec": "opus",
+                        "audioSource": "default_output",
+                        "colorRange": "limited",
+                        "copyToClipboard": false,
+                        "directory": "",
+                        "filenamePattern": "recording_yyyyMMdd_HHmmss",
+                        "frameRate": "60",
+                        "quality": "very_high",
+                        "resolution": "original",
+                        "showCursor": true,
+                        "videoCodec": "h264",
+                        "videoSource": "portal"
                     },
-                    "id": "plugin:github-feed"
+                    "id": "plugin:screen-recorder"
                 },
                 {
                     "hideWhenZero": false,
+                    "hideWhenZeroUnread": false,
                     "id": "NotificationHistory",
                     "showUnreadBadge": true
                 },
@@ -190,12 +201,12 @@
     },
     "colorSchemes": {
         "darkMode": true,
+        "generationMethod": "material",
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
-        "matugenSchemeType": "scheme-rainbow",
-        "predefinedScheme": "Rose Pine",
+        "predefinedScheme": "Tokyo Night",
         "schedulingMode": "off",
-        "useWallpaperColors": false
+        "useWallpaperColors": true
     },
     "controlCenter": {
         "cards": [
@@ -246,7 +257,7 @@
                     "id": "PowerProfile"
                 },
                 {
-                    "id": "KeepAwake"
+                    "id": "NoctaliaPerformance"
                 }
             ]
         }
@@ -277,22 +288,25 @@
         "pinnedApps": [
         ],
         "pinnedStatic": true,
+        "position": "bottom",
         "size": 1
     },
     "general": {
         "allowPanelsOnScreenWithoutBar": true,
-        "animationDisabled": true,
-        "animationSpeed": 1.2,
+        "animationDisabled": false,
+        "animationSpeed": 1.6,
         "avatarImage": "/home/elrond/.face",
         "boxRadiusRatio": 1,
         "compactLockScreen": false,
-        "dimmerOpacity": 0.2,
+        "dimmerOpacity": 0.4,
+        "enableLockScreenCountdown": true,
         "enableShadows": true,
-        "forceBlackScreenCorners": true,
-        "iRadiusRatio": 1,
+        "forceBlackScreenCorners": false,
+        "iRadiusRatio": 0.25,
         "language": "",
         "lockOnSuspend": true,
-        "radiusRatio": 1,
+        "lockScreenCountdownDuration": 10000,
+        "radiusRatio": 0,
         "scaleRatio": 1,
         "screenRadiusRatio": 1,
         "shadowDirection": "center",
@@ -300,8 +314,9 @@
         "shadowOffsetY": 0,
         "showChangelogOnStartup": true,
         "showHibernateOnLockScreen": false,
-        "showScreenCorners": true,
-        "showSessionButtonsOnLockScreen": true
+        "showScreenCorners": false,
+        "showSessionButtonsOnLockScreen": true,
+        "telemetryEnabled": true
     },
     "hooks": {
         "darkModeChange": "",
@@ -310,6 +325,7 @@
         "performanceModeEnabled": "bash -c \"/home/elrond/.config/hypr/scripts/gamemode_enable.sh\"",
         "screenLock": "",
         "screenUnlock": "",
+        "session": "",
         "wallpaperChange": ""
     },
     "location": {
@@ -347,6 +363,7 @@
         "backgroundOpacity": 1,
         "criticalUrgencyDuration": 15,
         "enableKeyboardLayoutToast": true,
+        "enableMediaToast": false,
         "enabled": true,
         "location": "top",
         "lowUrgencyDuration": 3,
@@ -354,7 +371,7 @@
         ],
         "normalUrgencyDuration": 8,
         "overlayLayer": true,
-        "respectExpireTimeout": true,
+        "respectExpireTimeout": false,
         "saveToHistory": {
             "critical": true,
             "low": true,
@@ -431,7 +448,7 @@
         "showHeader": true,
         "showNumberLabels": true
     },
-    "settingsVersion": 39,
+    "settingsVersion": 41,
     "systemMonitor": {
         "cpuCriticalThreshold": 90,
         "cpuPollingInterval": 3000,
@@ -450,6 +467,8 @@
         "memPollingInterval": 3000,
         "memWarningThreshold": 80,
         "networkPollingInterval": 3000,
+        "swapCriticalThreshold": 90,
+        "swapWarningThreshold": 80,
         "tempCriticalThreshold": 90,
         "tempPollingInterval": 3000,
         "tempWarningThreshold": 80,
@@ -457,45 +476,70 @@
         "warningColor": "#9ece6a"
     },
     "templates": {
-        "alacritty": false,
-        "cava": true,
-        "code": true,
-        "discord": true,
-        "emacs": false,
-        "enableUserTemplates": false,
-        "foot": true,
-        "fuzzel": false,
-        "ghostty": false,
-        "gtk": true,
-        "helix": false,
-        "hyprland": true,
-        "kcolorscheme": true,
-        "kitty": true,
-        "mango": false,
-        "niri": false,
-        "pywalfox": false,
-        "qt": false,
-        "spicetify": false,
-        "telegram": false,
-        "vicinae": false,
-        "walker": false,
-        "wezterm": false,
-        "yazi": true,
-        "zed": true,
-        "zenBrowser": true
+        "activeTemplates": [
+            {
+                "enabled": true,
+                "id": "gtk"
+            },
+            {
+                "enabled": true,
+                "id": "qt"
+            },
+            {
+                "enabled": true,
+                "id": "kcolorscheme"
+            },
+            {
+                "enabled": true,
+                "id": "kitty"
+            },
+            {
+                "enabled": true,
+                "id": "foot"
+            },
+            {
+                "enabled": true,
+                "id": "discord"
+            },
+            {
+                "enabled": true,
+                "id": "cava"
+            },
+            {
+                "enabled": true,
+                "id": "yazi"
+            },
+            {
+                "enabled": true,
+                "id": "hyprland"
+            },
+            {
+                "enabled": true,
+                "id": "zenBrowser"
+            },
+            {
+                "enabled": true,
+                "id": "pywalfox"
+            },
+            {
+                "enabled": true,
+                "id": "code"
+            }
+        ],
+        "enableUserTheming": false
     },
     "ui": {
         "bluetoothDetailsViewMode": "grid",
         "bluetoothHideUnnamedDevices": false,
         "boxBorderEnabled": false,
-        "fontDefault": "JetBrainsMono Nerd Font",
+        "fontDefault": "Adwaita Sans",
         "fontDefaultScale": 1,
         "fontFixed": "JetBrainsMono Nerd Font",
         "fontFixedScale": 1,
         "networkPanelView": "wifi",
-        "panelBackgroundOpacity": 1,
-        "panelsAttachedToBar": true,
-        "settingsPanelMode": "attached",
+        "panelBackgroundOpacity": 0.9,
+        "panelsAttachedToBar": false,
+        "settingsPanelMode": "window",
         "tooltipsEnabled": true,
         "wifiDetailsViewMode": "grid"
     },
@@ -509,7 +553,7 @@
         "monitorDirectories": [
         ],
         "overviewEnabled": false,
-        "panelPosition": "bottom_center",
+        "panelPosition": "follow_bar",
         "randomEnabled": false,
         "randomIntervalSec": 300,
         "recursiveSearch": false,

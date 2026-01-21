@@ -1,5 +1,7 @@
 [config]
 
+[templates]
+
 # User-defined templates
 # Add your custom templates below
 # Example:
@@ -10,10 +12,5 @@
 
 # Remove this section and add your own templates
 #[templates.placeholder]
-#input_path = "/home/elrond/.config/quickshell/Assets/MatugenTemplates/noctalia.json"
+#input_path = "/home/elrond/.config/quickshell/noctalia-shell/Assets/MatugenTemplates/noctalia.json"
 #output_path = "/home/elrond/.cache/noctalia/placeholder.json"
-
-# [templates.hyprland]
-# input_path = '~/.config/noctalia/matugenTemplates/hyprland-colors.conf'
-# output_path = '~/.config/hypr/noctalia/noctalia-colors.conf'
-# post_hook = 'hyprctl reload'
