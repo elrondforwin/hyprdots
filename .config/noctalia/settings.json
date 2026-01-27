@@ -6,6 +6,7 @@
         "customLaunchPrefixEnabled": false,
         "enableClipPreview": true,
         "enableClipboardHistory": true,
+        "enableSettingsSearch": false,
         "iconMode": "tabler",
         "ignoreMouseInput": false,
         "pinnedApps": [
@@ -34,7 +35,7 @@
         "capsuleOpacity": 1,
         "density": "default",
         "exclusive": true,
-        "floating": false,
+        "floating": true,
         "hideOnOverview": false,
         "marginHorizontal": 8,
         "marginVertical": 8,
@@ -127,21 +128,9 @@
                     ]
                 },
                 {
-                    "defaultSettings": {
-                        "hideInactive": false,
-                        "removeMargins": false
-                    },
-                    "id": "plugin:privacy-indicator"
-                },
-                {
                     "displayMode": "forceOpen",
                     "id": "KeyboardLayout",
                     "showIcon": true
-                },
-                {
-                    "displayMode": "alwaysHide",
-                    "id": "Volume",
-                    "middleClickCommand": "pwvucontrol || pavucontrol"
                 },
                 {
                     "defaultSettings": {
@@ -152,6 +141,7 @@
                         "directory": "",
                         "filenamePattern": "recording_yyyyMMdd_HHmmss",
                         "frameRate": "60",
+                        "hideInactive": false,
                         "quality": "very_high",
                         "resolution": "original",
                         "showCursor": true,
@@ -159,6 +149,11 @@
                         "videoSource": "portal"
                     },
                     "id": "plugin:screen-recorder"
+                },
+                {
+                    "displayMode": "onhover",
+                    "id": "Volume",
+                    "middleClickCommand": "pwvucontrol || pavucontrol"
                 },
                 {
                     "hideWhenZero": false,
@@ -201,9 +196,10 @@
     },
     "colorSchemes": {
         "darkMode": true,
-        "generationMethod": "material",
+        "generationMethod": "tonal-spot",
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
+        "monitorForColors": "DP-2",
         "predefinedScheme": "Tokyo Night",
         "schedulingMode": "off",
         "useWallpaperColors": true
@@ -263,12 +259,25 @@
         }
     },
     "desktopWidgets": {
-        "enabled": true,
+        "enabled": false,
         "gridSnap": false,
         "monitorWidgets": [
             {
                 "name": "DP-2",
                 "widgets": [
+                    {
+                        "hideMode": "visible",
+                        "id": "MediaPlayer",
+                        "roundedCorners": true,
+                        "scale": 1.181030384527212,
+                        "showAlbumArt": true,
+                        "showBackground": false,
+                        "showButtons": true,
+                        "showVisualizer": true,
+                        "visualizerType": "linear",
+                        "x": 23,
+                        "y": 946
+                    }
                 ]
             }
         ]
@@ -302,11 +311,11 @@
         "enableLockScreenCountdown": true,
         "enableShadows": true,
         "forceBlackScreenCorners": false,
-        "iRadiusRatio": 0.25,
+        "iRadiusRatio": 1,
         "language": "",
         "lockOnSuspend": true,
         "lockScreenCountdownDuration": 10000,
-        "radiusRatio": 0,
+        "radiusRatio": 1,
         "scaleRatio": 1,
         "screenRadiusRatio": 1,
         "shadowDirection": "center",
@@ -326,6 +335,7 @@
         "screenLock": "",
         "screenUnlock": "",
         "session": "",
+        "startup": "",
         "wallpaperChange": ""
     },
     "location": {
@@ -448,7 +458,7 @@
         "showHeader": true,
         "showNumberLabels": true
     },
-    "settingsVersion": 41,
+    "settingsVersion": 44,
     "systemMonitor": {
         "cpuCriticalThreshold": 90,
         "cpuPollingInterval": 3000,
@@ -477,10 +487,6 @@
     },
     "templates": {
         "activeTemplates": [
-            {
-                "enabled": true,
-                "id": "gtk"
-            },
             {
                 "enabled": true,
                 "id": "qt"
@@ -524,6 +530,10 @@
             {
                 "enabled": true,
                 "id": "code"
+            },
+            {
+                "enabled": true,
+                "id": "gtk"
             }
         ],
         "enableUserTheming": false
@@ -544,6 +554,7 @@
         "wifiDetailsViewMode": "grid"
     },
     "wallpaper": {
+        "automationEnabled": false,
         "directory": "/home/elrond/Pictures/Wallpapers",
         "enableMultiMonitorDirectories": false,
         "enabled": true,
@@ -554,16 +565,16 @@
         ],
         "overviewEnabled": false,
         "panelPosition": "follow_bar",
-        "randomEnabled": false,
         "randomIntervalSec": 300,
-        "recursiveSearch": false,
         "setWallpaperOnAllMonitors": true,
+        "showHiddenFiles": false,
         "solidColor": "#1a1a2e",
         "transitionDuration": 1500,
         "transitionEdgeSmoothness": 0.05,
         "transitionType": "random",
         "useSolidColor": false,
         "useWallhaven": false,
+        "viewMode": "single",
         "wallhavenApiKey": "",
         "wallhavenCategories": "111",
         "wallhavenOrder": "desc",
