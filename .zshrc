@@ -189,8 +189,8 @@ if command -v fzf > /dev/null; then
       --color=fg:#c0caf5,bg:-1,hl:#7aa2f7
       --color=fg+:#c0caf5,bg+:-1,hl+:#7aa2f7
       --color=border:#414868,header:#7dcfff,gutter:#1a1b26
-      --color=spinner:#bb9af7,info:#7dcfff
-      --color=pointer:#bb9af7,marker:#f7768e,prompt:#9aa5ce"
+      --color=spinner:#7dcfff,info:#7dcfff
+      --color=pointer:#7dcfff,marker:#f7768e,prompt:#9aa5ce"
 fi
 
 
