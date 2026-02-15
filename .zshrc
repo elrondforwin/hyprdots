@@ -91,7 +91,7 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:*' use-fzf-default-opts yes
 
 # Aliases
-alias ls='ls --color'
+alias ls='ls --color=auto --group-directories-first'
 alias rm='rm -r'
 alias cp='cp -r'
 alias mkdir='mkdir -p'
@@ -133,6 +133,10 @@ alias dolphere="dolphin . &> /dev/null & disown"
 alias rcp='rsync --archive --modify-window=2 --progress --verbose --itemize-changes --stats --human-readable'
 alias f='fastfetch'
 alias t='tmux'
+
+help() {
+    "$@" --help 2>&1 | bat
+}
 
 # some movement fixes
 bindkey '\e[3~' delete-char
@@ -196,6 +200,10 @@ fi
 
 if command -v zoxide > /dev/null; then
     eval "$(zoxide init --cmd cd zsh)"
+fi
+
+if command -v bat > /dev/null; then
+    alias lsblk="lsblk | bat -l conf -p"
 fi
 
 if command -v eza > /dev/null; then
