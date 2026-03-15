@@ -1,0 +1,135 @@
+spawn-sh-at-startup "qs -c noctalia-shell &"
+include "./animations.kdl"
+include "./env.kdl"
+include "./binds.kdl"
+include "./rules.kdl"
+
+// noctalia shell
+include "./noctalia.kdl"
+
+prefer-no-csd
+
+output "DP-2" {
+    variable-refresh-rate on-demand=true
+}
+
+workspace "a" {
+}
+workspace "b" {
+}
+workspace "c" {
+}
+workspace "d" {
+}
+
+
+input {
+    keyboard {
+        xkb {
+            layout "us,tr"
+            options "caps:escape,grp:win_space_toggle"
+        }
+
+        repeat-delay 250
+
+        // Enable numlock on startup, omitting this setting disables it.
+        numlock
+    }
+
+    touchpad {
+        off
+    }
+
+    mouse {
+        // off
+        // natural-scroll
+        accel-speed 0.2
+        accel-profile "flat"
+        // scroll-method "no-scroll"
+    }
+
+    trackpoint {
+        off
+    }
+
+    // warp-mouse-to-focus
+    focus-follows-mouse max-scroll-amount="0%"
+}
+
+layout {
+    gaps 4
+
+    // - "never", "always", "on-overflow"
+    center-focused-column "never"
+
+    // You can customize the widths that "switch-preset-column-width" (Mod+R) toggles between.
+    preset-column-widths {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+        // fixed 1920
+    }
+
+    // You can also customize the heights that "switch-preset-window-height" (Mod+Shift+R) toggles between.
+    // preset-window-heights { }
+
+    default-column-width { proportion 0.5; }
+    // default-column-width {}
+
+    focus-ring {
+        off
+    }
+
+    border {
+        width 3
+    }
+
+    shadow {
+        // on
+        softness 100
+        spread 5
+        offset x=0 y=5
+    }
+
+    struts {
+        // left 64
+        // right 64
+        // top 64
+        // bottom 64
+    }
+    tab-indicator {
+        corner-radius 12
+    }
+}
+
+hotkey-overlay {
+    skip-at-startup
+}
+
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+
+debug {
+  // Allows notification actions and window activation from Noctalia.
+  honor-xdg-activation-with-invalid-serial
+}
+
+window-rule {
+  geometry-corner-radius 0
+  clip-to-geometry true
+}
+
+overview {
+  backdrop-color "#26233a"
+  zoom 0.6
+  workspace-shadow {
+    off
+  }
+}
+
+gestures {
+    hot-corners {
+        off
+    }
+}
+
+

@@ -29,6 +29,11 @@ else command -v "$FALLBACK_EDITOR" > /dev/null;
   export EDITOR="$FALLBACK_EDITOR"
 fi
 
+# I don't want to add this env var to every wm I use.
+if command -v qt6ct > /dev/null; then
+  export QT_QPA_PLATFORMTHEME="qt6ct"
+fi
+
 # add ~/.local/bin to $PATH
 PATH=$PATH:/$HOME/.local/bin
 
@@ -251,13 +256,13 @@ extract() {
 	done
 }
 
-# launch hyprland automatically
-if command -v Hyprland > /dev/null; then
-  if [[ ! -f /tmp/hyprland.lock ]]; then
-    touch /tmp/hyprland.lock
-    start-hyprland
-  fi
-fi
+# # launch hyprland automatically
+# if command -v Hyprland > /dev/null; then
+#   if [[ ! -f /tmp/hyprland.lock ]]; then
+#     touch /tmp/hyprland.lock
+#     start-hyprland
+#   fi
+# fi
 
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
