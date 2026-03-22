@@ -30,9 +30,9 @@ else command -v "$FALLBACK_EDITOR" > /dev/null;
 fi
 
 # I don't want to add this env var to every wm I use.
-if command -v qt6ct > /dev/null; then
-  export QT_QPA_PLATFORMTHEME="qt6ct"
-fi
+# if command -v qt6ct > /dev/null; then
+#   export QT_QPA_PLATFORMTHEME="qt6ct"
+# fi
 
 # add ~/.local/bin to $PATH
 PATH=$PATH:/$HOME/.local/bin

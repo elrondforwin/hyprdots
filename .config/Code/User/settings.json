@@ -1,78 +1,74 @@
 {
-    "keyboard.dispatch": "keyCode",
-    "extensions.experimental.affinity": {
-        "asvetliakov.vscode-neovim": 1
-    },
-    "explorer.confirmDragAndDrop": false,
-    "editor.mouseWheelZoom": true,
-    "code-runner.runInTerminal": true,
-    "qt-core.additionalQtPaths": [
-        {
-            "name": "Qt-5.15.18-linux-g++_from_PATH",
-            "path": "/usr/bin/qmake"
-        }
-    ],
-    "go.toolsManagement.autoUpdate": true,
-    "editor.fontSize": 16,
-    "workbench.colorTheme": "Vira Theme Carbon",
-    "editor.fontFamily": "'JetBrainsMono NF'",
-    "vscode-neovim.neovimInitVimPaths.linux": "~/.config/nvim-vscode/init.lua",
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+	"keyboard.dispatch": "keyCode",
+	"extensions.experimental.affinity": {
+		"asvetliakov.vscode-neovim": 1,
+	},
+	"explorer.confirmDragAndDrop": false,
+	"editor.mouseWheelZoom": true,
+	"code-runner.runInTerminal": true,
+	"qt-core.additionalQtPaths": [
+		{
+			"name": "Qt-5.15.18-linux-g++_from_PATH",
+			"path": "/usr/bin/qmake",
+		},
+	],
+	"go.toolsManagement.autoUpdate": true,
+	"editor.fontSize": 16,
+	"workbench.colorTheme": "Minimal Kiwi Darker",
+	"editor.fontFamily": "'JetBrainsMono NF'",
+	"vscode-neovim.neovimInitVimPaths.linux": "~/.config/nvim-vscode/init.lua",
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
 
-    // Window settings
-    "window.titleBarStyle": "native",
-    "window.customTitleBarVisibility": "never",
-    "window.customMenuBarAltFocus": false,
-    "window.enableMenuBarMnemonics": false,
-    "window.menuBarVisibility": "hidden",
+	// Window settings
+	"window.titleBarStyle": "custom",
+	"window.customMenuBarAltFocus": false,
+	"window.enableMenuBarMnemonics": false,
 
-    // Hide unnecessary UI
-    "workbench.activityBar.location": "hidden",
-    "workbench.layoutControl.enabled": false,
-    "workbench.navigationControl.enabled": false,
-    "window.commandCenter": false,
-    "extensions.ignoreRecommendations": true,
-    "editor.minimap.enabled": false,
-    "breadcrumbs.enabled": false,
-    "editor.stickyScroll.enabled": false,
-    "terminal.integrated.stickyScroll.enabled": false,
+	// Hide unnecessary UI
+	// "workbench.activityBar.location": "hidden",
+	"workbench.layoutControl.enabled": false,
+	"workbench.navigationControl.enabled": false,
+	"editor.minimap.enabled": false,
+	"breadcrumbs.enabled": false,
+	"editor.stickyScroll.enabled": false,
+	"terminal.integrated.stickyScroll.enabled": false,
 
-    
-    // UI Settings
-    "workbench.sideBar.location": "right",
-    "explorer.compactFolders": false,
-    "editor.cursorStyle": "block",
-    "editor.hideCursorInOverviewRuler": true,
-    "debug.showBreakpointsInOverviewRuler": false,
-    "editor.overviewRulerBorder": false,
+	// UI Settings
+	"workbench.sideBar.location": "right",
+	"explorer.compactFolders": false,
+	"editor.cursorStyle": "block",
+	"editor.hideCursorInOverviewRuler": true,
+	"debug.showBreakpointsInOverviewRuler": false,
+	"editor.overviewRulerBorder": false,
 
+	// Smoothness
+	"editor.cursorBlinking": "smooth",
+	"editor.smoothScrolling": true,
+	"editor.cursorSmoothCaretAnimation": "on",
 
-    // Smoothness
-    "editor.cursorBlinking": "smooth",
-    "editor.smoothScrolling": true,
-    "editor.cursorSmoothCaretAnimation": "on",
+	// Editor Rendering
+	"editor.renderControlCharacters": false,
+	"editor.guides.indentation": true,
+	"editor.guides.bracketPairs": false,
 
-    // Editor Rendering
-    "editor.renderControlCharacters": false,
-    "editor.guides.indentation": true,
-    "editor.guides.bracketPairs": false,
+	// Disable automatic updates
+	"update.mode": "none",
 
-    // Disable automatic updates
-    "update.mode": "none",
+	// Disable telemetry
+	"telemetry.telemetryLevel": "off",
+	"telemetry.editStats.enabled": false,
+	"telemetry.feedback.enabled": false,
 
-    // Disable telemetry
-    "telemetry.telemetryLevel": "off",
-    "telemetry.editStats.enabled": false,
-    "telemetry.feedback.enabled": false,
+	// MISC
+	"editor.renderWhitespace": "none",
+	"explorer.confirmDelete": false,
+	"editor.formatOnSave": true,
+	"workbench.editor.showTabs": "multiple",
 
-
-    // MISC
-    "editor.renderWhitespace": "none",
-    "explorer.confirmDelete": false,
-    "editor.formatOnSave": false,
-    "workbench.editor.showTabs": "none",
-
-
-    // Extensions
-    "prettier.useTabs": true
+	// Extensions
+	"prettier.useTabs": true,
+	"[java]": {
+		"editor.defaultFormatter": "redhat.java",
+	},
+	"window.commandCenter": false,
 }

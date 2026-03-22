@@ -9,7 +9,9 @@ binds {
     Mod+V { spawn-sh "qs -c noctalia-shell ipc call launcher clipboard"; }
     Mod+Shift+V { spawn-sh "cliphist wipe"; }
     Alt+Space { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
-    Alt+F4 { spawn-sh "qs ipc -c noctalia-shell call sessionMenu toggle"; }
+    Alt+F4 { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
+
+    Mod+O { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
 
     Mod+A repeat=false { toggle-overview; }
 

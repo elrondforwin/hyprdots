@@ -8,7 +8,9 @@
         "customLaunchPrefixEnabled": false,
         "density": "comfortable",
         "enableClipPreview": true,
+        "enableClipboardChips": true,
         "enableClipboardHistory": true,
+        "enableClipboardSmartIcons": true,
         "enableSessionSearch": true,
         "enableSettingsSearch": false,
         "enableWindowsSearch": false,
@@ -23,7 +25,6 @@
         "showIconBackground": true,
         "sortByMostUsed": true,
         "terminalCommand": "xterm -e",
-        "useApp2Unit": true,
         "viewMode": "list"
     },
     "audio": {
@@ -41,15 +42,16 @@
         "autoHideDelay": 500,
         "autoShowDelay": 150,
         "backgroundOpacity": 1,
-        "barType": "simple",
+        "barType": "framed",
         "capsuleColorKey": "none",
         "capsuleOpacity": 1,
         "contentPadding": 2,
         "density": "default",
         "displayMode": "always_visible",
+        "enableExclusionZoneInset": true,
         "floating": false,
         "fontScale": 1,
-        "frameRadius": 12,
+        "frameRadius": 24,
         "frameThickness": 8,
         "hideOnOverview": false,
         "marginHorizontal": 8,
@@ -103,6 +105,7 @@
                     "occupiedColor": "secondary",
                     "pillSize": 0.6,
                     "showApplications": false,
+                    "showApplicationsHover": false,
                     "showBadge": true,
                     "showLabelsOnlyWhenOccupied": true,
                     "unfocusedIconsOpacity": 1
@@ -288,7 +291,7 @@
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "monitorForColors": "DP-2",
-        "predefinedScheme": "Ayu",
+        "predefinedScheme": "Gruvbox",
         "schedulingMode": "off",
         "useWallpaperColors": true
     },
@@ -359,6 +362,7 @@
     "desktopWidgets": {
         "enabled": false,
         "gridSnap": false,
+        "gridSnapScale": false,
         "monitorWidgets": [
             {
                 "name": "DP-2",
@@ -398,8 +402,10 @@
         "indicatorColor": "primary",
         "indicatorOpacity": 0.6,
         "indicatorThickness": 3,
+        "launcherIcon": "",
         "launcherIconColor": "none",
         "launcherPosition": "end",
+        "launcherUseDistroLogo": false,
         "monitors": [
         ],
         "onlySameOutput": true,
@@ -421,15 +427,15 @@
         "avatarImage": "/home/elrond/.face",
         "boxRadiusRatio": 1,
         "clockFormat": "hh\\nmm",
-        "clockStyle": "custom",
+        "clockStyle": "analog",
         "compactLockScreen": true,
         "dimmerOpacity": 0,
         "enableBlurBehind": true,
         "enableLockScreenCountdown": true,
         "enableLockScreenMediaControls": false,
         "enableShadows": true,
-        "forceBlackScreenCorners": false,
-        "iRadiusRatio": 0.4,
+        "forceBlackScreenCorners": true,
+        "iRadiusRatio": 1,
         "keybinds": {
             "keyDown": [
                 "Down"
@@ -457,13 +463,13 @@
         "language": "",
         "lockOnSuspend": true,
         "lockScreenAnimations": true,
-        "lockScreenBlur": 0.7000000000000001,
+        "lockScreenBlur": 1,
         "lockScreenCountdownDuration": 10000,
         "lockScreenMonitors": [
         ],
-        "lockScreenTint": 0.3,
-        "passwordChars": false,
-        "radiusRatio": 0,
+        "lockScreenTint": 0,
+        "passwordChars": true,
+        "radiusRatio": 1,
         "reverseScroll": false,
         "scaleRatio": 1,
         "screenRadiusRatio": 1,
@@ -472,11 +478,12 @@
         "shadowOffsetY": 0,
         "showChangelogOnStartup": true,
         "showHibernateOnLockScreen": false,
-        "showScreenCorners": false,
+        "showScreenCorners": true,
         "showSessionButtonsOnLockScreen": true,
         "telemetryEnabled": true
     },
     "hooks": {
+        "colorGeneration": "",
         "darkModeChange": "",
         "enabled": true,
         "performanceModeDisabled": "bash -c \"/home/elrond/.config/hypr/scripts/util.sh gamemode-off\"",
@@ -587,7 +594,8 @@
         "overlayLayer": true
     },
     "plugins": {
-        "autoUpdate": false
+        "autoUpdate": false,
+        "notifyUpdates": true
     },
     "sessionMenu": {
         "countdownDuration": 5000,
@@ -656,7 +664,7 @@
         "showHeader": false,
         "showKeybinds": true
     },
-    "settingsVersion": 57,
+    "settingsVersion": 59,
     "systemMonitor": {
         "batteryCriticalThreshold": 5,
         "batteryWarningThreshold": 20,
@@ -712,10 +720,6 @@
             },
             {
                 "enabled": true,
-                "id": "zenBrowser"
-            },
-            {
-                "enabled": true,
                 "id": "pywalfox"
             },
             {
@@ -755,11 +759,13 @@
         "fontDefaultScale": 1,
         "fontFixed": "JetBrainsMono Nerd Font",
         "fontFixedScale": 1,
-        "panelBackgroundOpacity": 0.93,
+        "panelBackgroundOpacity": 1,
         "panelsAttachedToBar": true,
+        "scrollbarAlwaysVisible": true,
         "settingsPanelMode": "window",
         "settingsPanelSideBarCardStyle": false,
-        "tooltipsEnabled": true
+        "tooltipsEnabled": true,
+        "translucentWidgets": false
     },
     "wallpaper": {
         "automationEnabled": false,
@@ -785,7 +791,9 @@
         "sortOrder": "name",
         "transitionDuration": 1500,
         "transitionEdgeSmoothness": 0.05,
-        "transitionType": "disc",
+        "transitionType": [
+            "disc"
+        ],
         "useSolidColor": false,
         "useWallhaven": false,
         "viewMode": "single",

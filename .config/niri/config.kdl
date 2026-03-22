@@ -10,7 +10,6 @@ include "./noctalia.kdl"
 prefer-no-csd
 
 output "DP-2" {
-    variable-refresh-rate on-demand=true
 }
 
 workspace "a" {
@@ -114,7 +113,7 @@ debug {
 }
 
 window-rule {
-  geometry-corner-radius 0
+  geometry-corner-radius 20
   clip-to-geometry true
 }
 
