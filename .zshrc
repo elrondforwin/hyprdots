@@ -193,13 +193,14 @@ if command -v fzf > /dev/null; then
     #   --color=pointer:#c4a7e7,marker:#eb6f92,prompt:#908caa"
     # export FZF_DEFAULT_OPTS="--color 16"
 
-    # tokyo night theme
+    # # tokyo night theme
     export FZF_DEFAULT_OPTS="
       --color=fg:#c0caf5,bg:-1,hl:#7aa2f7
       --color=fg+:#c0caf5,bg+:-1,hl+:#7aa2f7
       --color=border:#414868,header:#7dcfff,gutter:#1a1b26
       --color=spinner:#7dcfff,info:#7dcfff
       --color=pointer:#7dcfff,marker:#f7768e,prompt:#9aa5ce"
+
 fi
 
 

@@ -6,7 +6,7 @@
         "clipboardWrapText": true,
         "customLaunchPrefix": "",
         "customLaunchPrefixEnabled": false,
-        "density": "comfortable",
+        "density": "default",
         "enableClipPreview": true,
         "enableClipboardChips": true,
         "enableClipboardHistory": true,
@@ -19,12 +19,12 @@
         "overviewLayer": true,
         "pinnedApps": [
         ],
-        "position": "center",
+        "position": "follow_bar",
         "screenshotAnnotationTool": "",
         "showCategories": false,
         "showIconBackground": true,
         "sortByMostUsed": true,
-        "terminalCommand": "xterm -e",
+        "terminalCommand": "kitty -e",
         "viewMode": "list"
     },
     "audio": {
@@ -41,7 +41,7 @@
     "bar": {
         "autoHideDelay": 500,
         "autoShowDelay": 150,
-        "backgroundOpacity": 1,
+        "backgroundOpacity": 0.9,
         "barType": "framed",
         "capsuleColorKey": "none",
         "capsuleOpacity": 1,
@@ -86,6 +86,16 @@
                     "id": "Clock",
                     "tooltipFormat": "HH:mm ddd, MMM dd",
                     "useCustomFont": false
+                },
+                {
+                    "defaultSettings": {
+                        "customColor": "none",
+                        "showConditionIcon": true,
+                        "showTempUnit": true,
+                        "showTempValue": true,
+                        "tooltipOption": "everything"
+                    },
+                    "id": "plugin:weather-indicator"
                 }
             ],
             "left": [
@@ -133,7 +143,7 @@
                     "usePadding": false
                 },
                 {
-                    "compactMode": false,
+                    "compactMode": true,
                     "hideMode": "hidden",
                     "hideWhenIdle": false,
                     "id": "MediaMini",
@@ -142,22 +152,47 @@
                     "scrollingMode": "hover",
                     "showAlbumArt": true,
                     "showArtistFirst": true,
-                    "showProgressRing": false,
-                    "showVisualizer": false,
+                    "showProgressRing": true,
+                    "showVisualizer": true,
                     "textColor": "none",
                     "useFixedWidth": false,
                     "visualizerType": "mirrored"
+                },
+                {
+                    "defaultSettings": {
+                        "arrowType": "caret",
+                        "byteThresholdActive": 1024,
+                        "fontSizeModifier": 1,
+                        "forceMegabytes": false,
+                        "iconSizeModifier": 1,
+                        "minWidth": 0,
+                        "showNumbers": true,
+                        "spacingInbetween": 0,
+                        "useCustomColors": false
+                    },
+                    "id": "plugin:network-indicator"
                 }
             ],
             "right": [
                 {
                     "defaultSettings": {
-                        "activeColor": "primary",
-                        "hideInactive": false,
-                        "inactiveColor": "none",
-                        "removeMargins": false
+                        "hideBackground": false,
+                        "minimumThreshold": 10
                     },
-                    "id": "plugin:privacy-indicator"
+                    "id": "plugin:catwalk"
+                },
+                {
+                    "defaultSettings": {
+                        "catColor": "default",
+                        "catOffsetY": 0,
+                        "catSize": 1,
+                        "idleTimeout": 150,
+                        "raveMode": false,
+                        "tappyMode": false,
+                        "useMprisFilter": false,
+                        "waitingTimeout": 30000
+                    },
+                    "id": "plugin:slowbongo"
                 },
                 {
                     "blacklist": [
@@ -179,61 +214,9 @@
                 },
                 {
                     "defaultSettings": {
+                        "mode": "region"
                     },
-                    "id": "plugin:kde-connect"
-                },
-                {
-                    "colorizeSystemIcon": "none",
-                    "enableColorization": false,
-                    "generalTooltipText": "",
-                    "hideMode": "alwaysExpanded",
-                    "icon": "brand-google-filled",
-                    "id": "CustomButton",
-                    "ipcIdentifier": "lens",
-                    "leftClickExec": "bash -c '/home/elrond/hyprdots/.config/hypr/scripts/util.sh lens'",
-                    "leftClickUpdateText": true,
-                    "maxTextLength": {
-                        "horizontal": 10,
-                        "vertical": 10
-                    },
-                    "middleClickExec": "",
-                    "middleClickUpdateText": false,
-                    "parseJson": false,
-                    "rightClickExec": "",
-                    "rightClickUpdateText": false,
-                    "showExecTooltip": true,
-                    "showIcon": true,
-                    "showTextTooltip": true,
-                    "textCollapse": "",
-                    "textCommand": "",
-                    "textIntervalMs": 3000,
-                    "textStream": false,
-                    "wheelDownExec": "",
-                    "wheelDownUpdateText": false,
-                    "wheelExec": "",
-                    "wheelMode": "unified",
-                    "wheelUpExec": "",
-                    "wheelUpUpdateText": false,
-                    "wheelUpdateText": false
-                },
-                {
-                    "defaultSettings": {
-                        "audioCodec": "opus",
-                        "audioSource": "default_output",
-                        "colorRange": "limited",
-                        "copyToClipboard": false,
-                        "directory": "",
-                        "filenamePattern": "recording_yyyyMMdd_HHmmss",
-                        "frameRate": "60",
-                        "hideInactive": false,
-                        "iconColor": "none",
-                        "quality": "very_high",
-                        "resolution": "original",
-                        "showCursor": true,
-                        "videoCodec": "h264",
-                        "videoSource": "portal"
-                    },
-                    "id": "plugin:screen-recorder"
+                    "id": "plugin:screenshot"
                 },
                 {
                     "displayMode": "onhover",
@@ -249,6 +232,24 @@
                     "id": "NotificationHistory",
                     "showUnreadBadge": true,
                     "unreadBadgeColor": "primary"
+                },
+                {
+                    "defaultSettings": {
+                        "colorHistory": [
+                        ],
+                        "detectedRecorder": "",
+                        "installedLangs": [
+                            "eng"
+                        ],
+                        "paletteColors": [
+                        ],
+                        "selectedOcrLang": "eng",
+                        "transAvailable": false
+                    },
+                    "id": "plugin:screen-toolkit"
+                },
+                {
+                    "id": "plugin:mimeapp-gui"
                 },
                 {
                     "colorizeDistroLogo": false,
@@ -360,7 +361,7 @@
         }
     },
     "desktopWidgets": {
-        "enabled": false,
+        "enabled": true,
         "gridSnap": false,
         "gridSnapScale": false,
         "monitorWidgets": [
@@ -368,17 +369,26 @@
                 "name": "DP-2",
                 "widgets": [
                     {
-                        "hideMode": "visible",
-                        "id": "MediaPlayer",
+                        "defaultSettings": {
+                            "hideBackground": false,
+                            "minimumThreshold": 10
+                        },
+                        "id": "plugin:catwalk",
+                        "showBackground": true,
+                        "x": 1699,
+                        "y": 982
+                    },
+                    {
+                        "colorName": "primary",
+                        "height": 72,
+                        "hideWhenIdle": false,
+                        "id": "AudioVisualizer",
                         "roundedCorners": true,
-                        "scale": 1.181030384527212,
-                        "showAlbumArt": true,
                         "showBackground": false,
-                        "showButtons": true,
-                        "showVisualizer": true,
                         "visualizerType": "linear",
-                        "x": 23,
-                        "y": 946
+                        "width": 320,
+                        "x": 10,
+                        "y": 1002
                     }
                 ]
             }
@@ -391,10 +401,10 @@
         "colorizeIcons": true,
         "deadOpacity": 1,
         "displayMode": "auto_hide",
-        "dockType": "floating",
+        "dockType": "attached",
         "enabled": true,
         "floatingRatio": 1,
-        "groupApps": false,
+        "groupApps": true,
         "groupClickAction": "cycle",
         "groupContextMenuMode": "extended",
         "groupIndicatorStyle": "dots",
@@ -404,8 +414,8 @@
         "indicatorThickness": 3,
         "launcherIcon": "",
         "launcherIconColor": "none",
-        "launcherPosition": "end",
-        "launcherUseDistroLogo": false,
+        "launcherPosition": "start",
+        "launcherUseDistroLogo": true,
         "monitors": [
         ],
         "onlySameOutput": true,
@@ -429,7 +439,7 @@
         "clockFormat": "hh\\nmm",
         "clockStyle": "analog",
         "compactLockScreen": true,
-        "dimmerOpacity": 0,
+        "dimmerOpacity": 0.2,
         "enableBlurBehind": true,
         "enableLockScreenCountdown": true,
         "enableLockScreenMediaControls": false,
@@ -728,10 +738,6 @@
             },
             {
                 "enabled": true,
-                "id": "gtk"
-            },
-            {
-                "enabled": true,
                 "id": "hyprtoolkit"
             },
             {
@@ -749,6 +755,10 @@
             {
                 "enabled": true,
                 "id": "niri"
+            },
+            {
+                "enabled": true,
+                "id": "gtk"
             }
         ],
         "enableUserTheming": false
@@ -759,7 +769,7 @@
         "fontDefaultScale": 1,
         "fontFixed": "JetBrainsMono Nerd Font",
         "fontFixedScale": 1,
-        "panelBackgroundOpacity": 1,
+        "panelBackgroundOpacity": 0.93,
         "panelsAttachedToBar": true,
         "scrollbarAlwaysVisible": true,
         "settingsPanelMode": "window",
