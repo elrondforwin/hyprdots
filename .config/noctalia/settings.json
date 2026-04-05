@@ -41,7 +41,7 @@
     "bar": {
         "autoHideDelay": 500,
         "autoShowDelay": 150,
-        "backgroundOpacity": 0.9,
+        "backgroundOpacity": 0.7000000000000001,
         "barType": "framed",
         "capsuleColorKey": "none",
         "capsuleOpacity": 1,
@@ -247,9 +247,6 @@
                         "transAvailable": false
                     },
                     "id": "plugin:screen-toolkit"
-                },
-                {
-                    "id": "plugin:mimeapp-gui"
                 },
                 {
                     "colorizeDistroLogo": false,
@@ -765,11 +762,11 @@
     },
     "ui": {
         "boxBorderEnabled": false,
-        "fontDefault": "Adwaita Sans",
-        "fontDefaultScale": 1,
+        "fontDefault": "SF Pro Rounded",
+        "fontDefaultScale": 1.1099999999999999,
         "fontFixed": "JetBrainsMono Nerd Font",
-        "fontFixedScale": 1,
-        "panelBackgroundOpacity": 0.93,
+        "fontFixedScale": 1.05,
+        "panelBackgroundOpacity": 0.7000000000000001,
         "panelsAttachedToBar": true,
         "scrollbarAlwaysVisible": true,
         "settingsPanelMode": "window",
@@ -798,7 +795,7 @@
         "showHiddenFiles": true,
         "skipStartupTransition": false,
         "solidColor": "#161b22",
-        "sortOrder": "name",
+        "sortOrder": "date_desc",
         "transitionDuration": 1500,
         "transitionEdgeSmoothness": 0.05,
         "transitionType": [
@@ -806,7 +803,7 @@
         ],
         "useSolidColor": false,
         "useWallhaven": false,
-        "viewMode": "single",
+        "viewMode": "recursive",
         "wallhavenApiKey": "",
         "wallhavenCategories": "111",
         "wallhavenOrder": "desc",

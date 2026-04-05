@@ -11,10 +11,6 @@
             "enabled": true,
             "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
         },
-        "mimeapp-gui": {
-            "enabled": true,
-            "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
-        },
         "network-indicator": {
             "enabled": true,
             "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
