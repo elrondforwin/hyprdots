@@ -138,6 +138,10 @@ alias dolphere="dolphin . &> /dev/null & disown"
 alias rcp='rsync --archive --modify-window=2 --progress --verbose --itemize-changes --stats --human-readable'
 alias f='fastfetch'
 alias t='tmux'
+alias notes="dredge"
+alias kittyconf="nvim ~/.config/kitty/kitty.conf; cd -"
+alias hyprconf="cd ~/.config/hypr/configs; y"
+alias airplay="uxplay -bt709 -avdec -vsync -fps 60"
 
 help() {
     "$@" --help 2>&1 | bat

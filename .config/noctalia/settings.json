@@ -19,7 +19,7 @@
         "overviewLayer": true,
         "pinnedApps": [
         ],
-        "position": "follow_bar",
+        "position": "center",
         "screenshotAnnotationTool": "",
         "showCategories": false,
         "showIconBackground": true,
@@ -31,7 +31,8 @@
         "mprisBlacklist": [
         ],
         "preferredPlayer": "mpv",
-        "spectrumFrameRate": 30,
+        "spectrumFrameRate": 60,
+        "spectrumMirrored": true,
         "visualizerType": "linear",
         "volumeFeedback": false,
         "volumeFeedbackSoundFile": "",
@@ -41,7 +42,7 @@
     "bar": {
         "autoHideDelay": 500,
         "autoShowDelay": 150,
-        "backgroundOpacity": 0.7000000000000001,
+        "backgroundOpacity": 0.8,
         "barType": "framed",
         "capsuleColorKey": "none",
         "capsuleOpacity": 1,
@@ -49,19 +50,18 @@
         "density": "default",
         "displayMode": "always_visible",
         "enableExclusionZoneInset": true,
-        "floating": false,
         "fontScale": 1,
         "frameRadius": 24,
-        "frameThickness": 8,
+        "frameThickness": 4,
         "hideOnOverview": false,
-        "marginHorizontal": 8,
-        "marginVertical": 9,
+        "marginHorizontal": 30,
+        "marginVertical": 12,
         "middleClickAction": "none",
         "middleClickCommand": "",
         "middleClickFollowMouse": false,
         "monitors": [
         ],
-        "mouseWheelAction": "none",
+        "mouseWheelAction": "workspace",
         "mouseWheelWrap": true,
         "outerCorners": true,
         "position": "top",
@@ -78,6 +78,19 @@
         "widgetSpacing": 6,
         "widgets": {
             "center": [
+                {
+                    "defaultSettings": {
+                        "catColor": "default",
+                        "catOffsetY": 0,
+                        "catSize": 1,
+                        "idleTimeout": 150,
+                        "raveMode": false,
+                        "tappyMode": false,
+                        "useMprisFilter": false,
+                        "waitingTimeout": 30000
+                    },
+                    "id": "plugin:slowbongo"
+                },
                 {
                     "clockColor": "none",
                     "customFont": "",
@@ -99,6 +112,31 @@
                 }
             ],
             "left": [
+                {
+                    "defaultSettings": {
+                        "borderRadius": 1,
+                        "drawer": true,
+                        "expandDirection": "down",
+                        "focusBorderColor": "primary",
+                        "hideEmptyWorkspaces": true,
+                        "mainIcon": "layout-grid",
+                        "primaryPillColor": "none",
+                        "primaryShowPill": false,
+                        "primarySize": 0.9,
+                        "primarySymbolColor": "none",
+                        "secondaryPillColor": "primary",
+                        "secondaryShowPill": true,
+                        "secondarySize": 0.9,
+                        "secondarySymbolColor": "none",
+                        "workspaces": [
+                            {
+                                "icon": "message",
+                                "name": "communication"
+                            }
+                        ]
+                    },
+                    "id": "plugin:special-workspaces"
+                },
                 {
                     "characterCount": 2,
                     "colorizeIcons": false,
@@ -143,22 +181,6 @@
                     "usePadding": false
                 },
                 {
-                    "compactMode": true,
-                    "hideMode": "hidden",
-                    "hideWhenIdle": false,
-                    "id": "MediaMini",
-                    "maxWidth": 150,
-                    "panelShowAlbumArt": true,
-                    "scrollingMode": "hover",
-                    "showAlbumArt": true,
-                    "showArtistFirst": true,
-                    "showProgressRing": true,
-                    "showVisualizer": true,
-                    "textColor": "none",
-                    "useFixedWidth": false,
-                    "visualizerType": "mirrored"
-                },
-                {
                     "defaultSettings": {
                         "arrowType": "caret",
                         "byteThresholdActive": 1024,
@@ -171,9 +193,7 @@
                         "useCustomColors": false
                     },
                     "id": "plugin:network-indicator"
-                }
-            ],
-            "right": [
+                },
                 {
                     "defaultSettings": {
                         "hideBackground": false,
@@ -183,27 +203,33 @@
                 },
                 {
                     "defaultSettings": {
-                        "catColor": "default",
-                        "catOffsetY": 0,
-                        "catSize": 1,
-                        "idleTimeout": 150,
-                        "raveMode": false,
-                        "tappyMode": false,
-                        "useMprisFilter": false,
-                        "waitingTimeout": 30000
+                        "activeColor": "primary",
+                        "enableToast": true,
+                        "hideInactive": false,
+                        "iconSpacing": 4,
+                        "inactiveColor": "none",
+                        "micFilterRegex": "",
+                        "removeMargins": false
                     },
-                    "id": "plugin:slowbongo"
-                },
+                    "id": "plugin:privacy-indicator"
+                }
+            ],
+            "right": [
                 {
-                    "blacklist": [
-                    ],
-                    "chevronColor": "none",
-                    "colorizeIcons": true,
-                    "drawerEnabled": false,
-                    "hidePassive": false,
-                    "id": "Tray",
-                    "pinned": [
-                    ]
+                    "compactMode": true,
+                    "hideMode": "hidden",
+                    "hideWhenIdle": false,
+                    "id": "MediaMini",
+                    "maxWidth": 150,
+                    "panelShowAlbumArt": true,
+                    "scrollingMode": "hover",
+                    "showAlbumArt": true,
+                    "showArtistFirst": true,
+                    "showProgressRing": false,
+                    "showVisualizer": true,
+                    "textColor": "none",
+                    "useFixedWidth": false,
+                    "visualizerType": "mirrored"
                 },
                 {
                     "displayMode": "forceOpen",
@@ -213,25 +239,55 @@
                     "textColor": "none"
                 },
                 {
+                    "blacklist": [
+                    ],
+                    "chevronColor": "none",
+                    "colorizeIcons": true,
+                    "drawerEnabled": true,
+                    "hidePassive": false,
+                    "id": "Tray",
+                    "pinned": [
+                        "Discord"
+                    ]
+                },
+                {
+                    "defaultSettings": {
+                        "githubGistId": "",
+                        "githubToken": "",
+                        "notes": "[]",
+                        "syncEnabled": false
+                    },
+                    "id": "plugin:sticky-notes"
+                },
+                {
+                    "defaultSettings": {
+                        "audioCodec": "opus",
+                        "audioSource": "default_output",
+                        "colorRange": "limited",
+                        "copyToClipboard": false,
+                        "customReplayDuration": "30",
+                        "directory": "",
+                        "filenamePattern": "recording_yyyyMMdd_HHmmss",
+                        "frameRate": "60",
+                        "hideInactive": false,
+                        "iconColor": "none",
+                        "quality": "very_high",
+                        "replayDuration": "30",
+                        "replayEnabled": false,
+                        "replayStorage": "ram",
+                        "resolution": "original",
+                        "restorePortalSession": false,
+                        "showCursor": true,
+                        "videoCodec": "h264",
+                        "videoSource": "portal"
+                    },
+                    "id": "plugin:screen-recorder"
+                },
+                {
                     "defaultSettings": {
                         "mode": "region"
                     },
                     "id": "plugin:screenshot"
-                },
-                {
-                    "displayMode": "onhover",
-                    "iconColor": "none",
-                    "id": "Volume",
-                    "middleClickCommand": "pwvucontrol || pavucontrol",
-                    "textColor": "none"
-                },
-                {
-                    "hideWhenZero": false,
-                    "hideWhenZeroUnread": false,
-                    "iconColor": "none",
-                    "id": "NotificationHistory",
-                    "showUnreadBadge": true,
-                    "unreadBadgeColor": "primary"
                 },
                 {
                     "defaultSettings": {
@@ -249,8 +305,24 @@
                     "id": "plugin:screen-toolkit"
                 },
                 {
+                    "displayMode": "alwaysShow",
+                    "iconColor": "none",
+                    "id": "Volume",
+                    "middleClickCommand": "pwvucontrol || pavucontrol",
+                    "textColor": "none"
+                },
+                {
+                    "hideWhenZero": false,
+                    "hideWhenZeroUnread": false,
+                    "iconColor": "none",
+                    "id": "NotificationHistory",
+                    "showUnreadBadge": true,
+                    "unreadBadgeColor": "primary"
+                },
+                {
                     "colorizeDistroLogo": false,
                     "colorizeSystemIcon": "primary",
+                    "colorizeSystemText": "none",
                     "customIconPath": "",
                     "enableColorization": true,
                     "icon": "noctalia",
@@ -291,6 +363,7 @@
         "monitorForColors": "DP-2",
         "predefinedScheme": "Gruvbox",
         "schedulingMode": "off",
+        "syncGsettings": true,
         "useWallpaperColors": true
     },
     "controlCenter": {
@@ -365,28 +438,6 @@
             {
                 "name": "DP-2",
                 "widgets": [
-                    {
-                        "defaultSettings": {
-                            "hideBackground": false,
-                            "minimumThreshold": 10
-                        },
-                        "id": "plugin:catwalk",
-                        "showBackground": true,
-                        "x": 1699,
-                        "y": 982
-                    },
-                    {
-                        "colorName": "primary",
-                        "height": 72,
-                        "hideWhenIdle": false,
-                        "id": "AudioVisualizer",
-                        "roundedCorners": true,
-                        "showBackground": false,
-                        "visualizerType": "linear",
-                        "width": 320,
-                        "x": 10,
-                        "y": 1002
-                    }
                 ]
             }
         ],
@@ -399,7 +450,7 @@
         "deadOpacity": 1,
         "displayMode": "auto_hide",
         "dockType": "attached",
-        "enabled": true,
+        "enabled": false,
         "floatingRatio": 1,
         "groupApps": true,
         "groupClickAction": "cycle",
@@ -436,7 +487,7 @@
         "clockFormat": "hh\\nmm",
         "clockStyle": "analog",
         "compactLockScreen": true,
-        "dimmerOpacity": 0.2,
+        "dimmerOpacity": 0,
         "enableBlurBehind": true,
         "enableLockScreenCountdown": true,
         "enableLockScreenMediaControls": false,
@@ -487,6 +538,7 @@
         "showHibernateOnLockScreen": false,
         "showScreenCorners": true,
         "showSessionButtonsOnLockScreen": true,
+        "smoothScrollEnabled": true,
         "telemetryEnabled": true
     },
     "hooks": {
@@ -517,6 +569,7 @@
     },
     "location": {
         "analogClockInCalendar": false,
+        "autoLocate": false,
         "firstDayOfWeek": -1,
         "hideWeatherCityName": false,
         "hideWeatherTimezone": false,
@@ -527,10 +580,10 @@
         "use12hourFormat": false,
         "useFahrenheit": false,
         "weatherEnabled": true,
-        "weatherShowEffects": true
+        "weatherShowEffects": true,
+        "weatherTaliaMascotAlways": false
     },
     "network": {
-        "airplaneModeEnabled": false,
         "bluetoothAutoConnect": true,
         "bluetoothDetailsViewMode": "grid",
         "bluetoothHideUnnamedDevices": false,
@@ -538,8 +591,7 @@
         "bluetoothRssiPollingEnabled": false,
         "disableDiscoverability": false,
         "networkPanelView": "wifi",
-        "wifiDetailsViewMode": "grid",
-        "wifiEnabled": false
+        "wifiDetailsViewMode": "grid"
     },
     "nightLight": {
         "autoSchedule": true,
@@ -555,7 +607,7 @@
         "disableWallpaper": true
     },
     "notifications": {
-        "backgroundOpacity": 1,
+        "backgroundOpacity": 0.51,
         "clearDismissed": true,
         "criticalUrgencyDuration": 15,
         "density": "default",
@@ -570,7 +622,7 @@
         ],
         "normalUrgencyDuration": 8,
         "overlayLayer": true,
-        "respectExpireTimeout": false,
+        "respectExpireTimeout": true,
         "saveToHistory": {
             "critical": true,
             "low": true,
@@ -601,7 +653,7 @@
         "overlayLayer": true
     },
     "plugins": {
-        "autoUpdate": false,
+        "autoUpdate": true,
         "notifyUpdates": true
     },
     "sessionMenu": {
@@ -783,7 +835,8 @@
         ],
         "fillColor": "#000000",
         "fillMode": "crop",
-        "hideWallpaperFilenames": true,
+        "hideWallpaperFilenames": false,
+        "linkLightAndDarkWallpapers": true,
         "monitorDirectories": [
         ],
         "overviewBlur": 0.4,
@@ -795,12 +848,13 @@
         "showHiddenFiles": true,
         "skipStartupTransition": false,
         "solidColor": "#161b22",
-        "sortOrder": "date_desc",
+        "sortOrder": "random",
         "transitionDuration": 1500,
         "transitionEdgeSmoothness": 0.05,
         "transitionType": [
             "disc"
         ],
+        "useOriginalImages": false,
         "useSolidColor": false,
         "useWallhaven": false,
         "viewMode": "recursive",
