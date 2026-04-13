@@ -136,12 +136,12 @@ if type -q expac
     alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
 end
 
-if type -q Hyprland
-    if not test -f /tmp/hyprland.lock
-        touch /tmp/hyprland.lock
-        exec Hyprland
-    end
-end
+# if type -q Hyprland
+#     if not test -f /tmp/hyprland.lock
+#         touch /tmp/hyprland.lock
+#         exec Hyprland
+#     end
+# end
 
 # prompt
 function fish_prompt --description 'Write out the prompt'

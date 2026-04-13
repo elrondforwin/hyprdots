@@ -60,6 +60,8 @@
         "middleClickCommand": "",
         "middleClickFollowMouse": false,
         "monitors": [
+            "IPAD",
+            "DP-2"
         ],
         "mouseWheelAction": "workspace",
         "mouseWheelWrap": true,
@@ -70,6 +72,24 @@
         "rightClickCommand": "",
         "rightClickFollowMouse": true,
         "screenOverrides": [
+            {
+                "density": "mini",
+                "displayMode": "auto_hide",
+                "enabled": true,
+                "name": "IPAD",
+                "position": "top",
+                "widgets": {
+                    "center": [
+                    ],
+                    "left": [
+                    ],
+                    "right": [
+                        {
+                            "id": "plugin:wallcards"
+                        }
+                    ]
+                }
+            }
         ],
         "showCapsule": false,
         "showOnWorkspaceSwitch": true,
@@ -112,31 +132,6 @@
                 }
             ],
             "left": [
-                {
-                    "defaultSettings": {
-                        "borderRadius": 1,
-                        "drawer": true,
-                        "expandDirection": "down",
-                        "focusBorderColor": "primary",
-                        "hideEmptyWorkspaces": true,
-                        "mainIcon": "layout-grid",
-                        "primaryPillColor": "none",
-                        "primaryShowPill": false,
-                        "primarySize": 0.9,
-                        "primarySymbolColor": "none",
-                        "secondaryPillColor": "primary",
-                        "secondaryShowPill": true,
-                        "secondarySize": 0.9,
-                        "secondarySymbolColor": "none",
-                        "workspaces": [
-                            {
-                                "icon": "message",
-                                "name": "communication"
-                            }
-                        ]
-                    },
-                    "id": "plugin:special-workspaces"
-                },
                 {
                     "characterCount": 2,
                     "colorizeIcons": false,
@@ -285,12 +280,6 @@
                 },
                 {
                     "defaultSettings": {
-                        "mode": "region"
-                    },
-                    "id": "plugin:screenshot"
-                },
-                {
-                    "defaultSettings": {
                         "colorHistory": [
                         ],
                         "detectedRecorder": "",
@@ -310,6 +299,10 @@
                     "id": "Volume",
                     "middleClickCommand": "pwvucontrol || pavucontrol",
                     "textColor": "none"
+                },
+                {
+                    "iconColor": "none",
+                    "id": "NoctaliaPerformance"
                 },
                 {
                     "hideWhenZero": false,
@@ -409,13 +402,7 @@
             ],
             "right": [
                 {
-                    "id": "WallpaperSelector"
-                },
-                {
                     "id": "PowerProfile"
-                },
-                {
-                    "id": "NoctaliaPerformance"
                 },
                 {
                     "enableOnStateLogic": true,
@@ -668,35 +655,35 @@
                 "command": "",
                 "countdownEnabled": true,
                 "enabled": true,
-                "keybind": ""
+                "keybind": "1"
             },
             {
                 "action": "reboot",
                 "command": "",
                 "countdownEnabled": true,
                 "enabled": true,
-                "keybind": ""
+                "keybind": "2"
             },
             {
                 "action": "suspend",
                 "command": "",
                 "countdownEnabled": true,
                 "enabled": true,
-                "keybind": ""
+                "keybind": "3"
             },
             {
                 "action": "logout",
                 "command": "",
                 "countdownEnabled": true,
                 "enabled": true,
-                "keybind": ""
+                "keybind": "4"
             },
             {
                 "action": "lock",
                 "command": "",
                 "countdownEnabled": true,
                 "enabled": true,
-                "keybind": ""
+                "keybind": "5"
             },
             {
                 "action": "hibernate",
@@ -710,7 +697,7 @@
                 "command": "",
                 "countdownEnabled": true,
                 "enabled": true,
-                "keybind": ""
+                "keybind": "6"
             },
             {
                 "action": "userspaceReboot",
@@ -814,8 +801,8 @@
     },
     "ui": {
         "boxBorderEnabled": false,
-        "fontDefault": "SF Pro Rounded",
-        "fontDefaultScale": 1.1099999999999999,
+        "fontDefault": "Google Sans Flex",
+        "fontDefaultScale": 1.1,
         "fontFixed": "JetBrainsMono Nerd Font",
         "fontFixedScale": 1.05,
         "panelBackgroundOpacity": 0.7000000000000001,
@@ -827,7 +814,7 @@
         "translucentWidgets": false
     },
     "wallpaper": {
-        "automationEnabled": false,
+        "automationEnabled": true,
         "directory": "/home/elrond/Pictures/Wallpapers",
         "enableMultiMonitorDirectories": false,
         "enabled": true,
@@ -843,21 +830,23 @@
         "overviewEnabled": true,
         "overviewTint": 0.6,
         "panelPosition": "follow_bar",
-        "randomIntervalSec": 300,
+        "randomIntervalSec": 1800,
         "setWallpaperOnAllMonitors": true,
-        "showHiddenFiles": true,
+        "showHiddenFiles": false,
         "skipStartupTransition": false,
         "solidColor": "#161b22",
-        "sortOrder": "random",
+        "sortOrder": "date_asc",
         "transitionDuration": 1500,
         "transitionEdgeSmoothness": 0.05,
         "transitionType": [
-            "disc"
+            "disc",
+            "stripes",
+            "fade"
         ],
-        "useOriginalImages": false,
+        "useOriginalImages": true,
         "useSolidColor": false,
         "useWallhaven": false,
-        "viewMode": "recursive",
+        "viewMode": "single",
         "wallhavenApiKey": "",
         "wallhavenCategories": "111",
         "wallhavenOrder": "desc",
