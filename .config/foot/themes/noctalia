@@ -1,24 +1,24 @@
 [colors-dark]
-background = 121316
-foreground = e3e2e6
+background = 111416
+foreground = e1e2e5
 
-selection-background = d8bde4
-selection-foreground = 3c2947
+selection-background = cac1e9
+selection-foreground = 322c4c
 
-regular0 = 43474e
+regular0 = 41484d
 regular1 = ffb4ab
-regular2 = a0c9ff
-regular3 = bbc7db
-regular4 = d8bde4
-regular5 = a0c9ff
-regular6 = bbc7db
-regular7 = e3e2e6
+regular2 = 7cd0ff
+regular3 = b5c9d7
+regular4 = cac1e9
+regular5 = 7cd0ff
+regular6 = b5c9d7
+regular7 = e1e2e5
 
-bright0  = c3c6cf
+bright0  = c0c7cd
 bright1  = ffb4ab
-bright2  = a0c9ff
-bright3  = bbc7db
-bright4  = d8bde4
-bright5  = a0c9ff
-bright6  = bbc7db
-bright7  = e3e2e6
+bright2  = 7cd0ff
+bright3  = b5c9d7
+bright4  = cac1e9
+bright5  = 7cd0ff
+bright6  = b5c9d7
+bright7  = e1e2e5

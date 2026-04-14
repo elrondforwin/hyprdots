@@ -42,17 +42,17 @@
     "bar": {
         "autoHideDelay": 500,
         "autoShowDelay": 150,
-        "backgroundOpacity": 0.8,
+        "backgroundOpacity": 0.51,
         "barType": "framed",
         "capsuleColorKey": "none",
         "capsuleOpacity": 1,
         "contentPadding": 2,
-        "density": "default",
+        "density": "spacious",
         "displayMode": "always_visible",
         "enableExclusionZoneInset": true,
         "fontScale": 1,
         "frameRadius": 24,
-        "frameThickness": 4,
+        "frameThickness": 12,
         "hideOnOverview": false,
         "marginHorizontal": 30,
         "marginVertical": 12,
@@ -66,7 +66,7 @@
         "mouseWheelAction": "workspace",
         "mouseWheelWrap": true,
         "outerCorners": true,
-        "position": "top",
+        "position": "left",
         "reverseScroll": false,
         "rightClickAction": "controlCenter",
         "rightClickCommand": "",
@@ -89,6 +89,11 @@
                         }
                     ]
                 }
+            },
+            {
+                "enabled": false,
+                "name": "DP-2",
+                "position": "top"
             }
         ],
         "showCapsule": false,
@@ -98,38 +103,6 @@
         "widgetSpacing": 6,
         "widgets": {
             "center": [
-                {
-                    "defaultSettings": {
-                        "catColor": "default",
-                        "catOffsetY": 0,
-                        "catSize": 1,
-                        "idleTimeout": 150,
-                        "raveMode": false,
-                        "tappyMode": false,
-                        "useMprisFilter": false,
-                        "waitingTimeout": 30000
-                    },
-                    "id": "plugin:slowbongo"
-                },
-                {
-                    "clockColor": "none",
-                    "customFont": "",
-                    "formatHorizontal": "HH:mm ddd, MMM dd",
-                    "formatVertical": "HH mm - dd MM",
-                    "id": "Clock",
-                    "tooltipFormat": "HH:mm ddd, MMM dd",
-                    "useCustomFont": false
-                },
-                {
-                    "defaultSettings": {
-                        "customColor": "none",
-                        "showConditionIcon": true,
-                        "showTempUnit": true,
-                        "showTempValue": true,
-                        "tooltipOption": "everything"
-                    },
-                    "id": "plugin:weather-indicator"
-                }
             ],
             "left": [
                 {
@@ -176,26 +149,16 @@
                     "usePadding": false
                 },
                 {
-                    "defaultSettings": {
-                        "arrowType": "caret",
-                        "byteThresholdActive": 1024,
-                        "fontSizeModifier": 1,
-                        "forceMegabytes": false,
-                        "iconSizeModifier": 1,
-                        "minWidth": 0,
-                        "showNumbers": true,
-                        "spacingInbetween": 0,
-                        "useCustomColors": false
-                    },
-                    "id": "plugin:network-indicator"
-                },
-                {
-                    "defaultSettings": {
-                        "hideBackground": false,
-                        "minimumThreshold": 10
-                    },
-                    "id": "plugin:catwalk"
-                },
+                    "clockColor": "none",
+                    "customFont": "",
+                    "formatHorizontal": "HH:mm ddd, MMM dd",
+                    "formatVertical": "HH mm",
+                    "id": "Clock",
+                    "tooltipFormat": "HH:mm ddd, MMM dd",
+                    "useCustomFont": true
+                }
+            ],
+            "right": [
                 {
                     "defaultSettings": {
                         "activeColor": "primary",
@@ -207,9 +170,7 @@
                         "removeMargins": false
                     },
                     "id": "plugin:privacy-indicator"
-                }
-            ],
-            "right": [
+                },
                 {
                     "compactMode": true,
                     "hideMode": "hidden",
@@ -227,13 +188,6 @@
                     "visualizerType": "mirrored"
                 },
                 {
-                    "displayMode": "forceOpen",
-                    "iconColor": "none",
-                    "id": "KeyboardLayout",
-                    "showIcon": true,
-                    "textColor": "none"
-                },
-                {
                     "blacklist": [
                     ],
                     "chevronColor": "none",
@@ -242,7 +196,6 @@
                     "hidePassive": false,
                     "id": "Tray",
                     "pinned": [
-                        "Discord"
                     ]
                 },
                 {
@@ -279,30 +232,30 @@
                     "id": "plugin:screen-recorder"
                 },
                 {
-                    "defaultSettings": {
-                        "colorHistory": [
-                        ],
-                        "detectedRecorder": "",
-                        "installedLangs": [
-                            "eng"
-                        ],
-                        "paletteColors": [
-                        ],
-                        "selectedOcrLang": "eng",
-                        "transAvailable": false
-                    },
-                    "id": "plugin:screen-toolkit"
-                },
-                {
-                    "displayMode": "alwaysShow",
+                    "displayMode": "onhover",
                     "iconColor": "none",
                     "id": "Volume",
                     "middleClickCommand": "pwvucontrol || pavucontrol",
                     "textColor": "none"
                 },
                 {
-                    "iconColor": "none",
-                    "id": "NoctaliaPerformance"
+                    "defaultSettings": {
+                        "colorHistory": [
+                        ],
+                        "detectedCompositor": "",
+                        "detectedRecorder": "",
+                        "filenameFormat": "",
+                        "installedLangs": [
+                            "eng"
+                        ],
+                        "paletteColors": [
+                        ],
+                        "screenshotPath": "",
+                        "selectedOcrLang": "eng",
+                        "transAvailable": false,
+                        "videoPath": ""
+                    },
+                    "id": "plugin:screen-toolkit"
                 },
                 {
                     "hideWhenZero": false,
@@ -402,6 +355,9 @@
             ],
             "right": [
                 {
+                    "id": "NoctaliaPerformance"
+                },
+                {
                     "id": "PowerProfile"
                 },
                 {
@@ -467,14 +423,14 @@
         "allowPanelsOnScreenWithoutBar": true,
         "allowPasswordWithFprintd": false,
         "animationDisabled": false,
-        "animationSpeed": 1.6,
+        "animationSpeed": 1,
         "autoStartAuth": false,
         "avatarImage": "/home/elrond/.face",
         "boxRadiusRatio": 1,
         "clockFormat": "hh\\nmm",
         "clockStyle": "analog",
         "compactLockScreen": true,
-        "dimmerOpacity": 0,
+        "dimmerOpacity": 0.2,
         "enableBlurBehind": true,
         "enableLockScreenCountdown": true,
         "enableLockScreenMediaControls": false,
@@ -811,10 +767,10 @@
         "settingsPanelMode": "window",
         "settingsPanelSideBarCardStyle": false,
         "tooltipsEnabled": true,
-        "translucentWidgets": false
+        "translucentWidgets": true
     },
     "wallpaper": {
-        "automationEnabled": true,
+        "automationEnabled": false,
         "directory": "/home/elrond/Pictures/Wallpapers",
         "enableMultiMonitorDirectories": false,
         "enabled": true,
@@ -840,8 +796,7 @@
         "transitionEdgeSmoothness": 0.05,
         "transitionType": [
             "disc",
-            "stripes",
-            "fade"
+            "stripes"
         ],
         "useOriginalImages": true,
         "useSolidColor": false,
