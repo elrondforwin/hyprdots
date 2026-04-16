@@ -1,15 +1,10 @@
 # SOME ESSENTIAL PACKAGES
 # yay -S eza zoxide nvim bat rar unrar-free ncdu fzf fastfetch tmux
 
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # Set the directory we want to store zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+# starship init zsh
+eval "$(starship init zsh)"
 
 # Download Zinit, if it's not there yet
 if [ ! -d "$ZINIT_HOME" ]; then
@@ -40,8 +35,6 @@ PATH=$PATH:/$HOME/.local/bin
 # Source/Load zinit
 source "${ZINIT_HOME}/zinit.zsh"
 
-zinit ice depth=1; zinit light romkatv/powerlevel10k
-
 # emacs mode
 set -o emacs
 
@@ -64,9 +57,6 @@ zinit snippet OMZP::command-not-found
 autoload -Uz compinit && compinit
 
 zinit cdreplay -q
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Keybindings
 bindkey -e
@@ -143,6 +133,10 @@ alias kittyconf="nvim ~/.config/kitty/kitty.conf; cd -"
 alias hyprconf="cd ~/.config/hypr/configs; y"
 alias airplay="uxplay -bt709 -avdec -vsync -fps 60"
 alias virtscreen="~/.config/hypr/scripts/virtscreen.sh"
+
+vencordinstall() {
+  sh -c "$(curl -sS https://vencord.dev/install.sh)"
+}
 
 help() {
     "$@" --help 2>&1 | bat

@@ -7,6 +7,10 @@
         }
     ],
     "states": {
+        "clipper": {
+            "enabled": true,
+            "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
+        },
         "deskvis": {
             "enabled": true,
             "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
@@ -36,10 +40,6 @@
             "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
         },
         "screen-toolkit": {
-            "enabled": true,
-            "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
-        },
-        "slowbongo": {
             "enabled": true,
             "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
         },

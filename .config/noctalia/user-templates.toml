@@ -14,3 +14,11 @@
 #[templates.placeholder]
 #input_path = "/home/elrond/.config/quickshell/noctalia-shell/Assets/MatugenTemplates/noctalia.json"
 #output_path = "/home/elrond/.cache/noctalia/placeholder.json"
+
+[templates.gtk4]
+input_path = "~/.config/noctalia/matugenTemplates/gtk4.css"
+output_path = '~/.config/gtk-4.0/gtk.css'
+
+[templates.hyprland]
+input_path = "~/.config/noctalia/matugenTemplates/hyprland.conf"
+output_path = "~/.config/hypr/noctalia/noctalia-overrides.conf"

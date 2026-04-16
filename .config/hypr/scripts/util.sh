@@ -14,7 +14,7 @@ case $1 in
 
       xdg-open "https://lens.google.com/uploadbyurl?url=$URL"
 
-      rm -f "$IMAGE"
+      # rm -f "$IMAGE"
       ;;
 
   "qr")
