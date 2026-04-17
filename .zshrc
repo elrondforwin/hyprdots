@@ -1,5 +1,5 @@
 # SOME ESSENTIAL PACKAGES
-# yay -S eza zoxide nvim bat rar unrar-free ncdu fzf fastfetch tmux
+# yay -S eza zoxide nvim bat unrar-free ncdu fzf fastfetch tmux
 
 # Set the directory we want to store zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
