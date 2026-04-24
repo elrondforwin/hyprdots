@@ -256,13 +256,13 @@ extract() {
 	done
 }
 
-# # launch hyprland automatically
-# if command -v Hyprland > /dev/null; then
-#   if [[ ! -f /tmp/hyprland.lock ]]; then
-#     touch /tmp/hyprland.lock
-#     start-hyprland
-#   fi
-# fi
+# launch hyprland automatically
+if command -v Hyprland > /dev/null; then
+  if [[ ! -f /tmp/hyprland.lock ]]; then
+    touch /tmp/hyprland.lock
+    start-hyprland
+  fi
+fi
 
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
