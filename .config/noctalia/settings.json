@@ -423,7 +423,7 @@
         ],
         "pinnedStatic": true,
         "position": "bottom",
-        "showDockIndicator": true,
+        "showDockIndicator": false,
         "showLauncherIcon": true,
         "sitOnFrame": false,
         "size": 1
