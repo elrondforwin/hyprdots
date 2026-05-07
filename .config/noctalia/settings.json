@@ -44,16 +44,16 @@
         "autoHideDelay": 500,
         "autoShowDelay": 50,
         "backgroundOpacity": 1,
-        "barType": "floating",
+        "barType": "simple",
         "capsuleColorKey": "none",
         "capsuleOpacity": 0.3,
         "contentPadding": 2,
-        "density": "comfortable",
-        "displayMode": "auto_hide",
+        "density": "default",
+        "displayMode": "always_visible",
         "enableExclusionZoneInset": true,
         "fontScale": 1,
         "frameRadius": 24,
-        "frameThickness": 8,
+        "frameThickness": 4,
         "hideOnOverview": false,
         "marginHorizontal": 500,
         "marginVertical": 8,
@@ -85,12 +85,6 @@
                     "left": [
                     ],
                     "right": [
-                        {
-                            "id": "plugin:mimeapp-gui"
-                        },
-                        {
-                            "id": "plugin:wallcards"
-                        }
                     ]
                 }
             },
@@ -382,13 +376,14 @@
                         "hourHandStyle": "fill",
                         "id": "plugin:cookie-clock",
                         "minuteHandStyle": "medium",
+                        "scale": 1.0452806139306698,
                         "secondHandStyle": "hide",
                         "showBackground": true,
                         "showHourMarks": false,
                         "showSeconds": true,
                         "sides": 9,
-                        "x": 1545,
-                        "y": 79
+                        "x": 1555,
+                        "y": 91
                     }
                 ]
             }
@@ -402,7 +397,7 @@
         "deadOpacity": 0.6,
         "displayMode": "auto_hide",
         "dockType": "attached",
-        "enabled": true,
+        "enabled": false,
         "floatingRatio": 1,
         "groupApps": true,
         "groupClickAction": "cycle",
@@ -756,6 +751,10 @@
             {
                 "enabled": true,
                 "id": "hyprland"
+            },
+            {
+                "enabled": true,
+                "id": "zed"
             }
         ],
         "enableUserTheming": true
