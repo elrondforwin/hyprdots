@@ -158,22 +158,6 @@
             ],
             "right": [
                 {
-                    "compactMode": true,
-                    "hideMode": "hidden",
-                    "hideWhenIdle": false,
-                    "id": "MediaMini",
-                    "maxWidth": 32,
-                    "panelShowAlbumArt": true,
-                    "scrollingMode": "never",
-                    "showAlbumArt": true,
-                    "showArtistFirst": false,
-                    "showProgressRing": true,
-                    "showVisualizer": false,
-                    "textColor": "none",
-                    "useFixedWidth": false,
-                    "visualizerType": "wave"
-                },
-                {
                     "blacklist": [
                     ],
                     "chevronColor": "none",
